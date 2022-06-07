@@ -2,6 +2,10 @@
 
 <img src="images/bookjuck.png">
 
+https://github.com/kimdeagle/servlet-jsp-project 출처
+
+
+
 ### 북적북적은 Servlet/JSP를 사용한 온라인 서점 사이트 입니다.
 
 ### ▶ 특징 Feature
