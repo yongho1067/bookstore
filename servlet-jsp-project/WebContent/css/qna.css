@@ -1,0 +1,89 @@
+/*
+
+	QnA CSS
+	
+	1. QnA 목록조회
+	2. QnA 수정
+
+*/
+
+/* QnA 목록조회 */
+
+
+h3 {
+    margin-bottom:30px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#btn {
+    width:100%;
+    text-align:center;
+    margin:20px;
+}
+
+#senddate {
+    margin-bottom:20px;
+}
+
+#abox {
+    width:700px;
+    border:1px dashed #ccc;
+    margin:50px auto;
+    padding:50px;
+}
+
+#btn {
+    width:100%;
+    text-align:center;
+}
+
+#listtbl th, td {
+	text-align:center;
+}
+
+
+
+/* 고객 질문 수정 */
+
+#content {
+    width:80%;
+    margin:20px auto;
+}
+
+.selected {
+    width:120px;
+    float:left;
+    margin-left:10%;
+}
+
+/* 고객 QnA 작성 */
+
+#addtbl th, td {
+	text-align:center;
+}
+
+/* 고객 QnA 조회 */
+#listtbl th, td {
+	text-align:center;
+}
+
+/* 관리자 답변 입력 */
+
+#modaltbl {
+	width:100%;
+}
+
+/* 관리자 상세조회 */
+
+#qnatbl th, td{
+	text-align:center;
+}
+
+#qnatbl tr:nth-child(3) td {
+	text-align:left;
+}
+
+#qnatbl tr:nth-child(4) td {
+	text-align:left;
+}

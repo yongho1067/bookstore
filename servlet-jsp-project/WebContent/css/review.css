@@ -1,0 +1,44 @@
+/*
+
+	독후감 CSS
+	
+	1. 독후감 목록 조회(관리자)
+	2. 독후감 상세 조회
+	3. 독후감 목록 조회(고객)
+	4. 고객 독후감 작성
+
+*/
+
+/* 1. 독후감 목록 조회(관리자) */
+
+#btn {
+    width:100%;
+    text-align:center;
+}
+
+#listtbl th, td {
+	text-align:center;
+}
+
+/* 2. 독후감 상세 조회 */
+
+#detailtbl th {
+	text-align:center;
+}
+
+#detailtbl tr:nth-child(3) td {
+	text-align:left;
+}
+
+/* 3. 독후감 목록 조회(고객) */
+
+h3 {
+    margin-bottom:30px;
+}
+
+
+/* 4. 고객 독후감 작성 */
+
+#addtbl th, #edittbl th{
+	text-align:center;
+}

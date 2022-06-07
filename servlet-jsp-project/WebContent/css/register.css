@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+#tosForm {
+	width: 500px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	text-align: center;
+	padding: 30px;
+}
+
+#idCheck{
+	margin-top: 12px;
+}
+#id{
+	margin-left: -0.5px; 
+}
+
+.createId{
+	margin: 10px auto;
+	width: 100%;
+	border: 1px solid white;
+}
+
+.createId > tr > td,
+.createId > tr > th{
+	padding: 20px;
+	
+}
+
+
+#test001 tr:nth-child(4),
+#test001 tr:nth-child(5),
+#test001 tr:nth-child(6){
+	text-align: left;
+}
+
+
+#test001 input[type="radio"]{
+	margin-right: 10px;
+}
+
+#registerForm > h2{
+	padding-bottom: 15px;	
+}
+
+/*주소 TEXT 크기*/
+#sample6_postcode{width: 100px;}
+#sample6_address{width: 320px;}
+#sample6_detailAddress{width:200px;}
+#sample6_extraAddress{width:115px;}
+
+.nminput{
+	margin-top: 10px;
+	border: 1px solid red;
+}
+
+#footer{
+	margin-top: 30px;
+	text-align: center;
+}
+

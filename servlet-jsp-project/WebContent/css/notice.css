@@ -1,0 +1,62 @@
+/*
+
+	공지사항 CSS
+
+*/
+
+/*
+
+	관리자 list.jsp
+	XXXX
+
+*/
+
+/*
+
+	고객 list.jsp
+	
+*/
+
+#listtbl th, td {
+	text-align:center;
+}
+
+#listtbl, #detailtbl {
+	margin:0 auto;
+}
+
+
+
+/* add.jsp */
+
+#addtbl th, td, #edittbl td, td {
+	text-align:center;
+}
+
+#btn {
+    width:100%;
+    text-align:center;
+    margin:20px;
+}
+
+/* edit.jsp */
+
+#edittbl td, td {
+	text-align:center;
+}
+
+/* detail.jsp */
+
+#detailtbl th, td {
+	text-align:center;
+}
+
+#detailtbl tr:nth-child(2) td {
+	text-align:left;
+	padding:30px;
+}
+
+.mainsection {
+	text-align:center;
+	margin:70px !important;
+}

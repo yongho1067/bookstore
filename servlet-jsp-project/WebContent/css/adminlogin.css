@@ -1,0 +1,31 @@
+#logo {
+	width: 300px;
+    margin: 100px auto;
+}
+
+#logo > img {
+    width:300px;
+}
+
+#login {
+    width:400px;
+    margin:20px auto;
+    border:2px solid #ccc;
+    /* background-color: #E8F0E1; */
+    text-align:center;
+    padding:30px;
+}
+
+#id, #pwd {
+    margin:15px;
+}
+
+#loginbtn {
+    display:block;
+    margin:20px auto;
+}
+
+#footer p{
+	color: white;
+	text-align: center;
+}

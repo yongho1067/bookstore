@@ -1,0 +1,142 @@
+/* admin/book/list.jsp */
+
+[readonly] { background-color: transparent !important; }
+
+button { outline:none !important; }
+
+.contentsection {
+	margin-left: 5px !important;
+	max-width: 74%;
+}
+
+.tblbookcount, .tblebookcount {
+	margin-top: 20px;
+	margin-bottom: 100px;
+}
+
+.tblbookcount th, .tblbookcount td, .tblebookcount th, .tblebookcount td { text-align: center; }
+
+.tblbookcount .label, .tblebookcount .label {
+	font-size: 1em;
+	opacity: 0.7;
+}
+
+.tblbooklist, .tblebooklist { margin-top: 20px; }
+
+.tblbooklist th, .tblbooklist td, .tblebooklist th, .tblebooklist td { text-align: center; }
+
+/* 도서명 */
+.tblbooklist th:nth-child(1) { width: 30%; }
+
+/* 카테고리 */
+.tblbooklist th:nth-child(2) { width: 30%; }
+
+/* 저자 */
+.tblbooklist th:nth-child(3) { width: 13%; }
+
+/* 수량 */
+.tblbooklist th:nth-child(4) { width: 5%; }
+
+/* 버튼 */
+.tblbooklist th:nth-child(5) { width: 22%; }
+
+/* 도서명 */
+.tblebooklist th:nth-child(1) { width: 32%; }
+
+/* 카테고리 */
+.tblebooklist th:nth-child(2) { width: 32%; }
+
+/* 저자 */
+.tblebooklist th:nth-child(3) { width: 14%; }
+
+/* 버튼 */
+.tblebooklist th:nth-child(4) { width: 22%; }
+
+.tblbooklist td input[type=button], .tblebooklist td input[type=button] { margin-right: 5px; }
+
+input[type=button]:focus { outline: none !important; }
+
+.listheader { margin-top: 50px; }
+
+.listheader h5 {
+	margin-top: 20px;
+	float: left;
+}
+
+/* 리스트 -> 추가 버튼 */
+.listheader input[type=button] {
+	width: 90px;
+	float: right;
+	margin-right: 30px;
+}
+
+/* admin/book/add.jsp */
+
+#title { width: 300px; }
+
+#publisher { width: 300px; }
+
+#btnselcategory, #btnsearchauthor { margin-right: 10px;	}
+
+.category { text-align: center; }
+
+#authorname { width: 300px; }
+
+#pubdate { width: 200px; }
+
+#isbn { width: 200px; }
+
+#price { width: 80px; text-align: center; }
+
+#amount { width: 80px; text-align: center; }
+
+#page { width: 80px; text-align: center; }
+
+#copy { width: 400px; }
+
+/* 이미지, E-Book 파일명 */
+#imagename, #ebookname {
+	display: inline-block;
+	width: 300px;
+	margin-left: 5px;
+	margin-right: 10px;
+}
+
+/* 하단 버튼 집합 div */
+.actionbtns {
+	margin: 50px 0;
+	text-align: right;
+}
+
+/* 하단 버튼 */
+.actionbtns [type=button] {
+	width: 150px;
+	height: 60px;
+	font-size: 1.4em;
+	margin-right: 50px;
+}
+
+/* 취소, 목록 버튼 */
+#btncancel, #btnlist { background-color: lightgray; }
+
+/* modal */
+
+/* modal > 카테고리 선택 */
+#tblcategory th { text-align: center; }
+
+/* 작가명 검색어 입력 텍스트박스 + 검색 버튼 -> 우측 정렬 */
+.searchbar { text-align: right; }
+
+/* modal > 작가명 검색창 */
+#searchauthorname {
+	width: 200px;
+	display: inline-block;
+}
+
+/* modal > 작가 리스트 테이블 */
+#tblauthorlist th:nth-child(1) { width: 50px; text-align: center; }
+#tblauthorlist th:nth-child(2) { width: 100px; }
+#tblauthorlist th:nth-child(3) { width: auto; }
+#tblauthorlist td:nth-child(1) { text-align: center; }
+
+

@@ -1,0 +1,38 @@
+/*
+
+	자주하는 질문 CSS
+
+*/
+
+
+#btn {
+    width:100%;
+    text-align:center;
+    margin:20px 0;
+}
+
+/* 관리자 자주하는 질문 작성 */
+
+#addtbl th {
+	text-align:center;
+}
+
+/* 관리자 자주하는 질문 수정 */
+
+#edittbl th {
+	text-align:center;
+}
+
+/* 관리자, 회원 자주하는 질문 목록조회 */
+
+#listtbl th, td {
+	text-align:center;
+}
+
+/* 고객 검색창 */
+
+.search {
+	width:300px;
+	margin:20px;
+	float:right;
+}

@@ -1,0 +1,453 @@
+/*
+
+    4조
+    모든 페이지에서 사용할 CSS 파일
+    
+*/
+
+
+/* 
+
+    구조 설정(21.02.14 추가)
+
+    - header(nav 포함)
+    - aside | section
+    - footer
+    - 의 구조
+
+*/
+
+aside {
+    width:20%;
+    margin:15px;
+    min-height:1000px;
+    float:left;
+}
+
+.mainsection {
+    margin:15px;
+}
+
+.contentsection {
+	margin:15px;
+    float:left;
+    min-width:74%;
+}
+
+footer {
+    clear:both;
+}
+
+/*
+
+    글꼴
+
+    1. 제목(레코체)
+    2. 일반(넥슨 Lv2 고딕)
+    3. 글꼴 + 태그 선택자 설정
+    4. 헤딩 설정
+    5. 헤딩 크기 설정
+    6. 헤딩 태그(white)
+    7. 일반 강조(string, b태그)
+
+*/
+
+/* 1. 제목(레코체) */
+@font-face {
+    font-family: 'Recipekorea';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Recipekorea.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 2. 일반(넥슨 Lv2 고딕) */
+@font-face {
+    font-family: 'NEXON Lv2 Gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 3. 글꼴 + 태그 선택자 */
+body, p, div, span, ul, ol, li, dl, dt, dd, table, th, td, a, blockquote, textarea, fieldset, small, strong, b, i, em {
+    font-family: 'NEXON Lv2 Gothic';
+    color:#555;
+    line-height:1.5em;
+    font-size:15px;
+}
+
+/* 4. 헤딩 설정 */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Recipekorea';
+    color:#5B8E7D;
+}
+
+/* 5. 헤딩 크기 설정 */
+h1 { font-size:45px; }
+h2 { font-size:40px; }
+h3 { font-size:30px; }
+h4 { font-size:25px; }
+h5 { font-size:20px; }
+h6 { font-size:15px; }
+
+/* 6. 헤딩 태그(white) */
+
+.h1-white, .h2-white, .h3-white, .h4-white, .h5-white, .h6-white {
+    font-family: 'Recipekorea';
+    color:white;
+}
+
+/* 7. 일반 강조 */
+strong, b {
+    font-family: 'NEXON Lv2 Gothic';
+    color:#5B8E7D;
+}
+
+/*
+
+    텍스트 박스 설정
+    
+*/
+
+textarea {
+    resize:none;
+}
+
+.noline {
+    outline: none;
+}
+
+.form-control:focus {
+    box-shadow:none;
+    border-color:#ccc;
+}
+
+/*
+
+    크기 설정
+
+    1. 로고 이미지
+    2. 텍스트박스
+    3. 도서표지 이미지
+    4. 테이블
+
+*/
+
+/* 1. 로고 이미지 */
+
+.logo {
+    width:250px;
+    margin-bottom:20px;
+    margin-right:10px;
+    margin-left:-5px;
+}
+
+/* 2. 텍스트박스 */
+
+.small {
+    width:200px;
+}
+
+.medium {
+    width:300px;
+}
+
+.large {
+    width:400px;
+}
+
+/* 3. 도서표지 이미지 */
+
+.book-xs{
+    width: 90px;
+}
+
+.book-sm {
+    width:130px;
+}
+
+.book-md {
+    width:170px;
+}
+
+.book-lg {
+    width:210px;
+}
+
+/* 4. 테이블 */
+
+.tbl-sm {
+    width:650px;
+}
+
+.tbl-md {
+    width:850px;
+}
+
+.tbl-lg {
+    width:1000px;
+}
+
+/*
+
+    기타
+    
+    1. 인라인(block 태그를 inline으로 바꿔야할 때 사용하는 클래스)
+    2. 링크 설정
+    3. 버튼 설정
+    4. 리스트 점 없애기
+    5. 모달창 화면 가운데로 뜨기
+    6. 북적이 챗봇
+    7. top(상단으로)
+
+*/
+
+/* 1. 인라인 */
+
+.inline {
+    display:inline;
+}
+
+/* 2. 링크 설정 */
+
+a:hover {
+    text-decoration: none;
+    color:#F4A259;
+    border:none;
+    font-weight:bold;
+}
+
+/* 3. 버튼 설정 */
+
+.btn-general {
+    background-color:#BC4B51;
+    color:white;
+}
+
+.btn-general:hover {
+    background-color: transparent;
+    border:1px solid #ccc;
+    color:#F4A259;
+}
+
+/* 4. 리스트 점 없애기 21.02.14 추가 */
+
+ul {
+    list-style:none;
+}
+
+/* 5. 모달창 화면 가운데로 뜨기 */
+
+.modal {
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) { 
+    .modal:before {
+            display: inline-block;
+            vertical-align: middle;
+            content: " ";
+            height: 100%;
+    }
+}
+
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+
+
+/*  6. 북적이(챗봇) css  */
+#bookjeok {
+    text-align:center;
+    position: fixed;
+    padding:20px;
+    bottom: 0;
+}
+
+#chatbtn {
+    width:60px;
+}
+
+
+/*  7. top(상단으로) css  */
+#top {
+    text-align:center;
+    position:fixed;
+    padding:20px;
+    bottom:0px;
+    right:0px;
+}
+
+#top > span {
+    font-size:1.5em;
+    color:#BC4B51;
+}
+
+
+
+
+/* 
+
+	전체 적용할 헤더, 푸터 css
+	21.02.15 추가
+
+*/
+
+/*  header 적용 css   */
+#headerlink {
+    text-align:right;
+    margin:20px;
+}
+
+.headerlink-item {
+    margin:0 5px;
+}
+
+#searchmenu {
+    text-align:center;
+}
+
+#realtime {
+    margin:10px;
+}
+
+/* navigation bar */
+
+.nav {
+    width:105%;
+}
+
+.nav > li {
+    width:16%;
+    text-align:center;
+}
+
+.navbar {
+    background-color: #F4E285;
+    border:none;
+}
+
+.nav > li > a:hover {
+    background-color:transparent;
+}
+
+.nav > li > a:active {
+    background-color:transparent;
+}
+
+.nav > li> a:visited {
+    background-color:transparent;
+}
+
+.nav > li > a:focus{
+    background-color:transparent;
+}
+
+a {
+    outline:none;
+}
+
+#searchbtn:focus {
+	outline:none !important;
+}
+
+/* 국내도서 중분류 */
+#internalmenu {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	width: 181.44px;
+	/* background-color: #D5E8CB; */
+	background-color: #F4EB8D;
+	text-align: center;
+}
+
+#internalmenu > a {
+	display: block;
+	margin: 5px auto 5px auto;
+}
+
+/* 해외도서 중분류 */
+#externalmenu {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	width: 181.44px;
+	/* background-color: #D5E8CB; */
+	background-color: #F4EB8D;
+	text-align: center;
+}
+
+#externalmenu > a {
+	display: block;
+	margin: 5px auto 5px auto;
+}
+
+/*  footer 적용 css  */
+/* footer */
+
+footer {
+    background-color: #f8edb7;
+    text-align:center;
+}
+
+#footerlink {
+    width:100%;
+    text-align:center;
+    padding:20px;
+    background-color: #8CB369;
+}
+
+.footerlink-item {
+    margin:0 3%;
+    color:white;
+    
+}
+
+.separator {
+    color:white;
+}
+
+footer .logo_area {
+    display: inline-block;
+    position: relative;
+    top: -20px;
+    left: 20px;
+}
+
+footer .click_footer {
+    display: inline-block;
+    position: relative;
+    text-align:left;
+    top: 20px;
+    left: 30px;
+}
+
+.logo_area {
+    display:inline;
+}
+
+/*
+
+	페이지네이션 CSS
+	21.02.17 추가
+
+*/
+
+.pagination {
+    display:block;
+    text-align:center;
+    margin:50px 0;
+}
+
+.pagination > li > a {
+    float:none;
+    margin-left:-5px;
+}

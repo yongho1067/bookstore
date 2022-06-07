@@ -1,0 +1,272 @@
+/* 
+
+Olivine : #8CB369 - RGB(140,179,105)
+Buff : #F4E285 - RGB(244,226,133)
+Sandy Brown : #F4A259 - RGB(244,162,89)
+Wintergreen Dream : #5B8E7D - RGB(91,142,125)
+Bittersweet Shimmer : #BC4B51 - RGB(188,75,81)
+
+*/
+
+article{
+	margin-bottom: 30px;
+}
+
+.contentsection{
+	margin-bottom: 150px;
+}
+
+th{
+    background-color: RGBA(244,162,89,.13);
+}
+
+
+.read{
+    border: 0;
+    outline: none;
+}
+
+.date{
+    width: 90px;
+}
+
+.orderer{
+    border-bottom: 1px solid #DDD;
+    text-indent: 40px;
+}
+
+.orderer th{
+    width: 150px;   
+}
+
+.periodbox{
+	margin-top: 30px;
+}
+
+.periodtbl{
+    border-bottom: 1px solid #DDD;
+}
+
+.periodtbl th{
+    width: 150px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.sort_option{
+    /* border: 1px solid #555; */
+    border-radius: 3px;
+    padding: 3px 4px 2px;
+    
+}
+
+.sort_option a{
+    border-radius: 3px;
+    width: 31px;
+    height: 13px;
+    padding: 3px 4px 2px;
+    /* border: 1px solid #EEE; */
+    /* border-right: 1px solid #555; */
+    /* border-left: 1px solid #555; */
+}
+
+.sort_option a.on{
+    border: 1px solid #DDD;
+    background-color: RGBA(244,162,89,.3);
+    color: #333;
+    /* box-shadow: 5px 5px 10px 1px gray inset; */
+    box-shadow: inset 1.5px 1.5px 0 RGBA(244,162,89,.6), inset -1px -1px 3px RGBA(244,162,89,.6);
+    font-weight: normal;
+}
+
+#strDate,
+#endDate
+{
+	
+	background: #FFF;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.datepicker th{
+	background-color: #FFF;
+}
+
+.order-state-box{
+	width: 100%;
+	height: 75px;
+	background-repeat: no-repeat;
+}
+
+.order-state{
+	float: left;
+}
+
+.order-state li{
+	background-image: url(/bookjuck/image/orderstate.gif);
+	background-position: -15px 6px;
+	background-repeat: no-repeat;
+	width: 112px;
+	height: 75px;
+	display: inline-block;
+	margin-right: 18px;
+	
+}
+
+.order-state-box li:nth-child(2){
+	background-position: -124px 6px;
+}
+
+.order-state-box li:nth-child(3){
+	background-position: -236px 6px;
+}
+
+.order-state-box li:nth-child(4){
+	background-position: -350px 6px;
+}
+
+.order-state span{
+	width: 60px;
+}
+
+.total-order{
+	width: 150px;
+	float: left;
+}
+
+.total-order span{
+	float: right;
+}
+
+
+.olDate{
+    margin-top: 80px;
+    margin-bottom: 3px;
+    font-size: 13px;
+}
+
+.orderCnt{
+    width: 26px;
+    text-align: right;
+}
+
+.orderList{
+	border-bottom: 1px solid #DDD;
+}
+
+.orderList th,.orderList td {
+    text-align: center;
+    border-right: 1px solid #ddd;
+}
+
+.orderList th:nth-child(5),.orderList td:nth-child(5){
+    border-right: 0;
+}
+
+.orderList tr th:nth-child(1){
+    width: 150px;
+}
+.orderList tr th:nth-child(2){
+    width: 140px;
+}
+.orderList tr th:nth-child(3){
+    width: 310px;
+}
+.orderList tr th:nth-child(4){
+    width: 130px;
+}
+.orderList tr th:nth-child(5){
+    width: 120px;
+}
+
+
+.orderList tr td:nth-child(1){
+    padding-top: 35px;   
+}
+
+.orderList tr td:nth-child(2){
+    padding-top: 68px;
+
+}
+.orderList tr td:nth-child(3){
+	vertical-align: middle;
+    text-align: left;
+}
+
+.orderList tr td:nth-child(4){
+    padding-top: 68px;
+}
+
+.orderList tr td:nth-child(5){
+    padding-top: 28px;
+}
+
+
+.orderList tr td:nth-child(1) a:first-child{
+	color: #F4A259;
+}
+
+.orderList tr td:nth-child(3) div{
+/*     position: relative; */
+/*     top: -50px; */
+width: 200px;
+float: right;
+
+}
+
+.orderList tr td:nth-child(5) button{
+    margin-bottom: 5px;
+    width: 80px;
+}
+
+
+.noOrderList{
+    text-align: center;
+    font-weight: bold;
+    margin: 90px 0;
+}
+
+.noOrderList span{
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.btn-order{
+    /* background-color: RGBA(244,162,89,.3); */
+    background-color: #5B8E7D;
+    color: white;
+    width: 120px;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.btn-order:hover{
+    color: white;
+    font-weight: normal;
+}
+
+.btn1{
+    background-color: #EFEFEF;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.btn1:hover{
+    color: #555;
+    font-weight: normal;
+}
+
+input[type=date]{
+	width:170px;
+	display:inline-block;
+}
+
+#periodbtn{
+	padding: 8px 16px;
+	margin-left: 10px;
+}
+
+.datepicker{
+	color: red;
+}
