@@ -23,8 +23,8 @@
 <div class='logintop'>
 
 
-<input type="button" class='login' value="로그인" onclick="location.href='http://google.com';">
-<input type="button" class='login' value="회원가입" onclick = "location.href = '#' ">
+<input type="button" class='login' value="로그아웃" onclick="location.href='http://google.com';">
+<input type="button" class='login' value="마이페이지" onclick = "location.href = '#' ">
 <input type="button" class='login' value="장바구니" onclick = "location.href = '#' ">
 </div>
 
