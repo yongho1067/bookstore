@@ -6,8 +6,8 @@ bo_name VARCHAR2(50) NOT NULL, -- 책의이름
 bo_cc VARCHAR2(20) NOT NULL, -- 책의분류 ex) 국내서적 ,해외서적
 bo_janre VARCHAR2(20) NOT NULL, -- 책의장르 ex)  소설, 역사, 만화
 bo_date DATE NOT NULL, -- 출간일 
-bo_author VARCHAR2(20) NOT NULL, -- 작가
-bo_pb VARCHAR2(20) NOT NULL, -- 책출판사
+bo_author VARCHAR2(50) NOT NULL, -- 작가
+bo_pb VARCHAR2(50) NOT NULL, -- 책출판사
 bo_price NUMBER(10) NOT NULL, -- 책의 가격
 bo_grade NUMBER(5,2), -- 책의 평점 
 bo_count NUMBER(5) NOT NULL, -- 책의 재고
