@@ -2,7 +2,7 @@
 DROP TABLE book_table;
 CREATE TABLE book_table ( -- 책테이블
 bo_id NUMBER(5) PRIMARY KEY, -- 책의 아이디
-bo_name VARCHAR2(50) NOT NULL, -- 책의이름 
+bo_name VARCHAR2(100) NOT NULL, -- 책의이름 
 bo_cc VARCHAR2(20) NOT NULL, -- 책의분류 ex) 국내서적 ,해외서적
 bo_janre VARCHAR2(20) NOT NULL, -- 책의장르 ex)  소설, 역사, 만화
 bo_date DATE NOT NULL, -- 출간일 
