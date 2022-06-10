@@ -12,10 +12,11 @@
 <style>
 
 </style>
+
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 </head>
-<body>
+<body onload="init();">
 
 
 <div class='login1'>
@@ -36,29 +37,29 @@
 </div>
 
 <div class='bookinfo'>
-책 제목
-<pre>
+책 제목 : <b>책 이름</b>
 
-</pre>
+<br>
+<pre>가나다라마바사</pre>
 </div>
-<div class="count">
-<input type='button'
-       onclick='count("plus")'
-       value='+'/>
-<input type='button'
-       onclick='count("minus")'
-       value='-'/>
-<input type="text" id="result" value="0"></div>
+<form name="form" method="get" id="counttype" >
+수량 : <input type=hidden name="sell_price" value="5500">
+<input type="text" name="amount" value="1" size="3" onchange="change();">
+<input type="button" value=" + " onclick="add();">
+<input type="button" value=" - " onclick="del();">
+<br>
+
+금액 : <input type="text" name="sum" size="11" readonly>원
 
 <input type="button" class='login' value="장바구니" onclick = "location.href = '#' ">
 <input type="button" class='login' value="바로구매" onclick = "location.href = '#' ">
 
-</div>
+</form>
 
-<div class="review">
 
-<form>
-  <select name="star">
+<form method="get" name="star">
+<div id="star">
+  <select>
     <option value="none">== 평점선택 ==</option>
     <option value="1">★☆☆☆☆</option>
     <option value="2">★★☆☆☆</option>
@@ -66,30 +67,83 @@
     <option value="4">★★★★☆</option>
     <option value="5">★★★★★</option>
   </select>
+<br>
+<textarea name="oneline" cols="80" rows="2" placeholder="이책의 한줄평"  style="resize: none;"></textarea>
+<input type="submit" value="작성" id="inputtype"> 
+</div>
 </form>
 
-<textarea name="oneline" cols="80" rows="2" placeholder="이책의 한줄평"></textarea>
+
+<div class="review">
+<table>
+<thead>
+        <tr>
+            <th>별점</th>
+            <th>이름</th>
+            <th>한줄 평</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td></td>
+            <td></td>
+        </tr>
+         <tr>
+            <td>1</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+
+</table>
+
 </div>
 
-<p>별점 유저아이디 평가</p>
 <script>
-function count(type)  {
-	  // 결과를 표시할 element
-	  const resultElement = document.getElementById('result');
-	  
-	  // 현재 화면에 표시된 값
-	  let number = resultElement.innerText;
-	  
-	  // 더하기/빼기
-	  if(type === 'plus') {
-	    number = parseInt(number) + 1;
-	  }else if(type === 'minus')  {
-	    number = parseInt(number) - 1;
-	  }
-	  
-	  // 결과 출력
-	  resultElement.innerText = number;
-	}
+
+var sell_price;
+var amount;
+
+function init () {
+	sell_price = document.form.sell_price.value;
+	amount = document.form.amount.value;
+	document.form.sum.value = sell_price;
+	change();
+}
+
+function add () {
+	hm = document.form.amount;
+	sum = document.form.sum;
+	hm.value ++ ;
+
+	sum.value = parseInt(hm.value) * sell_price;
+}
+
+function del () {
+	hm = document.form.amount;
+	sum = document.form.sum;
+		if (hm.value > 1) {
+			hm.value -- ;
+			sum.value = parseInt(hm.value) * sell_price;
+		}
+}
+
+function change () {
+	hm = document.form.amount;
+	sum = document.form.sum;
+
+		if (hm.value < 0) {
+			hm.value = 0;
+		}
+	sum.value = parseInt(hm.value) * sell_price;
+}  
+
 </script>
 </body>
 </html>
