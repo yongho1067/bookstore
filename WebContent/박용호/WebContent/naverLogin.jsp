@@ -8,7 +8,7 @@
 <script type="text/javascript">
   var naver_id_login = new naver_id_login("RDdgbivY7FUS7o1r_0v0", "http://localhost:8888/bookstore/naverLogin.jsp");
   // 접근 토큰 값 출력
-  alert(naver_id_login.oauthParams.access_token);
+ /*  alert(naver_id_login.oauthParams.access_token); */
   // 네이버 사용자 프로필 조회
   naver_id_login.get_naver_userprofile("naverSignInCallback()");
   // 네이버 사용자 프로필 조회 이후 프로필 정보를 처리할 callback function

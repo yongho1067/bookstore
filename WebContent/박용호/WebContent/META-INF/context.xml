@@ -1,0 +1,17 @@
+<Context path="/bookstore" docBas="www">
+<Resource
+	name="jdbc/bookstore"
+	auth="Container"
+	type="javax.sql.DataSource"
+	driverClassName="oracle.jdbc.driver.OracleDriver"
+	loginTimeout="10"
+	validationQuery="select 1 FROM DUAL"
+	maxWait="5000"
+	username="hr"
+	password="hr"
+	testOnBorrow="true"
+	url="jdbc:oracle:thin:@localhost:1521:xe"/>
+<ResourceLink type="javax.sql.data.DataSource"
+	name="jdbc/bookstore"
+	global="jdbc/bookstore"/>
+</Context>

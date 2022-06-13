@@ -80,6 +80,7 @@ function kakaoLogout() {
 		</div> 
 		<br>
 	<input type="submit" id="btnLogin" value="로그인" >
+	<li><a href="join.jsp">회원가입</a></li>
 	<br><br>
 </div>
 	<!-- 사이트 로그인 종료 -->
@@ -93,6 +94,7 @@ function kakaoLogout() {
   	naver_id_login.setButton("green", 4,70);
   	naver_id_login.setDomain("http://localhost:8888/bookstore/login.jsp");
   	naver_id_login.setState(state);
+  	
   	naver_id_login.setPopup();
   	naver_id_login.init_naver_id_login();
   </script>
@@ -104,16 +106,10 @@ function kakaoLogout() {
     <!-- 카카오 로그인 시작 -->
     <div class="btn" align ="center">
 	<a href="javascript:void(0)"  onclick="kakaoLogin();" >
-    	<img src="image/kakaologin.png" width="350" height ="80px" />
+    	<img src="image/kakaologin.png" width="360" height ="82px" />
     </a>
 </div>
 	<!-- 카카오 로그인 종료 -->
-
-
-
-
-
-
 
 
 </body>
