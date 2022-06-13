@@ -21,7 +21,7 @@ mem_id_num NUMBER(5) PRIMARY KEY, -- 회원의 고유값
 mem_id VARCHAR2(20) UNIQUE NOT NULL, -- 회원의 아이디
 mem_name VARCHAR2(10) NOT NULL, -- 회원이름
 mem_bd DATE NOT NULL, -- 회원 생년월일
-mem_email VARCHAR2(50) NOT NULL, -- 회원 이메일 
+mem_email VARCHAR2(50) UNIQUE NOT NULL, -- 회원 이메일 
 mem_pn1 NUMBER(5) NOT NULL, -- 010 부분
 mem_pn2 NUMBER(5) NOT NULL, -- 전화번호 앞자리
 mem_pn3 NUMBER(5) NOT NULL, -- 전화번호 뒷자리
