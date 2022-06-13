@@ -17,13 +17,11 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+
 	
-	
-<div class='logintop'>
-<input type="button" class='login' value="로그인" onclick="location.href='http://google.com';">
-<input type="button" class='login' value="회원가입" onclick = "location.href = '#' ">
-<input type="button" class='login' value="장바구니" onclick = "location.href = '#' ">
-</div>
+<%@include file="/header.jsp" %>
+
 
 <div class='title'>
 <h1>북쳐핸섭</h1>

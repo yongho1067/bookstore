@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+   <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -76,29 +78,27 @@
 
 <div class="review">
 <table>
+<!--  
 <thead>
         <tr>
             <th>별점</th>
             <th>이름</th>
             <th>한줄 평</th>
         </tr>
+    
     </thead>
+        -->
     <tbody>
-        <tr>
-            <td>1</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td></td>
-            <td></td>
-        </tr>
+       <c:forEach var="vo1" items="${alist1 }">
+         <!-- request scope에 객체 전체를 ArrayList alist1에 저장 -->
          <tr>
-            <td>1</td>
-            <td></td>
-            <td></td>
-        </tr>
+            <td>${vo1.id }</td>
+            <!-- <td>${vo1.name }</td> -->
+            <td>${vo1.name }</td>
+            <!-- 전체보기하면서 수정/삭제도 준비 -->
+            <td>${vo1.d }</td>
+         </tr>
+      </c:forEach>
     </tbody>
 
 </table>
