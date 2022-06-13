@@ -18,7 +18,7 @@ bo_ex VARCHAR2(1000) -- 책설명
 DROP TABLE mem_table;
 CREATE TABLE mem_table( -- 회원 테이블
 mem_id_num NUMBER(5) PRIMARY KEY, -- 회원의 고유값
-mem_id VARCHAR2(20) PRIMARY KEY, -- 회원의 아이디
+mem_id VARCHAR2(20) , -- 회원의 아이디
 mem_name VARCHAR2(10) NOT NULL, -- 회원이름
 mem_bd DATE NOT NULL, -- 회원 생년월일
 mem_email VARCHAR2(50) NOT NULL, -- 회원 이메일 
