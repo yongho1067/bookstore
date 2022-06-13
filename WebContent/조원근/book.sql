@@ -18,7 +18,7 @@ bo_ex VARCHAR2(1000) -- 책설명
 DROP TABLE mem_table;
 CREATE TABLE mem_table( -- 회원 테이블
 mem_id_num NUMBER(5) PRIMARY KEY, -- 회원의 고유값
-mem_id VARCHAR2(20) , -- 회원의 아이디
+mem_id VARCHAR2(20) UNIQUE NOT NULL, -- 회원의 아이디
 mem_name VARCHAR2(10) NOT NULL, -- 회원이름
 mem_bd DATE NOT NULL, -- 회원 생년월일
 mem_email VARCHAR2(50) NOT NULL, -- 회원 이메일 
@@ -62,17 +62,17 @@ DROP SEQUENCE mem_seq ;
 CREATE SEQUENCE mem_seq
 START WITH 1
 INCREMENT BY 1;
-
-INSERT INTO mem_table VALUES(
-MEM_SEQ.NEXTVAL,
-'홍길동',
-'1996/05/23',
-'s1234@naver.com',
-010,
-1234,
-1234,
-12345,
-12345
-);
-SELECT
-    * FROM mem_table;
+--
+--INSERT INTO mem_table VALUES(
+--MEM_SEQ.NEXTVAL,
+--'홍길동',
+--'1996/05/23',
+--'s1234@naver.com',
+--010,
+--1234,
+--1234,
+--12345,
+--12345
+--);
+--SELECT
+--    * FROM mem_table;
