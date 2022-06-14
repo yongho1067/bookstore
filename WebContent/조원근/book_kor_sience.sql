@@ -295,18 +295,3 @@ NUM_SEQ.nextval,
 SELECT * FROM book_table; 
 
 DELETE FROM book_table;
-
-
-
-
-
-
-
-
-
-
-CREATE TABLE grade_table( -- ÆòÁ¡ ´ñ±Û Å×ÀÌºí
-mem_id_num NUMBER(5) ,
-bo_grade NUMBER(5),
-comment_ VARCHAR2(10) -- ´ñ±Û 
-);

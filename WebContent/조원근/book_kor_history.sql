@@ -308,15 +308,3 @@ DELETE FROM book_table;
 
 
 
-
-
-
-
-
-
-
-CREATE TABLE grade_table( -- 평점 댓글 테이블
-mem_id_num NUMBER(5) ,
-bo_grade NUMBER(5),
-comment_ VARCHAR2(10) -- 댓글 
-);

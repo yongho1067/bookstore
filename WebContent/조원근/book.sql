@@ -21,10 +21,9 @@ mem_id_num NUMBER(5) PRIMARY KEY, -- 회원의 고유값
 mem_id VARCHAR2(20) UNIQUE NOT NULL, -- 회원의 아이디
 mem_name VARCHAR2(10) NOT NULL, -- 회원이름
 mem_bd VARCHAR2(20) NOT NULL, -- 회원 생년월일
-mem_email VARCHAR2(50) UNIQUE NOT NULL, -- 회원 이메일 
+mem_email VARCHAR2(50) NOT NULL, -- 회원 이메일 
 mem_pn VARCHAR2(20) NOT NULL, -- 회원 전화번호 
-mem_pw VARCHAR2(10) NOT NULL, -- 회원 비밀번호
-mem_pw_ck VARCHAR2(10) NOT NULL -- 회원비밀번호 확인
+mem_pw VARCHAR2(10) NOT NULL -- 회원 비밀번호
 );
 
 
@@ -44,26 +43,15 @@ comment_ VARCHAR2(10) -- 댓글
 
 DROP TABLE basket_table;
 CREATE TABLE basket_table( -- 장바구니 테이블
-bas_order NUMBER(5) PRIMARY KEY ,
-bas_count NUMBER(5),
-bas_total NUMBER(5),
+bas_order NUMBER(5) PRIMARY KEY , -- 주문번호
+bas_count NUMBER(5), -- 갯수
+bas_total NUMBER(5), -- 총합
 bo_id NUMBER(5) REFERENCES book_table(bo_id),
 mem_id_num NUMBER(5)  REFERENCES mem_table(mem_id_num)
 );
-INSERT INTO mem_table
-(
-bo_id
-)
-values (1);
 
 
-INSERT INTO basket_table
-(
-bas_order,
-bas_count,
-bas_total
-)
-VALUES(2,2,15000);
+
 
 SELECT * FROM basket_table;
 
