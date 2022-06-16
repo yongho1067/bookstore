@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.book.my.BookGetAllInfo;
+import com.book.my.BookGetBookInfo;
 import com.book.my.BookGetReviewInfo;
 
 /**
@@ -48,7 +49,7 @@ public class Bookfrontcontroller extends HttpServlet {
 	       
 	       switch(c) {
 	       case "/getBookInfo.do":
-	    	   h1 = new BookGetAllInfo();
+	    	   h1 = new BookGetBookInfo();
                try {
                        h1.Book(request, response);
                } catch (Exception e1) {
@@ -66,7 +67,7 @@ public class Bookfrontcontroller extends HttpServlet {
                        e1.printStackTrace();
                }
                
-               str = "bookdetail.jsp";  
+               str = "main.jsp";  
             break;
 	       
 	       

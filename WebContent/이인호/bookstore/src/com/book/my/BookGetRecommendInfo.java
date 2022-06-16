@@ -10,7 +10,7 @@ import com.frontcontroller.my.BookImpl;
 
 import bookinfoDAO.BookInfoDAO;
 
-public class BookGetAllInfo implements BookImpl {
+public class BookGetRecommendInfo implements BookImpl {
 	@Override
 	public void Book(HttpServletRequest request,HttpServletResponse response) throws Exception{
 		

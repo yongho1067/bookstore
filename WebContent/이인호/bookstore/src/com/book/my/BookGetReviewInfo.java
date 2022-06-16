@@ -8,8 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.book.vo.ReviewVO;
 import com.frontcontroller.my.BookImpl;
 
-import telinfoDAO.TelInfoDAO;
-import telinfoVO.TelInfoVO;
+import bookinfoDAO.BookInfoDAO;
 
 public class BookGetReviewInfo implements BookImpl {
 	@Override
@@ -18,12 +17,12 @@ public class BookGetReviewInfo implements BookImpl {
 	request.setCharacterEncoding("utf-8");
 	response.setCharacterEncoding("utf-8");
 	
-	TelInfoDAO tidao1 = null;
+	BookInfoDAO tidao1 = null;
 	
-	tidao1 = new TelInfoDAO();
-	ArrayList<ReviewVO> alist1= null;
-	alist1 = tidao1.BookgetReviewInfo();
-	request.setAttribute("alist1", alist1);
+	tidao1 = new BookInfoDAO();
+	ArrayList<ReviewVO> reviewlist1= null;
+	reviewlist1 = tidao1.BookgetReviewInfo();
+	request.setAttribute("reviewlist1", reviewlist1);
 	
 	 
 	 

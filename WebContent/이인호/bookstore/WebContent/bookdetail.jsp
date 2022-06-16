@@ -28,6 +28,10 @@
 </div>
 
 
+<form action="getBookInfo.do?id=${svo.id }" method="get">
+
+
+
 <div class='title'>
 책정보
 </div>
@@ -39,11 +43,15 @@
 </div>
 
 <div class='bookinfo'>
-책 제목 : <b>책 이름</b>
+책 제목 : <b>${svo.name }</b>
 
 <br>
-<pre>가나다라마바사</pre>
+<pre>${svo.example }</pre>
 </div>
+
+
+</form>
+
 <form name="form" method="get" id="counttype" >
 수량 : <input type=hidden name="sell_price" value="5500">
 <input type="text" name="amount" value="1" size="3" onchange="change();">
@@ -75,24 +83,22 @@
 </div>
 </form>
 
+ 
+ 
+         
+<form action="getBookReviewInfo.do"> 
+
+ 
+            <c:forEach var="vo2" items="${reviewlist1 }">
+         <tr>
+            <td>${vo2.comment }</td>
+            
+         </tr>
+      </c:forEach>
+ </form>
+        
 
 
-<form action="getBookInfo.do?sname=${svo.id }" method="get">
-	<table border="1">
-		<tr><td>사번</td><td>이름</td><td>전화번호</td></tr>
-		<tr>
-	     <td>${svo.id }</td>
-	     <td>${svo.name }</td>
-	     <td>${svo.cc }</td>
-	  	</tr>
-		<tr>
-			<td colspan="4">
-			<input type="submit" value="수정">
-			<input type="reset" value="취소"></td>
-		</tr>
-	</table>
-
-</form>
 
 
 
