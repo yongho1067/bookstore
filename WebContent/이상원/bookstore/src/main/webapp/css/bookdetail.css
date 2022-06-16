@@ -1,0 +1,67 @@
+@charset "EUC-KR";
+
+
+.title{
+    text-align : center;
+	font-size: 30px;
+}
+
+.login{
+  position: relative;
+  left : 75%;
+  color: #fff;
+  height: 35px;
+  width: 80px;
+  border: 1px solid  #009879; ;
+  background: #009879;;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+}
+
+.imagebox{
+	position: fixed;
+	left:10%;
+	
+}
+
+.bookimage{
+	width: 200px;
+	height: 300px;
+}
+
+.bookinfo{
+	position: fixed;
+	left:35%;
+}
+
+#counttype{
+	position: fixed;
+	left:35%;
+	top: 50%;
+	
+}
+
+
+.review{
+	position:fixed;
+	left:10%;
+	top: 70%;
+	
+	
+}
+#star{
+	position:fixed;
+	left:10%;
+	top: 60%;
+
+}
+
+#inputtype{
+  color: #fff;
+  height: 35px;
+  width: 80px;
+  border: 1px solid  #009879; ;
+  background: #009879;;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+}

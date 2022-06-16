@@ -59,12 +59,12 @@ a[class*="btn"] {text-decoration: none;}
 <body bgcolor="lightgray">
 
 	
-	<% int cnt = 0; %>
+	<% String cnt = ""; %>
 	<table align="center">	
 	
 	
 		<tr>
-			<form action="nonmemberjang.jsp">
+			<form method="post" action="nonmemberjang.jsp">
 			
 			
 				<td>
@@ -76,7 +76,7 @@ a[class*="btn"] {text-decoration: none;}
 					</select>
 					<input type="text" name=cnt>개
 					
-					<input type="submit" value="장바구니에 담기" class="btn-3d cyan" onclick="장바구니에 추가 되었습니다.">
+					<input type="submit" value="장바구니에 담기" class="btn-3d cyan" onclick="addToCart()">
 				
 				</td>
 			
@@ -94,8 +94,9 @@ a[class*="btn"] {text-decoration: none;}
 <% request.setCharacterEncoding("UTF-8"); %>
 <% response.setCharacterEncoding("UTF-8"); %>
 
-<%
 
+<%
+session.setAttribute("AA", value)
 
 
 %>
@@ -113,6 +114,17 @@ a[class*="btn"] {text-decoration: none;}
 $('a').click(function(event){
     event.preventDefault(); 
   });
+  
+
+function addToCart(){
+	if(confirm("상품을 장바구니에 추가하시겠습니까?")){
+		document.addForm.submit();
+	}else{
+		document.addForm.reset();
+	}
+} 
+  
+
 </script>	
 	
 	
