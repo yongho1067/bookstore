@@ -64,3 +64,15 @@ INCREMENT BY 1;
 
 SELECT
     * FROM mem_table;
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    

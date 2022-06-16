@@ -294,6 +294,7 @@ NUM_SEQ.nextval,
 '성공에 대한 야망과 실패한 아메리칸 드림의 비극!'
 );-- 외국소설 20
 
+
 SELECT * FROM book_table; 
 
 DELETE FROM book_table;

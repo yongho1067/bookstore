@@ -298,6 +298,6 @@ NUM_SEQ.nextval,
 'Wonderfully erudite, humorous, and easy to read'
 );-- 외국컴퓨터 20
 
-SELECT * FROM book_table order by bo_id; 
+SELECT * FROM book_table; 
 
 DELETE FROM book_table;
