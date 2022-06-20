@@ -301,3 +301,5 @@ NUM_SEQ.nextval,
 SELECT * FROM book_table; 
 
 DELETE FROM book_table;
+
+commit;

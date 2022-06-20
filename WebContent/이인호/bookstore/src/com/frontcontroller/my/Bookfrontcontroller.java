@@ -1,6 +1,8 @@
 package com.frontcontroller.my;
 
 import java.io.IOException;
+import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,6 +14,10 @@ import javax.servlet.http.HttpServletResponse;
 import com.book.my.BookGetAllInfo;
 import com.book.my.BookGetBookInfo;
 import com.book.my.BookGetReviewInfo;
+import com.book.vo.CartDTO;
+
+import bookinfoDAO.ReserveDAO;
+
 
 /**
  * Servlet implementation class Bookfrontcontroller2
@@ -44,7 +50,7 @@ public class Bookfrontcontroller extends HttpServlet {
 	      
 	       String c = request.getRequestURI().substring(request.getContextPath().length());   
 	       String str = null;
-	       
+	       ReserveDAO rsdao = null;
 	       BookImpl h1 = null; 
 	       
 	       switch(c) {
@@ -81,6 +87,56 @@ public class Bookfrontcontroller extends HttpServlet {
                
                str = "bookdetail.jsp";  
                break;
+               
+	       case "/ordering.do":
+				String sell_price = request.getParameter("sell_price");
+				String amount = request.getParameter("amount");
+				String sum = request.getParameter("sum");
+				
+				
+				
+				ReserveDAO rsdao2 = null;
+				try {
+					rsdao = new ReserveDAO();
+					rsdao.insert_reserve(sell_price, amount, sum);
+				} catch (ClassNotFoundException | SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				
+				
+				request.setAttribute("sell_price", sell_price);
+				request.setAttribute("amount", amount);
+				request.setAttribute("sum", sum);
+			
+			str = "ordercomplete.jsp";
+				break;
+
+			
+			case "/orderlist.do":
+				try {
+					rsdao = new ReserveDAO();
+				} catch (ClassNotFoundException | SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				ArrayList<CartDTO> odlist = null;
+				
+				try {
+					odlist = rsdao.orderList();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				
+				request.setAttribute("orlist", odlist);
+				
+				str = "orderlist.jsp";
+				break;
+				
 	       }
 	       RequestDispatcher rd1 = request.getRequestDispatcher(str);
 	         rd1.forward(request, response);

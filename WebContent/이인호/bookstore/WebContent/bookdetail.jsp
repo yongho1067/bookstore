@@ -52,7 +52,7 @@
 
 </form>
 
-<form name="form" method="get" id="counttype" >
+<form action="jang.jsp" name="form" method="get" id="counttype" >
 수량 : <input type=hidden name="sell_price" value="5500">
 <input type="text" name="amount" value="1" size="3" onchange="change();">
 <input type="button" value=" + " onclick="add();">
@@ -61,8 +61,8 @@
 
 금액 : <input type="text" name="sum" size="11" readonly>원
 
-<input type="button" class='login' value="장바구니" onclick = "location.href = '#' ">
-<input type="button" class='login' value="바로구매" onclick = "location.href = '#' ">
+<input type="submit" class='login' value="장바구니" onclick = "location.href = '#' ">
+<input type="submit" class='login' value="바로구매" onclick = "location.href = '#' ">
 
 </form>
 

@@ -153,19 +153,23 @@
 </form>
 
 	<table border="1">
-		<tr><td>아이디</td><td>이름</td><td>전화번호</td></tr>
-		<c:forEach var="vo1" items="${alist1 }">
+		<tr><td>아이디</td><td>이름</td><td>전화번호</td><td>전화번호</td></tr>
+		<c:forEach var="vo1" items="${alist1}">
          <tr>
             <td>${vo1.id }</td>
-            <td><a href="getBookInfo.do?id=${vo1.id }">${vo1.name }</a>
+            <td><a href="getBookInfo.do?id=${vo1.id}">${vo1.name }</a>
             <!-- 전체보기하면서 수정/삭제도 준비 -->
             <td>${vo1.cc }</td>
-            <td>${vo1.janre }</td>
+            <td>${vo1.janre}</td>
          </tr>
       </c:forEach>
 	</table>
 
+<%
 
+
+
+%>
 
 </body>
 </html>
