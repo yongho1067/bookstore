@@ -34,22 +34,29 @@ SELECT * FROM book_table;
 DELETE FROM book_table;
 
 
-
+drop table grade_table;
 CREATE TABLE grade_table( -- 평점 댓글 테이블
-mem_id_num NUMBER(5) ,
-bo_grade NUMBER(5),
-comment_ VARCHAR2(10) -- 댓글 
+mem_id_num NUMBER(5) , -- 회원번호
+bo_id number(5), -- 책번호
+bo_grade NUMBER(5), -- 평점
+comment_ VARCHAR2(10), -- 댓글
+foreign key (bo_id) REFERENCES book_table(bo_id),
+foreign key (mem_id_num) REFERENCES mem_table(mem_id_num)
+
 );
 
 DROP TABLE basket_table;
 CREATE TABLE basket_table( -- 장바구니 테이블
-bas_order NUMBER(5) PRIMARY KEY , -- 주문번호
+bas_order NUMBER GENERATED ALWAYS as IDENTITY(START WITH 1 INCREMENT BY 1) , -- 주문번호
+bo_id NUMBER(5),
+mem_id_num NUMBER(5) ,
+bas_address VARCHAR2(200), -- 주소
 bas_count NUMBER(5), -- 갯수
-bas_total NUMBER(5), -- 총합
-bo_id NUMBER(5) REFERENCES book_table(bo_id),
-mem_id_num NUMBER(5)  REFERENCES mem_table(mem_id_num)
+primary key(bas_order),
+foreign key (bo_id) REFERENCES book_table(bo_id),
+foreign key (mem_id_num) REFERENCES mem_table(mem_id_num)
 );
-
+ALTER TABLE basket_table add unique (bo_id , mem_id_num);
 
 
 
