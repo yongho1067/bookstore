@@ -5,6 +5,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link rel="stylesheet" href="/bookstore/css/boolist.css">
+
+
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
@@ -50,13 +58,13 @@
     <div class="sidebar">
     <header>도서</header>
     <ul>
-     <li><a href="#"><i class="fas fa-stream"></i>Dashboard</a></li>
-     <li><a href="#"><i class="fas fa-stream"></i>Shortcuts</a></li>
-     <li><a href="#"><i class="fas fa-stream"></i>Overview</a></li>
-     <li><a href="#"><i class="fas fa-stream"></i>Events</a></li>
-     <li><a href="#"><i class="fas fa-stream"></i>About</a></li>
-     <li><a href="#"><i class="fas fa-stream"></i>Services</a></li>
-     <li><a href="#"><i class="fas fa-stream"></i>Contact</a></li>
+     <li><a href="getBookListInfo.do?janre=컴퓨터"><i class="fas fa-stream"></i>computer</a></li>
+     <li><a href="getBookListInfo.do"><i class="fas fa-stream"></i>History</a></li>
+     <li><a href="getBookListInfo.do"><i class="fas fa-stream"></i>Novel</a></li>
+     <li><a href="getBookListInfo.do"><i class="fas fa-stream"></i>Science</a></li>
+     <li><a href="getBookListInfo.do"><i class="fas fa-stream"></i>About</a></li>
+     <li><a href="getBookListInfo.do"><i class="fas fa-stream"></i>Services</a></li>
+     <li><a href="ggetBookListInfo.do"><i class="fas fa-stream"></i>Contact</a></li>
     </ul>
    </div>
    <div class="favoritebook">
@@ -124,24 +132,24 @@
     </thead>
     <tbody>
     <tr>
-            <td><a href="#"><img src="./image/book/test.jpg" class="bookimage"></a>	</td>
-            <td><a href="#"><img src="./image/book/test.jpg" class="bookimage"></a>	</td>
-            <td><a href="#"><img src="./image/book/test.jpg" class="bookimage"></a>	</td>
+            <td><a href="getBookInfo.do?id=1"><img src="./image/book/test.jpg" class="bookimage"></a>	</td>
+            <td><a href="getBookInfo.do?id=2"><img src="./image/book/test.jpg" class="bookimage"></a>	</td>
+            <td><a href="getBookInfo.do?id=3"><img src="./image/book/test.jpg" class="bookimage"></a>	</td>
    </tr>
     <tr>
-            <td>책이름	</td>
-            <td>책이름	</td>
- 			<td>책이름	</td>   
+            <td><a href="getBookInfo.do?id=${vo1.id }">${vo1.name }</a>	</td>
+            <td><a href="getBookInfo.do?id=${vo1.id }">${vo1.name }</a>	</td>
+ 			<td><a href="getBookInfo.do?id=${vo1.id }">${vo1.name }</a>	</td>   
    </tr>
    <tr>
-            <td><a href="#"><img src="./image/book/test.jpg" class="bookimage"></a>	</td>
-            <td><a href="#"><img src="./image/book/test.jpg" class="bookimage"></a>	</td>
-            <td><a href="#"><img src="./image/book/test.jpg" class="bookimage"></a>	</td>
+            <td><a href="getBookInfo.do?id=4"><img src="./image/book/test.jpg" class="bookimage"></a>	</td>
+            <td><a href="getBookInfo.do?id=5"><img src="./image/book/test.jpg" class="bookimage"></a>	</td>
+             <td><a href="getBookInfo.do?id=6"><img src="./image/book/test.jpg" class="bookimage"></a>	</td>
    </tr>
     <tr>
-            <td>책이름	</td>
-            <td>책이름	</td>
- 			<td>책이름	</td> 
+            <td><a href="getBookInfo.do?id=${vo1.id }">${vo1.name }</a>	</td>
+            <td><a href="getBookInfo.do?id=${vo1.id }">${vo1.name }</a>	</td>
+ 			<td><a href="getBookInfo.do?id=${vo1.id }">${vo1.name }</a>	</td> 
    </tr>
     </tbody>
 	</table>
@@ -153,23 +161,19 @@
 </form>
 
 	<table border="1">
-		<tr><td>아이디</td><td>이름</td><td>전화번호</td><td>전화번호</td></tr>
-		<c:forEach var="vo1" items="${alist1}">
+		<tr><td>아이디</td><td>이름</td><td>전화번호</td></tr>
+		<c:forEach var="vo1" items="${alist1 }">
          <tr>
             <td>${vo1.id }</td>
-            <td><a href="getBookInfo.do?id=${vo1.id}">${vo1.name }</a>
+            <td><a href="getBookInfo.do?id=${vo1.id }">${vo1.name }</a>
             <!-- 전체보기하면서 수정/삭제도 준비 -->
             <td>${vo1.cc }</td>
-            <td>${vo1.janre}</td>
+            <td>${vo1.janre }</td>
          </tr>
       </c:forEach>
 	</table>
 
-<%
 
-
-
-%>
 
 </body>
 </html>

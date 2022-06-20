@@ -28,7 +28,6 @@
 </div>
 
 
-<form action="getBookInfo.do?id=${svo.id }" method="get">
 
 
 
@@ -50,9 +49,8 @@
 </div>
 
 
-</form>
 
-<form action="jang.jsp" name="form" method="get" id="counttype" >
+<form name="form" method="get" id="counttype" >
 수량 : <input type=hidden name="sell_price" value="5500">
 <input type="text" name="amount" value="1" size="3" onchange="change();">
 <input type="button" value=" + " onclick="add();">
@@ -61,8 +59,8 @@
 
 금액 : <input type="text" name="sum" size="11" readonly>원
 
-<input type="submit" class='login' value="장바구니" onclick = "location.href = '#' ">
-<input type="submit" class='login' value="바로구매" onclick = "location.href = '#' ">
+<input type="button" class='login' value="장바구니" onclick = "location.href = '#' ">
+<input type="button" class='login' value="바로구매" onclick = "location.href = '#' ">
 
 </form>
 
@@ -83,20 +81,17 @@
 </div>
 </form>
 
- 
- 
-         
-<form action="getBookReviewInfo.do"> 
+
 
  
-            <c:forEach var="vo2" items="${reviewlist1 }">
-         <tr>
-            <td>${vo2.comment }</td>
-            
-         </tr>
-      </c:forEach>
- </form>
-        
+     <c:forEach var="vo2" items="${reviewlist1 }">
+       <tr>
+          <td>${vo2.comment }</td>
+       	  <td>${vo2.comment }</td>
+          <td>${vo2.comment }</td>   
+       </tr>
+     </c:forEach>
+
 
 
 
