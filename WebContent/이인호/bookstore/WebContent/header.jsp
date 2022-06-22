@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,9 +13,9 @@
 
 	
 <div class='logintop'>
-<input type="button" class='login' value="·Î±×ÀÎ" onclick="location.href='http://google.com';">
-<input type="button" class='login' value="È¸¿ø°¡ÀÔ" onclick = "location.href = '#' ">
-<input type="button" class='login' value="Àå¹Ù±¸´Ï" onclick = "location.href = '#' ">
+<input type="button" class='login' value="ë¡œê·¸ì¸" onclick="location.href='http://google.com';">
+<input type="button" class='login' value="íšŒì›ê°€ìž…" onclick = "location.href = '#' ">
+<input type="button" class='login' value="ìž¥ë°”êµ¬ë‹ˆ" onclick = "location.href = '#' ">
 </div>
 
 </body>

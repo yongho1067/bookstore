@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
     
 <!DOCTYPE html>
@@ -30,18 +30,18 @@
 
 
 	
-<%@include file="/header.jsp" %>
+<%@include file="/header.jsp" %> <!-- Ìó§Îçî Î°úÍ∑∏Ïù∏ -->
 
 
-<div class='title'>
-<h1>∫œ√ƒ«⁄º∑</h1>
+<div class='title'>	<!-- Ï†úÎ™© -->
+<h1>Î∂ÅÏ≥êÌï∏ÏÑ≠</h1>
 </div>
 
 
 
-<div class="wrap">
+<div class="wrap">	<!-- Í≤ÄÏÉâÏ∞Ω -->
    <div class="search">
-      <input type="text" class="searchTerm" placeholder="ø¯«œ¥¬ µµº≠ ∞Àªˆ">
+      <input type="text" class="searchTerm" placeholder="ÏõêÌïòÎäî ÎèÑÏÑú Í≤ÄÏÉâ">
       <button type="submit" class="searchButton" onclick = "location.href = '#' " >
         <i class="fa fa-search"></i>
      </button>
@@ -50,15 +50,15 @@
 
 <br>
 
-<input type="checkbox" id="check">
+<input type="checkbox" id="check"> <!-- ÏÇ¨Ïù¥ÎìúÎ∞î Î©îÎâ¥ -->
     <label for="check">
       <i class="fas fa-bars" id="btn"></i>
       <i class="fas fa-times" id="cancel"></i>
     </label>
     <div class="sidebar">
-    <header>µµº≠</header>
+    <header>ÎèÑÏÑú</header>
     <ul>
-     <li><a href="getBookListInfo.do?janre=ƒƒ«ª≈Õ"><i class="fas fa-stream"></i>computer</a></li>
+     <li><a href="getBookListInfo.do?janre=Ïª¥Ìì®ÌÑ∞"><i class="fas fa-stream"></i>computer</a></li>
      <li><a href="getBookListInfo.do"><i class="fas fa-stream"></i>History</a></li>
      <li><a href="getBookListInfo.do"><i class="fas fa-stream"></i>Novel</a></li>
      <li><a href="getBookListInfo.do"><i class="fas fa-stream"></i>Science</a></li>
@@ -67,27 +67,29 @@
      <li><a href="ggetBookListInfo.do"><i class="fas fa-stream"></i>Contact</a></li>
     </ul>
    </div>
+   
+   
    <div class="favoritebook">
     
-    <table class="styled-table">
+    <table class="styled-table"> <!-- Ïù∏Í∏∞ÏàúÏúÑ -->
     <thead>
         <tr>
-            <th>¿Œ±‚ º¯¿ß</th>
-            <th>¿Ã∏ß</th>
+            <th>Ïù∏Í∏∞ ÏàúÏúÑ</th>
+            <th>Ïù¥Î¶Ñ</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>1</td>
-            <td><a href="#">√•¿Ã∏ß</a></td>
+            <td><a href="#">Ï±ÖÏù¥Î¶Ñ</a></td>
         </tr>
         <tr>
             <td>2</td>
-            <td><a href="#">√•¿Ã∏ß</a></td>
+            <td><a href="#">Ï±ÖÏù¥Î¶Ñ</a></td>
         </tr>
          <tr>
             <td>3</td>
-            <td><a href="#">√•¿Ã∏ß</a></td>
+            <td><a href="#">Ï±ÖÏù¥Î¶Ñ</a></td>
         </tr>
         <!-- and so on... -->
     </tbody>
@@ -95,27 +97,27 @@
 </div>
     
     
-    <div class="goodbook">
+    <div class="goodbook">	<!-- ÌèâÏ†êÏàúÏúÑ -->
     
     <table class="styled-table">
     <thead>
         <tr>
-            <th>∆Ú¡° º¯¿ß</th>
-            <th>¿Ã∏ß	</th>
+            <th>ÌèâÏ†ê ÏàúÏúÑ</th>
+            <th>Ïù¥Î¶Ñ	</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>1</td>
-            <td><a href="#">√•¿Ã∏ß</a></td>
+            <td><a href="#">Ï±ÖÏù¥Î¶Ñ</a></td>
         </tr>
         <tr>
             <td>2</td>
-            <td><a href="#">√•¿Ã∏ß</a></td>
+            <td><a href="#">Ï±ÖÏù¥Î¶Ñ</a></td>
         </tr>
          <tr>
             <td>3</td>
-            <td><a href="#">√•¿Ã∏ß</a></td>
+            <td><a href="#">Ï±ÖÏù¥Î¶Ñ</a></td>
         </tr>
         <!-- and so on... -->
     </tbody>
@@ -123,11 +125,11 @@
 </div>
     
 
-    <div class="book1">
+    <div class="book1">	<!-- Ï∂îÏ≤úÎèÑÏÑú -->
     <table class="bookstyle">
     <thead>
         <tr>
-            <th colspan="3">√ﬂ√µ µµº≠</th>
+            <th colspan="3">Ï∂îÏ≤ú ÎèÑÏÑú</th>
         </tr>
     </thead>
     <tbody>
@@ -156,17 +158,17 @@
     </div>
 
     
-<form action="getBookAllInfo.do" method="get">
-<input type="submit" value="∏µŒ∫∏±‚">
+<form action="getBookAllInfo.do" method="get">	<!-- ÌÖåÏä§Ìä∏Ïö© ÎçîÎØ∏ -->
+<input type="submit" value="Î™®ÎëêÎ≥¥Í∏∞">
 </form>
 
 	<table border="1">
-		<tr><td>æ∆¿Ãµ</td><td>¿Ã∏ß</td><td>¿¸»≠π¯»£</td></tr>
+		<tr><td>ÏïÑÏù¥Îîî</td><td>Ïù¥Î¶Ñ</td><td>Ï†ÑÌôîÎ≤àÌò∏</td></tr>
 		<c:forEach var="vo1" items="${alist1 }">
          <tr>
             <td>${vo1.id }</td>
             <td><a href="getBookInfo.do?id=${vo1.id }">${vo1.name }</a>
-            <!-- ¿¸√º∫∏±‚«œ∏Èº≠ ºˆ¡§/ªË¡¶µµ ¡ÿ∫Ò -->
+            <!-- Ï†ÑÏ≤¥Î≥¥Í∏∞ÌïòÎ©¥ÏÑú ÏàòÏ†ï/ÏÇ≠Ï†úÎèÑ Ï§ÄÎπÑ -->
             <td>${vo1.cc }</td>
             <td>${vo1.janre }</td>
          </tr>

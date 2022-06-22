@@ -24,8 +24,10 @@ public class BookGetListInfo implements BookImpl {
 	   
 	    dao2 = new BookInfoDAO();
 	    
-	    //String janre = request.getParameter("janre");
-	    String janre = "컴퓨터";
+	    
+	    String janre = request.getParameter("janre");
+	    System.out.println(janre);
+	   // String janre = "역사";
 		jlist1 =  dao2.ListInfo(janre);
 		request.setAttribute("janre", janre); 
 		request.setAttribute("jlist1", jlist1);

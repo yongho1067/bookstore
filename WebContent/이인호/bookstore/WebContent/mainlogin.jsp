@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,20 +23,20 @@
 <div class='logintop'>
 
 
-<input type="button" class='login' value="∑Œ±◊æ∆øÙ" onclick="location.href='http://google.com';">
-<input type="button" class='login' value="∏∂¿Ã∆‰¿Ã¡ˆ" onclick = "location.href = '#' ">
-<input type="button" class='login' value="¿ÂπŸ±∏¥œ" onclick = "location.href = '#' ">
+<input type="button" class='login' value="Î°úÍ∑∏ÏïÑÏõÉ" onclick="location.href='http://google.com';">
+<input type="button" class='login' value="ÎßàÏù¥ÌéòÏù¥ÏßÄ" onclick = "location.href = '#' ">
+<input type="button" class='login' value="Ïû•Î∞îÍµ¨Îãà" onclick = "location.href = '#' ">
 </div>
 
 <div class='title'>
-<h1>∫œ√ƒ«⁄º∑</h1>
+<h1>Î∂ÅÏ≥êÌï∏ÏÑ≠</h1>
 </div>
 
 
 
 <div class="wrap">
    <div class="search">
-      <input type="text" class="searchTerm" placeholder="ø¯«œ¥¬ µµº≠ ∞Àªˆ">
+      <input type="text" class="searchTerm" placeholder="ÏõêÌïòÎäî ÎèÑÏÑú Í≤ÄÏÉâ">
       <button type="submit" class="searchButton" onclick = "location.href = '#' " >
         <i class="fa fa-search"></i>
      </button>
@@ -51,7 +51,7 @@
       <i class="fas fa-times" id="cancel"></i>
     </label>
     <div class="sidebar">
-    <header>µµº≠</header>
+    <header>ÎèÑÏÑú</header>
     <ul>
      <li><a href="#"><i class="fas fa-stream"></i>Dashboard</a></li>
      <li><a href="#"><i class="fas fa-stream"></i>Shortcuts</a></li>
@@ -67,22 +67,22 @@
     <table class="styled-table">
     <thead>
         <tr>
-            <th>¿Œ±‚ º¯¿ß</th>
-            <th>¿Ã∏ß</th>
+            <th>Ïù∏Í∏∞ ÏàúÏúÑ</th>
+            <th>Ïù¥Î¶Ñ</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>1</td>
-            <td><a href="#">√•¿Ã∏ß</a></td>
+            <td><a href="#">Ï±ÖÏù¥Î¶Ñ</a></td>
         </tr>
         <tr>
             <td>2</td>
-            <td><a href="#">√•¿Ã∏ß</a></td>
+            <td><a href="#">Ï±ÖÏù¥Î¶Ñ</a></td>
         </tr>
          <tr>
             <td>3</td>
-            <td><a href="#">√•¿Ã∏ß</a></td>
+            <td><a href="#">Ï±ÖÏù¥Î¶Ñ</a></td>
         </tr>
         <!-- and so on... -->
     </tbody>
@@ -95,22 +95,22 @@
     <table class="styled-table">
     <thead>
         <tr>
-            <th>∆Ú¡° º¯¿ß</th>
-            <th>¿Ã∏ß	</th>
+            <th>ÌèâÏ†ê ÏàúÏúÑ</th>
+            <th>Ïù¥Î¶Ñ	</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>1</td>
-            <td><a href="#">√•¿Ã∏ß</a></td>
+            <td><a href="#">Ï±ÖÏù¥Î¶Ñ</a></td>
         </tr>
         <tr>
             <td>2</td>
-            <td><a href="#">√•¿Ã∏ß</a></td>
+            <td><a href="#">Ï±ÖÏù¥Î¶Ñ</a></td>
         </tr>
          <tr>
             <td>3</td>
-            <td><a href="#">√•¿Ã∏ß</a></td>
+            <td><a href="#">Ï±ÖÏù¥Î¶Ñ</a></td>
         </tr>
         <!-- and so on... -->
     </tbody>
@@ -122,7 +122,7 @@
     <table class="bookstyle">
     <thead>
         <tr>
-            <th colspan="3">√ﬂ√µ µµº≠</th>
+            <th colspan="3">Ï∂îÏ≤ú ÎèÑÏÑú</th>
         </tr>
     </thead>
     <tbody>
@@ -132,9 +132,9 @@
             <td><a href="#"><img src="./image/book/test.jpg" class="bookimage"></a>	</td>
    </tr>
     <tr>
-            <td>√•¿Ã∏ß	</td>
-            <td>√•¿Ã∏ß	</td>
- 			<td>√•¿Ã∏ß	</td>   
+            <td>Ï±ÖÏù¥Î¶Ñ	</td>
+            <td>Ï±ÖÏù¥Î¶Ñ	</td>
+ 			<td>Ï±ÖÏù¥Î¶Ñ	</td>   
    </tr>
    <tr>
             <td><a href="#"><img src="./image/book/test.jpg" class="bookimage"></a>	</td>
@@ -142,9 +142,9 @@
             <td><a href="#"><img src="./image/book/test.jpg" class="bookimage"></a>	</td>
    </tr>
     <tr>
-            <td>√•¿Ã∏ß	</td>
-            <td>√•¿Ã∏ß	</td>
- 			<td>√•¿Ã∏ß	</td>   
+            <td>Ï±ÖÏù¥Î¶Ñ	</td>
+            <td>Ï±ÖÏù¥Î¶Ñ	</td>
+ 			<td>Ï±ÖÏù¥Î¶Ñ	</td>   
    </tr>
     </tbody>
 	</table>
