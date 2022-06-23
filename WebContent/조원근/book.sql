@@ -26,7 +26,16 @@ mem_pn VARCHAR2(20) NOT NULL, -- 회원 전화번호
 mem_pw VARCHAR2(10) NOT NULL -- 회원 비밀번호
 );
 
-
+INSERT INTO mem_table
+VALUES(
+1,
+'아이디',
+'북적',
+'19961111',
+'bookstore',
+'01022223333',
+'password'
+);
 
 
 SELECT * FROM book_table; 
@@ -37,13 +46,23 @@ DELETE FROM book_table;
 drop table grade_table;
 CREATE TABLE grade_table( -- 평점 댓글 테이블
 mem_id_num NUMBER(5) , -- 회원번호
-bo_id number(5), -- 책번호
+bo_id number(5) PRIMARY KEY, -- 책번호
 bo_grade NUMBER(5), -- 평점
 comment_ VARCHAR2(10), -- 댓글
 foreign key (bo_id) REFERENCES book_table(bo_id),
 foreign key (mem_id_num) REFERENCES mem_table(mem_id_num)
 
 );
+
+INSERT INTO grade_table
+VALUES(
+1,
+1,
+3,
+'보통'
+);
+
+SELECT * FROM grade_table; 
 
 DROP TABLE basket_table;
 CREATE TABLE basket_table( -- 장바구니 테이블
@@ -80,7 +99,7 @@ SELECT
     
     
     
-    
+    commit;
     
 
     

@@ -59,12 +59,12 @@
     <header>도서</header>
     <ul>
      <li><a href="getBookListInfo.do?janre=컴퓨터"><i class="fas fa-stream"></i>computer</a></li>
-     <li><a href="getBookListInfo.do"><i class="fas fa-stream"></i>History</a></li>
+     <li><a href="getBookListInfo.do?janre=역사"><i class="fas fa-stream"></i>History</a></li>
      <li><a href="getBookListInfo.do"><i class="fas fa-stream"></i>Novel</a></li>
      <li><a href="getBookListInfo.do"><i class="fas fa-stream"></i>Science</a></li>
      <li><a href="getBookListInfo.do"><i class="fas fa-stream"></i>About</a></li>
      <li><a href="getBookListInfo.do"><i class="fas fa-stream"></i>Services</a></li>
-     <li><a href="ggetBookListInfo.do"><i class="fas fa-stream"></i>Contact</a></li>
+     <li><a href="main.jsp"><i class="fas fa-stream"></i>메인페이지로</a></li>
     </ul>
    </div>
    

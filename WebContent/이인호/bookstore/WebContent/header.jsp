@@ -10,8 +10,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div >
+</div>
 
-	
 <div class='logintop'>
 <input type="button" class='login' value="로그인" onclick="location.href='http://google.com';">
 <input type="button" class='login' value="회원가입" onclick = "location.href = '#' ">

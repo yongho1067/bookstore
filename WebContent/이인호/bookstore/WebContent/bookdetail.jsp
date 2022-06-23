@@ -106,7 +106,8 @@
      </c:forEach>
      -->
 <%
-String sql = "select * from grade_table";
+int id= Integer.parseInt(request.getParameter("id"));
+String sql = "select * from grade_table where bo_id="+id;
 		try {
 		// 데이터베이스를 접속하기 위한 드라이버 SW 로드
 		Class.forName("oracle.jdbc.driver.OracleDriver");

@@ -64,13 +64,13 @@
      <li><a href="getBookListInfo.do"><i class="fas fa-stream"></i>Science</a></li>
      <li><a href="getBookListInfo.do"><i class="fas fa-stream"></i>About</a></li>
      <li><a href="getBookListInfo.do"><i class="fas fa-stream"></i>Services</a></li>
-     <li><a href="ggetBookListInfo.do"><i class="fas fa-stream"></i>Contact</a></li>
+     <li><a href="main.jsp"><i class="fas fa-stream"></i>메인페이지로</a></li>
     </ul>
    </div>
 
 <%
 String janre = request.getParameter("janre");
-String sql = "select * from book_table where bo_janre='"+janre+"'";
+String sql = "select * from book_table where bo_janre='"+janre+"' order by bo_id";
 		try {
 		// 데이터베이스를 접속하기 위한 드라이버 SW 로드
 		Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -83,17 +83,21 @@ String sql = "select * from book_table where bo_janre='"+janre+"'";
 	%>
 	<table class="booklist" border="1" >
 		<tr>
-			<td>이름</td>
-			<td>주소</td>
-			<td>주민등록변호</td>
+			<td>책번호</td>
+			<td>책이름</td>
+			<td>작가</td>
+			<td>가격</td>
+			<td>평점</td>
 		</tr>
 		<%
 			while (rs.next()) {
 		%>
 		<tr>
 			<td><%=rs.getString("bo_id")%></td>
-			<td><%=rs.getString("bo_name")%></td>
-			<td><%=rs.getString("bo_cc")%></td>
+			<td><a href="getBookInfo.do?id=<%=rs.getString("bo_id")%>"><%=rs.getString("bo_name")%></a></td>
+			<td><%=rs.getString("bo_author")%></td>
+			<td><%=rs.getString("bo_price")%></td>
+			<td><%=rs.getString("bo_grade")%> 점</td>
 		</tr>
 
 	

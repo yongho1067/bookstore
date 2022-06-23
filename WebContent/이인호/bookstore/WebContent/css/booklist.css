@@ -2,7 +2,9 @@
 
 .booklist{
 	position: relative;
-	left:30%;
+	left:20%;
+	top:50px;
+	
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
