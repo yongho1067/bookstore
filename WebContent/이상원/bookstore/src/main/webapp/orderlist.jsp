@@ -12,20 +12,24 @@
 </head>
 
 <%
+String ordernumber = request.getParameter("ordernumber");
+
 request.setCharacterEncoding("UTF-8");
 ReserveDAO rdao = new ReserveDAO();
 ArrayList<CartDTO> odlist = rdao.orderList();
 %>
 
 <body>
-	<% for(CartDTO tmp:odlist){ %>
+
+	<% out.println(ordernumber); %>
+	
+	<% for(CartDTO tmp:odlist) {%>
 	
 	<%=tmp.getBas_order() %><br>
 	<%=tmp.getBas_count() %><br>
 	<%=tmp.getBas_total() %><br>
 	<%=tmp.getBo_id() %><br>
 	<%=tmp.getMem_id_num() %><br>
-	
 	
 	<%} %>
 </body>

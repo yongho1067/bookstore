@@ -11,6 +11,21 @@ public class CartDTO {
 	int mem_id_num;
 	
 	
+	public CartDTO() {
+		
+		// TODO Auto-generated constructor stub
+	}
+	public CartDTO(String amount, String sum, int bas_order, String bas_count, String bas_total, int bo_id,
+			int mem_id_num) {
+		super();
+		this.amount = amount;
+		this.sum = sum;
+		this.bas_order = bas_order;
+		this.bas_count = bas_count;
+		this.bas_total = bas_total;
+		this.bo_id = bo_id;
+		this.mem_id_num = mem_id_num;
+	}
 	public int getBas_order() {
 		return bas_order;
 	}
@@ -41,16 +56,8 @@ public class CartDTO {
 	public void setMem_id_num(int mem_id_num) {
 		this.mem_id_num = mem_id_num;
 	}
-	public CartDTO(int bas_order, String bas_count, String bas_total, int bo_id, int mem_id_num) {
-		// TODO Auto-generated constructor stub
-		this.bas_order = bas_order;
-		this.bas_count = bas_count;
-		this.bas_total = bas_total;
-		this.bo_id = bo_id;
-		this.mem_id_num = mem_id_num;
-		
-		
-	}
+
+	
 	public String getAmount() {
 		return amount;
 	}

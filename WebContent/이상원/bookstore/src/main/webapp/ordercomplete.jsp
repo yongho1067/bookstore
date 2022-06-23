@@ -10,8 +10,9 @@
 	주문 완료 되었습니다.
 	<%
 	String sell_price = request.getParameter("sell_price");
+	String bas_order = request.getParameter("bas_order");
 	
-	
+	out.println(bas_order);
 	
 	
 	out.println(sell_price); %>
@@ -20,8 +21,18 @@
 	<a href="bookdetail.jsp">되돌아가기</a>
 	<br><br>
 	
-	<a href="orderlist.jsp">주문 확인</a>
 	
+	<br><br>
+	
+	<form action="orderlist.do" method="post">
+	주문 번호 입력
+	<input type="hidden" name="ordernumber">
+	
+	<input type="submit" value="주문 내역 확인">
+	</form>
 	
 </body>
+
+
+
 </html>
