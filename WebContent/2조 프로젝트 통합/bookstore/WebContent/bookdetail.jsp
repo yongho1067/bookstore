@@ -72,8 +72,8 @@
 
 금액 : <input type="text" name="sum" size="11" readonly>원
 
-<input type="button" class='login' value="장바구니" onclick = "location.href = '#' ">
-<input type="button" class='login' value="바로구매" onclick = "location.href = '#' ">
+<input type="button" class='login' value="장바구니" onclick = "location.href = '' ">
+<input type="button" class='login' value="바로구매" onclick = "location.href = 'jang.jsp' ">
 
 </form>
 
