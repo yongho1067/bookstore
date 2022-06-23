@@ -29,12 +29,15 @@
 <body>
 
 
-	
+	<header>
 <%@include file="/header.jsp" %> <!-- 헤더 로그인 -->
 
+</header>
 
 <div class='title'>	<!-- 제목 -->
 <h1>북쳐핸섭</h1>
+<button type="button" onclick = "location.href = 'BookInfo.jsp' " ></button>
+
 </div>
 
 
@@ -47,7 +50,6 @@
      </button>
    </div>
 </div>
-
 <br>
 
 <input type="checkbox" id="check"> <!-- 사이드바 메뉴 -->
@@ -158,24 +160,9 @@
     </div>
 
     
-<form action="getBookAllInfo.do" method="get">	<!-- 테스트용 더미 -->
-<input type="submit" value="모두보기">
-</form>
-
-	<table border="1">
-		<tr><td>아이디</td><td>이름</td><td>전화번호</td></tr>
-		<c:forEach var="vo1" items="${alist1 }">
-         <tr>
-            <td>${vo1.id }</td>
-            <td><a href="getBookInfo.do?id=${vo1.id }">${vo1.name }</a>
-            <!-- 전체보기하면서 수정/삭제도 준비 -->
-            <td>${vo1.cc }</td>
-            <td>${vo1.janre }</td>
-         </tr>
-      </c:forEach>
-	</table>
 
 
+	<%@include file="/footer.jsp" %> <!-- 헤더 로그인 -->
 
 </body>
 </html>

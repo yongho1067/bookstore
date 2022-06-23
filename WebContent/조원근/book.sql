@@ -66,19 +66,19 @@ SELECT * FROM grade_table;
 
 DROP TABLE basket_table;
 CREATE TABLE basket_table( -- 장바구니 테이블
-<<<<<<< HEAD
 bas_order NUMBER GENERATED ALWAYS as IDENTITY(START with 1 INCREMENT by 1), 
 PRIMARY KEY(bas_order) , -- 주문번호
-=======
-bas_order NUMBER GENERATED ALWAYS as IDENTITY(START WITH 1 INCREMENT BY 1) , -- 주문번호
+bas_count NUMBER(5), -- 갯수
+bas_total NUMBER(5), -- 갯수
+
+bas_address_1 VARCHAR2(200), -- 주소
+
+bas_address_2 VARCHAR2(200), -- 주소
 bo_id NUMBER(5),
 mem_id_num NUMBER(5) ,
-bas_address VARCHAR2(200), -- 주소
->>>>>>> 9200b7940e5d96e0f882c60e2e37867898340b57
-bas_count NUMBER(5), -- 갯수
-primary key(bas_order),
 foreign key (bo_id) REFERENCES book_table(bo_id),
-foreign key (mem_id_num) REFERENCES mem_table(mem_id_num)
+foreign key (mem_id_num) REFERENCES mem_table(mem_id_num),
+
 );
 ALTER TABLE basket_table add unique (bo_id , mem_id_num);
 

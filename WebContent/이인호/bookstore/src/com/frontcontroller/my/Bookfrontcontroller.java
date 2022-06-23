@@ -1,6 +1,7 @@
 package com.frontcontroller.my;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,10 +10,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.book.my.BookAdd;
 import com.book.my.BookGetAllInfo;
 import com.book.my.BookGetBookInfo;
 import com.book.my.BookGetListInfo;
 import com.book.my.BookGetReviewInfo;
+
+import bookinfoDAO.AdminDAO;
+import bookinfoDAO.ReserveDAO;
+
 
 /**
  * Servlet implementation class Bookfrontcontroller2
@@ -45,7 +51,9 @@ public class Bookfrontcontroller extends HttpServlet {
 	      
 	       String c = request.getRequestURI().substring(request.getContextPath().length());   
 	       String str = null;
-	       
+	       ReserveDAO rsdao = null;
+	       AdminDAO rsdao1 = null;
+
 	       BookImpl h1 = null; 
 	       BookImpl h2 = null;
 	       switch(c) {
@@ -83,19 +91,24 @@ public class Bookfrontcontroller extends HttpServlet {
                
                str = "booklist.jsp";  
             break;
+            
+	       case "/ordering.do":
+				
+				
+			
+			str = "ordercomplete.jsp";
+				break;
 	       
-	       /*
-	       case "/getBookReviewInfo.do":
-	    	   h1 = new BookGetReviewInfo();
+	       case "/bookadd.do":
+	    	   h1 = new BookAdd();
                try {
                        h1.Book(request, response);
                } catch (Exception e1) {
                        e1.printStackTrace();
                }
                
-               str = "bookdetail.jsp";  
-               break;
-                */
+				str = "/BookAdd.jsp"; // view �떞�떦
+				break;
 	       }
 	      
 	       RequestDispatcher rd1 = request.getRequestDispatcher(str);

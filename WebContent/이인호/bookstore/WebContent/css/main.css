@@ -6,6 +6,9 @@
 	font-size: 30px;
 }
 
+
+
+
 .login{
   position: relative;
   left : 75%;
@@ -74,7 +77,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 .sidebar {
-  position: fixed;
+  position: absolute;
   left: -250px;
   width: 250px;
   height: 100%;
@@ -153,13 +156,13 @@ label #cancel{
 
 
 .favoritebook{
-  position: fixed;
+  position: absolute;
   left : 30%;
   top: 40%
 }
 
 .goodbook{
-  position: fixed;
+  position: absolute;
   left : 30%;
   top: 70%
 }
@@ -193,7 +196,7 @@ label #cancel{
     
 
 .book1{
-  position: fixed;
+  position: absolute;
   left : 60%;
   top: 40%;
   text-ailgn: center;
@@ -220,4 +223,5 @@ label #cancel{
 	width: 100px;
 	height: 130px;
 }
+
 
