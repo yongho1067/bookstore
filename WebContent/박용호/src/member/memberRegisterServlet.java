@@ -53,7 +53,7 @@ public class memberRegisterServlet extends HttpServlet {
 				request.getSession().setAttribute("mesaageType", "성공 메세지");
 				request.getSession().setAttribute("messageContent", "회원가입에 성공했습니다.");
 					
-				response.sendRedirect("main.jsp");
+				response.sendRedirect("login.jsp");
 			}else {
 				request.getSession().setAttribute("count","2");
 				request.getSession().setAttribute("mesaageType", "오류 메세지");

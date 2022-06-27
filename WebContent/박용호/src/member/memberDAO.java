@@ -124,4 +124,36 @@ public class memberDAO {
 		
 		return -1; //데이터베이스 오류
 	}
+	
+	public memberDTO getMember(String id) throws Exception {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		String SQL = "select * from mem_table where mem_id = ?";
+		memberDTO member = null;
+
+		try {
+			conn = dataSource.getConnection();
+			pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, id);
+			ResultSet rs = pstmt.executeQuery();
+
+			if (rs.next()) {
+				member = new memberDTO();
+				member.setmem_id(rs.getString("mem_id"));
+				member.setmem_pw(rs.getString("mem_pw"));
+				member.setmem_name(rs.getString("mem_name"));
+				member.setmem_email(rs.getString("mem_email"));
+				member.setmem_pn(rs.getString("mem_pn"));
+				member.setmem_bd(rs.getString("mem_bd"));
+			}
+
+			conn.close();
+			pstmt.close();
+			rs.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return member;
+	}
 }

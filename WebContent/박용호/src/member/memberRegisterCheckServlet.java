@@ -22,6 +22,7 @@ public class memberRegisterCheckServlet extends HttpServlet {
 		
 		String mem_id = request.getParameter("mem_id");
 		response.getWriter().write(new memberDAO().registerCheck(mem_id)+""); //문자열형태로 출력하기위해 뒤에 빈 문자열 붙힘
+		count = 0;
 		count=count+1;
 	}
 

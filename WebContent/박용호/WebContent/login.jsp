@@ -1,3 +1,5 @@
+
+<%@page import="member.memberDAO"%>
 <%@ page import="java.net.URLEncoder" %>
 <%@ page import="java.security.SecureRandom" %>
 <%@ page import="java.math.BigInteger" %>
@@ -22,10 +24,17 @@
 			Kakao.API.request({
 			    url: '/v2/user/me',
 			    data: {
-			        property_keys:["kakao_account.email","kakao_account.birthday","kakao_account.nickname"]
+			        property_keys:["kakao_account.email","kakao_account.birthday","kakao_account.nickname","kakao_account.birthyear","kakao_account.birthday","kakao_account.phone_number"]
 			    },
 			    success: function(response) {
-			        console.log(response);
+			   		var id = response.id;
+			   		var email = response.kakao_account.email;
+			   		var nickname = response.kakao_account.nickname;
+			   		
+			   		console.log("id", id);
+			   		console.log("email",email);
+			   		console.log("nickname",nickname);
+
 			    },
 			    fail: function(error) {
 			        console.log(error);
@@ -69,19 +78,21 @@
 </head>
 <body> 
 	<!-- 사이트 로그인 시작 -->
+	
 <br>
 <div class="align" align="center">
-	아이디 : <input type="text" id="member_id" name = "member_id" placeholder="아이디">
+<form action="loginFunction.jsp" method="post">
+	아이디 : <input type="text" id="mem_id" name = "mem_id" placeholder="아이디">
 		<div class="text-id"> 
 		</div> 
 	<label></label>
-	비밀번호 : <input type="password" id="member_pw" name = "member_pw" placeholder="암호">
+	비밀번호 : <input type="password" id="mem_pw" name = "mem_pw" placeholder="암호">
 		<div class="text-id">
 	                        
 		</div> 
 		<br>
-	<input type="submit" id="btnLogin" value="로그인" >
-	<input type="button" value="회원가입" onclick="location.href='join.jsp'"/>
+	<input type="submit" id="btnLogin" value="로그인" onclick="location.href='loginFunction.jsp'" >
+	<input type="button" value="회원가입" onclick="location.href='join.jsp'"/></form>
 	<br><br>
 </div>
 	<!-- 사이트 로그인 종료 -->

@@ -13,18 +13,15 @@
   naver_id_login.get_naver_userprofile("naverSignInCallback()");
   // 네이버 사용자 프로필 조회 이후 프로필 정보를 처리할 callback function
   function naverSignInCallback() {
-    var nickName = naver_id_login.getProfileData('nickname');
+    var id = naver_id_login.getProfileData('id');
     var name = naver_id_login.getProfileData('name');
     var email = naver_id_login.getProfileData('email');
-    var gender = naver_id_login.getProfileData('gender');
-    var profileImage = naver_id_login.getProfileData('profieimage');
-    var birthday = naver_id_login.getProfileData('birthday');
-    var uniqId = naver_id_login.getProfileData('uniqid');
-    var age = naver_id_login.getProfileData('age');
-    var mobile = naver_id_login.getProfileData('mobile');
-    var birthYear = naver_id_login.getProfileData('birthyear');
+    var bd = naver_id_login.getProfileData('birthday');
+    var phone = naver_id_login.getProfileData('mobile');
+ 
+    
     window.open("http://" + window.location.hostname + ((location.port == "" || location.port == undefined) ? "" : ":" + location.port)
-        + "/bookstore/main.jsp?email="+email+"&name="+name+"&profileImage="+profileImage+"&birthday="+birthday+"&uniqId="+uniqId+"&age="+age+"&mobile="+mobile+"&birthYear="+birthYear+"&nickName="+nickName+"&gender="+gender);
+        + "/bookstore/main.jsp?email="+email+"&name="+name+"&birthday="+bd+"&mobile="+phone+"&id="+id);
     window.close();
   }
 </script>
