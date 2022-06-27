@@ -3,34 +3,28 @@
     <body>
         로그인 완료!
         <%
-            request.setCharacterEncoding("UTF-8");
+        request.setCharacterEncoding("UTF-8");
         
-        String id;
-        String name;
-        String email;
-        String bd;
-        String phone;
+        String mem_id = request.getParameter("mem_id");
+        String mem_name = request.getParameter("mem_email");
+        String mem_email = request.getParameter("mem_name");
+        String mem_bd = request.getParameter("mem_bd");
+        String mem_pn = request.getParameter("mem_pn");
         
-        if(session.getAttribute("id") != null){
-	        id = (String)session.getAttribute("id");
-			name = (String)session.getAttribute("name");
-			email = (String)session.getAttribute("email");
-			bd = (String)session.getAttribute("bd");
-			phone = (String)session.getAttribute("phone");
-        }else{
-            id = request.getParameter("id");
-            email = request.getParameter("email");
-            name = request.getParameter("name");
-            bd = request.getParameter("bd");
-            phone = request.getParameter("mobile");
+        if(session.getAttribute("mem_id") != null){
+        	mem_id = (String)session.getAttribute("mem_id");
+        	mem_name = (String)session.getAttribute("mem_name");
+        	mem_email = (String)session.getAttribute("mem_email");
+        	mem_bd = (String)session.getAttribute("mem_bd");
+        	mem_pn = (String)session.getAttribute("mem_pn");
         }
         %>
 
-        <div>아이디 <%=id %></div>
-        <div>이메일 <%=email %></div>
-        <div>이름 <%=name %></div>
-        <div>생일 <%=bd %></div>
-        <div>전화번호 <%=phone %></div>
+        <div>아이디 <%=mem_id %></div>
+        <div>이메일 <%=mem_email %></div>
+        <div>이름 <%=mem_name %></div>
+        <div>생일 <%=mem_bd %></div>
+        <div>전화번호 <%=mem_pn %></div>
 
 
     </body>

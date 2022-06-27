@@ -13,20 +13,22 @@
   naver_id_login.get_naver_userprofile("naverSignInCallback()");
   // 네이버 사용자 프로필 조회 이후 프로필 정보를 처리할 callback function
   function naverSignInCallback() {
-    var id = naver_id_login.getProfileData('id');
-    var name = naver_id_login.getProfileData('name');
-    var email = naver_id_login.getProfileData('email');
-    var bd = naver_id_login.getProfileData('birthday');
-    var phone = naver_id_login.getProfileData('mobile');
- 
+    var mem_id = naver_id_login.getProfileData('id');
+    var mem_name = naver_id_login.getProfileData('name');
+    var mem_email = naver_id_login.getProfileData('email');
+    var mem_bd = naver_id_login.getProfileData('birthday');
+    var mem_pn = naver_id_login.getProfileData('mobile');
     
-    window.open("http://" + window.location.hostname + ((location.port == "" || location.port == undefined) ? "" : ":" + location.port)
-        + "/bookstore/main.jsp?email="+email+"&name="+name+"&birthday="+bd+"&mobile="+phone+"&id="+id);
-    window.close();
+	
+	 var apiURL = (String)("http://" + window.location.hostname + ((location.port == "" || location.port == undefined) ? "" : ":" + location.port)
+        + "/bookstore/main.jsp?mem_email="+mem_email+"&mem_name="+mem_name+"&mem_bd="+mem_bd+"&mem_pn="+mem_pn+"&mem_id="+mem_id);
+	 window.open(apiURL);
+	 
+	 window.close();
   }
 </script>
+
+<%	
+%>
 </body>
 </html>
-
-
-

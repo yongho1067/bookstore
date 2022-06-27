@@ -23,17 +23,23 @@
 		function kakaoLogin() {
 			Kakao.API.request({
 			    url: '/v2/user/me',
-			    data: {
+			  /*   data: {
 			        property_keys:["kakao_account.email","kakao_account.birthday","kakao_account.nickname","kakao_account.birthyear","kakao_account.birthday","kakao_account.phone_number"]
-			    },
+			    }, */
 			    success: function(response) {
-			   		var id = response.id;
-			   		var email = response.kakao_account.email;
-			   		var nickname = response.kakao_account.nickname;
+			   		var mem_id = response.id;
+			   		var mem_email = response.kakao_account.email;
+			   		var mem_name = response.properties.nickname;
+			   		var mem_bd = response.kakao_account.birthday;
 			   		
-			   		console.log("id", id);
-			   		console.log("email",email);
-			   		console.log("nickname",nickname);
+			   		console.log("mem_id", mem_id);
+			   		console.log("mem_email",mem_email);
+			   		console.log("mem_name",mem_name);
+			   		console.log("mem_bd",mem_bd);
+			   		
+			   		var apiURL = (String)("http://" + window.location.hostname + ((location.port == "" || location.port == undefined) ? "" : ":" + location.port)
+			   		        + "/bookstore/main.jsp?mem_email="+mem_email+"&mem_name="+mem_name+"&mem_bd="+mem_bd+"&mem_id="+mem_id);
+			   			 window.open(apiURL);
 
 			    },
 			    fail: function(error) {
@@ -109,12 +115,13 @@
 	  	
 	  	naver_id_login.setPopup();
 	  	naver_id_login.init_naver_id_login();
+	  	
   	</script>
     <!-- 네이버 로그인 종료 -->
     
     <!-- 카카오 로그인 시작 -->
     <div class="btn" align ="center">
-	<a href="javascript:void(0)"  onclick="kakaoLogin();" >
+	<a href="javascript:void(0)"  onclick="kakaoLogin();">
     	<img src="image/kakaologin.png" width="360" height ="82px" />
     </a>
 	</div>
