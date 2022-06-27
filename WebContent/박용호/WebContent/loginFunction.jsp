@@ -10,33 +10,33 @@
 </head>
 <body>
 	<%request.setCharacterEncoding("UTF-8");%>
-	<%String id = request.getParameter("mem_id");%>
-	<%String password = request.getParameter("mem_pw"); %>
+	<%String mem_id = request.getParameter("mem_id");%>
+	<%String mem_pw = request.getParameter("mem_pw"); %>
 	
 	<%
 		memberDAO md = new memberDAO(); 
 	
-		memberDTO mdt = md.getMember(id);
+		memberDTO mdt = md.getMember(mem_id);
 		
-		String name = mdt.getmem_name();
-		String phone = mdt.getmem_pn();
-		String bd = mdt.getmem_bd();
-		String email = mdt.getmem_email();
+		String mem_name = mdt.getmem_name();
+		String mem_pn = mdt.getmem_pn();
+		String mem_bd = mdt.getmem_bd();
+		String mem_email = mdt.getmem_email();
 		
-		if(md.login(id, password) == 1){
-			session.setAttribute("id", id);
-			session.setAttribute("password", password);
-			session.setAttribute("name", name);
-			session.setAttribute("email", email);
-			session.setAttribute("bd", bd);
-			session.setAttribute("phone", phone);
+		if(md.login(mem_id, mem_pw) == 1){
+			session.setAttribute("mem_id", mem_id);
+			session.setAttribute("mem_pw", mem_pw);
+			session.setAttribute("mem_name", mem_name);
+			session.setAttribute("mem_email", mem_email);
+			session.setAttribute("mem_bd", mem_bd);
+			session.setAttribute("mem_pn", mem_pn);
 	%>
 	<script>alert("로그인 성공!");  </script>
 			
 	<%response.sendRedirect("main.jsp"); %>
 			
 			<% 
-		}else if(md.login(id, password) == 0){
+		}else if(md.login(mem_id, mem_pw) == 0){
 			%><script>alert("비밀번호가 틀렸습니다!!"); history.back(); </script><%
 		}else{
 			%><script>alert("아이디가 틀렸습니다!!"); history.back(); </script><%
