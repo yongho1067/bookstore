@@ -155,7 +155,7 @@ textarea {
 		  		  
 		  	<div class="form">
 		    	<label class="category">카테고리</label><br>
-		    	<select id="category" name="category" size="1" >
+		    	<select id="category" name="bo_cc" size="1" >
 		    		<option value="국내서적" selected>국내서적</option>
 		    		<option value="해외서적">해외서적</option>
 		    		
@@ -164,12 +164,12 @@ textarea {
 		  	
 		  	<div class="form">
 		  		<label class="price">정가 (단위 : 원)</label><br>
-		  		<input type="text" id="price" name="price" value="0" maxlength=20 required>
+		  		<input type="text" id="price" name="bo_price" value="0" maxlength=20 required>
 		  	</div>
 		  	
 		  	<div class="form">
 		  		<label class="amount">수량</label><br>
-		  		<input type="number" id="amount" name="amount" min="0" max="100" value="0" required>
+		  		<input type="number" id="amount" name="bo_count" min="0" max="100" value="0" required>
 		  	</div><br>
 		  	
 		  	<div>

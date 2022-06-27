@@ -21,15 +21,15 @@ public class BookAdd implements BookImpl {
 	System.out.println(request.getParameter("bo_pb"));
 
 	System.out.println(request.getParameter("bo_cc"));
+	System.out.println(request.getParameter("bo_price"));
+	System.out.println(request.getParameter("bo_count"));
 	
-
 	String Bo_name = request.getParameter("bo_name");
 	String Bo_pb = request.getParameter("bo_pb");
 	String Bo_cc = request.getParameter("bo_cc");
 	int Bo_price = Integer.parseInt(request.getParameter("bo_price"));
 	int Bo_count = Integer.parseInt(request.getParameter("bo_count"));
-	System.out.println(request.getParameter("bo_price"));
-	System.out.println(Bo_count);
+	
 
 	try { rsdao1 = new AdminDAO();
 	}catch (ClassNotFoundException | SQLException e1) {

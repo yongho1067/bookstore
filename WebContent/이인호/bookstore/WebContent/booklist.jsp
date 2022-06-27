@@ -50,23 +50,8 @@
 	
 	 -->
 
-<input type="checkbox" id="check"> <!-- 사이드바 메뉴 -->
-    <label for="check">
-      <i class="fas fa-bars" id="btn"></i>
-      <i class="fas fa-times" id="cancel"></i>
-    </label>
-    <div class="sidebar">
-    <header>도서</header>
-    <ul>
-     <li><a href="getBookListInfo.do?janre=컴퓨터"><i class="fas fa-stream"></i>computer</a></li>
-     <li><a href="getBookListInfo.do"><i class="fas fa-stream"></i>History</a></li>
-     <li><a href="getBookListInfo.do"><i class="fas fa-stream"></i>Novel</a></li>
-     <li><a href="getBookListInfo.do"><i class="fas fa-stream"></i>Science</a></li>
-     <li><a href="getBookListInfo.do"><i class="fas fa-stream"></i>About</a></li>
-     <li><a href="getBookListInfo.do"><i class="fas fa-stream"></i>Services</a></li>
-     <li><a href="main.jsp"><i class="fas fa-stream"></i>메인페이지로</a></li>
-    </ul>
-   </div>
+<%@include file="/sidebar.jsp" %> <!-- 사이드바 -->
+
 
 <%
 String janre = request.getParameter("janre");
@@ -81,17 +66,20 @@ String sql = "select * from book_table where bo_janre='"+janre+"' order by bo_id
 		// 쿼리 생성
 		rs = stmt.executeQuery(sql);
 	%>
-	<table class="booklist" border="1" >
+	<table class="styled-table" border="1" >
+		<thead>
 		<tr>
-			<td>책번호</td>
-			<td>책이름</td>
-			<td>작가</td>
-			<td>가격</td>
-			<td>평점</td>
+			<th>책번호</th>
+			<th>책이름</th>
+			<th>작가</th>
+			<th>가격</th>
+			<th>평점</th>
 		</tr>
+		</thead>
 		<%
 			while (rs.next()) {
 		%>
+		<tbody>
 		<tr>
 			<td><%=rs.getString("bo_id")%></td>
 			<td><a href="getBookInfo.do?id=<%=rs.getString("bo_id")%>"><%=rs.getString("bo_name")%></a></td>
@@ -99,7 +87,7 @@ String sql = "select * from book_table where bo_janre='"+janre+"' order by bo_id
 			<td><%=rs.getString("bo_price")%></td>
 			<td><%=rs.getString("bo_grade")%> 점</td>
 		</tr>
-
+		</tbody>
 	
 		<%
 			}

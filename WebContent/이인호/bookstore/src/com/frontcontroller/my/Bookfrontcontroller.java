@@ -15,6 +15,7 @@ import com.book.my.BookGetAllInfo;
 import com.book.my.BookGetBookInfo;
 import com.book.my.BookGetListInfo;
 import com.book.my.BookGetReviewInfo;
+import com.book.my.BookGetSearchInfo;
 
 import bookinfoDAO.AdminDAO;
 import bookinfoDAO.ReserveDAO;
@@ -108,6 +109,17 @@ public class Bookfrontcontroller extends HttpServlet {
                }
                
 				str = "/BookAdd.jsp"; // view �떞�떦
+				break;
+				
+	       case "/booksearch.do":
+	    	   h1 = new BookGetSearchInfo();
+               try {
+                       h1.Book(request, response);
+               } catch (Exception e1) {
+                       e1.printStackTrace();
+               }
+               
+				str = "/BookSearch.jsp"; 
 				break;
 	       }
 	      

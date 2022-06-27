@@ -1,15 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
-    
+
+<%@ page import="java.sql.DriverManager"%>
+<%@ page import="java.sql.Connection"%>
+<%@ page import="java.sql.Statement"%>
+<%@ page import="java.sql.ResultSet"%>
+
+<%!// 변수 선언
+	Connection conn = null;
+	Statement stmt = null;
+	ResultSet rs = null;
+	String uid = "c##book";
+	String pwd = "1234";
+	String url = "jdbc:oracle:thin:@localhost:1521:XE";
+	%>
+	
 <!DOCTYPE html>
 <html>
 <head>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-<link rel="stylesheet" href="/bookstore/css/boolist.css">
 
 
 
@@ -41,39 +51,76 @@
 </div>
 
 
-
+<form action="booksearch.do" method="post">
 <div class="wrap">	<!-- 검색창 -->
    <div class="search">
-      <input type="text" class="searchTerm" placeholder="원하는 도서 검색">
-      <button type="submit" class="searchButton" onclick = "location.href = '#' " >
+      <input type="text" class="searchTerm" placeholder="원하는 도서 검색" name="keyword">
+      <button type="submit" class="searchButton"  >
         <i class="fa fa-search"></i>
      </button>
    </div>
 </div>
+</form>
 <br>
 
-<input type="checkbox" id="check"> <!-- 사이드바 메뉴 -->
-    <label for="check">
-      <i class="fas fa-bars" id="btn"></i>
-      <i class="fas fa-times" id="cancel"></i>
-    </label>
-    <div class="sidebar">
-    <header>도서</header>
-    <ul>
-     <li><a href="getBookListInfo.do?janre=컴퓨터"><i class="fas fa-stream"></i>computer</a></li>
-     <li><a href="getBookListInfo.do?janre=역사"><i class="fas fa-stream"></i>History</a></li>
-     <li><a href="getBookListInfo.do"><i class="fas fa-stream"></i>Novel</a></li>
-     <li><a href="getBookListInfo.do"><i class="fas fa-stream"></i>Science</a></li>
-     <li><a href="getBookListInfo.do"><i class="fas fa-stream"></i>About</a></li>
-     <li><a href="getBookListInfo.do"><i class="fas fa-stream"></i>Services</a></li>
-     <li><a href="main.jsp"><i class="fas fa-stream"></i>메인페이지로</a></li>
-    </ul>
-   </div>
+<%@include file="/sidebar.jsp" %> <!-- 사이드바 -->
+
+
    
+<div class="goodbook">
+<%
+String sql = "SELECT rownum, a.*  FROM (select * from book_table order by bo_grade desc ) a where rownum<=3";
+		try {
+		// 데이터베이스를 접속하기 위한 드라이버 SW 로드
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		// 데이터베이스에 연결하는 작업 수행
+		conn = DriverManager.getConnection(url, uid, pwd);
+		// 쿼리를 생성gkf 객체 생성
+		stmt = conn.createStatement();
+		// 쿼리 생성
+		rs = stmt.executeQuery(sql);
+	%>
+	<table class="styled-table">
+		<thead>
+        <tr>
+            <th>평점 순위</th>
+            <th>책 이름	</th>
+        </tr>
+    </thead>
+		<%
+			while (rs.next()) {
+		%>
+	<tbody>
+        <tr>
+            <td><%=rs.getString("rownum")%></td>
+			<td><a href="getBookInfo.do?id=<%=rs.getString("bo_id")%>"><%=rs.getString("bo_name")%></a></td>
+        </tr>
+    </tbody>
+		<%  
+			}
+		} catch (Exception e) {
+		e.printStackTrace();
+		} finally {
+		try {
+		if (rs != null) {
+			rs.close();
+		}
+		if (stmt != null) {
+			stmt.close();
+		}
+		if (conn != null) {
+			conn.close();
+		}
+		} catch (Exception e) {
+		e.printStackTrace();
+		}
+		}
+		%>
+		</table>
+  </div>
    
-   <div class="favoritebook">
-    
-    <table class="styled-table"> <!-- 인기순위 -->
+     <div class="favoritebook">
+    <table class="styled-table"> 
     <thead>
         <tr>
             <th>인기 순위</th>
@@ -93,38 +140,13 @@
             <td>3</td>
             <td><a href="#">책이름</a></td>
         </tr>
-        <!-- and so on... -->
+    
     </tbody>
 </table>
 </div>
+
+   
     
-    
-    <div class="goodbook">	<!-- 평점순위 -->
-    
-    <table class="styled-table">
-    <thead>
-        <tr>
-            <th>평점 순위</th>
-            <th>이름	</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td><a href="#">책이름</a></td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td><a href="#">책이름</a></td>
-        </tr>
-         <tr>
-            <td>3</td>
-            <td><a href="#">책이름</a></td>
-        </tr>
-        <!-- and so on... -->
-    </tbody>
-</table>
-</div>
     
 
     <div class="book1">	<!-- 추천도서 -->

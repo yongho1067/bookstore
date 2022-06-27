@@ -40,6 +40,8 @@ VALUES(
 
 SELECT * FROM book_table; 
 
+SELECT * FROM book_table where rownum <=3 order by bo_grade desc ; 
+
 DELETE FROM book_table;
 
 
@@ -69,7 +71,7 @@ CREATE TABLE basket_table( -- 장바구니 테이블
 bas_order NUMBER GENERATED ALWAYS as IDENTITY(START with 1 INCREMENT by 1), 
 PRIMARY KEY(bas_order) , -- 주문번호
 bas_count NUMBER(5), -- 갯수
-bas_total NUMBER(5), -- 갯수
+bas_total NUMBER(20), -- 갯수
 
 bas_address_1 VARCHAR2(200), -- 주소
 
@@ -77,8 +79,7 @@ bas_address_2 VARCHAR2(200), -- 주소
 bo_id NUMBER(5),
 mem_id_num NUMBER(5) ,
 foreign key (bo_id) REFERENCES book_table(bo_id),
-foreign key (mem_id_num) REFERENCES mem_table(mem_id_num),
-
+foreign key (mem_id_num) REFERENCES mem_table(mem_id_num)
 );
 ALTER TABLE basket_table add unique (bo_id , mem_id_num);
 

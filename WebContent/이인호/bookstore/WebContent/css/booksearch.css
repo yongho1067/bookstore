@@ -1,27 +1,17 @@
-@charset "EUC-KR";
+@charset "UTF-8";
 
+.booklist{
+	position: relative;
+	left:20%;
+	top:150px;	
+}
 
 .title{
     text-align : center;
 	font-size: 30px;
 }
 
-
-
-
-.login{
-  position: relative;
-  left : 75%;
-  color: #fff;
-  height: 35px;
-  width: 80px;
-  border: 1px solid  #009879; ;
-  background: #009879;;
-  color: #fff;
-  border-radius: 0 5px 5px 0;
-}
-
-/*�˻�â*/
+/*검색창*/
 .search {
   width: 100%;
   position: relative;
@@ -64,25 +54,10 @@
 }
 
 
-
-
-
-.favoritebook{
-  position: absolute;
-  left : 30%;
-  top: 40%
-}
-
-.goodbook{
-  position: absolute;
-  left : 30%;
-  top: 70%
-}
-
 .styled-table{
 	position: relative;
 	left:20%;
-	top:50px;	
+	top:100px;	
 }
 
 
@@ -112,35 +87,3 @@
 .styled-table tbody td {
 	text-align: center;
 }
-    
-
-.book1{
-  position: absolute;
-  left : 60%;
-  top: 40%;
-  text-align: center;
-  width:700px;
-}
-
-.bookstyle thead tr {
-    background-color: #009879;
-    color: #ffffff;
-    text-align: left;
-}
-
-.bookstyle th,
-.bookstyle td {
-	border-bottom: 1px solid #dddddd;	
-    padding: 8px 15px;
-    text-align: center;
-}
-.bookstyle tbody tr:nth-of-type(even) {
-	    background-color: #f3f3f3;
-}
-
-.bookimage{
-	width: 100px;
-	height: 130px;
-}
-
-

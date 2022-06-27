@@ -11,6 +11,7 @@ import com.book.vo.AllInfoVO;
 import com.book.vo.BookInfoVO;
 import com.book.vo.ListInfoVO;
 import com.book.vo.ReviewVO;
+import com.book.vo.SearchInfoVO;
 
 import bookinfoDBConn.BookInfoDBConn;
 
@@ -124,16 +125,24 @@ public class BookInfoDAO {
 		return tiarray;
 	}
 	
-	public  ArrayList<ListInfoVO> ListInfo(String janre1) throws SQLException{
-		ArrayList<ListInfoVO> tiarray = new ArrayList<ListInfoVO>();
-		String sql = "SELECT * FROM book_table where bo_janre= ?";
+	public  ArrayList<SearchInfoVO> SearchBook(String keyword) throws SQLException{
+		ArrayList<SearchInfoVO> tiarray = new ArrayList<SearchInfoVO>();
+		String sql = "SELECT * FROM book_table";
+		
+		if(keyword != null && !keyword.isEmpty()) {
+			sql += " WHERE BO_NAME LIKE '%'||?||'%'";
+		}
 
 		
 		pstmt = con.prepareStatement(sql);
-		pstmt.setString(1, janre1);
+		
+		if(keyword != null && !keyword.isEmpty()) {
+			pstmt.setString(1, keyword);
+		}
 		rs = pstmt.executeQuery();
 		while(rs.next()) {
 			
+			int idx =1;
 			
 			int id = rs.getInt(1);
 			String name = rs.getString(2);
@@ -147,12 +156,42 @@ public class BookInfoDAO {
 			int count = rs.getInt(10);
 			String example = rs.getString(11);
 			
-		 ListInfoVO tv = new ListInfoVO(id, name, cc, janre, date, author, pb, price,
+			SearchInfoVO tv = new SearchInfoVO(id, name, cc, janre, date, author, pb, price,
 				 grade, count,  example);
 		 
 		 tiarray.add(tv);
 			}
 			return tiarray;
+	}
+			public  ArrayList<ListInfoVO> ListInfo(String janre1) throws SQLException{
+				ArrayList<ListInfoVO> tiarray = new ArrayList<ListInfoVO>();
+				String sql = "SELECT * FROM book_table where bo_janre= ?";
+
+				
+				pstmt = con.prepareStatement(sql);
+				pstmt.setString(1, janre1);
+				rs = pstmt.executeQuery();
+				while(rs.next()) {
+					
+					
+					int id = rs.getInt(1);
+					String name = rs.getString(2);
+					String cc = rs.getString(3);
+					String janre = rs.getString(4);
+					Date date = rs.getDate(5);
+					String author = rs.getString(6);
+					String pb = rs.getString(7);
+					int price = rs.getInt(8);
+					double grade = rs.getDouble(9);
+					int count = rs.getInt(10);
+					String example = rs.getString(11);
+					
+				 ListInfoVO tv = new ListInfoVO(id, name, cc, janre, date, author, pb, price,
+						 grade, count,  example);
+				 
+				 tiarray.add(tv);
+					}
+					return tiarray;
+				}
 		}
 	
-}
