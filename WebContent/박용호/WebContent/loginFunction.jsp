@@ -31,12 +31,17 @@
 			session.setAttribute("mem_email", mem_email);
 			session.setAttribute("mem_bd", mem_bd);
 			session.setAttribute("mem_pn", mem_pn);
-	%>
-	<script>alert("로그인 성공!");  </script>
-			
-	<%response.sendRedirect("main.jsp"); %>
-			
-			<% 
+	
+		if(mem_id.equals("admin")){
+			response.sendRedirect("admin_page.jsp"); 
+		}else{ %>
+		
+			<script>alert("로그인 성공!");</script>	
+		<%
+			response.sendRedirect("main.jsp"); 
+		}
+		%>	
+		<% 
 		}else if(md.login(mem_id, mem_pw) == 2){
 			%><script>alert("비밀번호가 틀렸습니다!!"); history.back(); </script><%
 		}else{
