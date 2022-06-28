@@ -38,18 +38,16 @@ VALUES(
 'password'
 );
 
-<<<<<<< Updated upstream
+
 
 SELECT * FROM book_table; 
-=======
+
 SELECT * FROM mem_table; 
 SELECT * FROM book_table; 
 
 SELECT rownum, a.*  FROM (select * from book_table order by bo_grade desc ) a where rownum<=3 ; 
 
 SELECT * FROM book_table  order by bo_grade desc ; 
-
->>>>>>> Stashed changes
 
 DELETE FROM book_table;
 
@@ -65,8 +63,6 @@ foreign key (mem_id_num) REFERENCES mem_table(mem_id_num)
 
 );
 
-<<<<<<< Updated upstream
-=======
 INSERT INTO grade_table
 VALUES(
 1,
@@ -79,7 +75,7 @@ SELECT * FROM grade_table;
 
 commit;
 
->>>>>>> Stashed changes
+
 DROP TABLE basket_table;
 CREATE TABLE basket_table( -- 장바구니 테이블
 bas_order VARCHAR2(100) , -- 주문번호

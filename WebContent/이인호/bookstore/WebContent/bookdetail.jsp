@@ -126,7 +126,25 @@ String sql = "select * from grade_table where bo_id="+id;
 		%>
 		<tr>
 			<td><%=rs.getString("mem_id_num")%></td>
-			<td><%=rs.getString("bo_grade")%></td>
+			<td><% String star=rs.getString("bo_grade");
+			switch(star){
+			case "1":
+				out.println("★☆☆☆☆");
+				break;
+			case "2":
+				out.println("★★☆☆☆");
+				break;
+			case "3":
+				out.println("★★★☆☆");
+				break;
+			case "4":
+				out.println("★★★★☆");
+				break;
+			case "5":
+				out.println("★★★★★");
+				break;
+			}
+			%></td>
 			<td><%=rs.getString("comment_")%></td>
 		</tr>
 		
