@@ -51,8 +51,8 @@ public class AdminDAO {
 		try {
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, Bo_name);
-			pstmt.setString(2, Bo_cc);
-			pstmt.setString(3, Bo_pb);
+			pstmt.setString(2, Bo_pb);
+			pstmt.setString(3, Bo_cc);
 			pstmt.setInt(4, Bo_price);
 			pstmt.setInt(5, Bo_count);
 
