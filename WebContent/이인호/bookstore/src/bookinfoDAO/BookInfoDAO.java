@@ -193,5 +193,21 @@ public class BookInfoDAO {
 					}
 					return tiarray;
 				}
+			
+		public boolean 	ReviewAddInsert (int mem_id_num, int bo_id, int bo_grade, String comment_) throws SQLException  {
+			String sql = "insert into grade_table values(2,1,?,?)";
+		
+				System.out.println(bo_grade);
+				System.out.println(comment_);
+
+				pstmt = con.prepareStatement(sql);
+				//pstmt.setInt(1, mem_id_num);
+				//pstmt.setInt(2, bo_id);
+				pstmt.setInt(1, bo_grade);
+				pstmt.setString(2, comment_);
+		
+				pstmt.executeUpdate();
+			
+			return true;
 		}
-	
+		}

@@ -34,7 +34,9 @@
 <%@include file="/header.jsp" %>
 
 
-
+<div class='title'>	<!-- 제목 -->
+<h1>북쳐핸섭</h1>
+</div>
 <!-- 
 	<table border="1" class="listtable">
 		<tr><td>아이디</td><td>이름</td><td>전화번호</td><td>전화번호</td></tr>

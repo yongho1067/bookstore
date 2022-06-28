@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+.title{
+    text-align : center;
+	font-size: 30px;
+}
+
 .styled-table{
 	position: relative;
 	left:20%;

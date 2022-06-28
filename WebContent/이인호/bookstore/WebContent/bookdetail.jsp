@@ -45,7 +45,7 @@
 
 
 <div class='title'>
-책정보
+<b>책정보</b>
 </div>
 
 
@@ -78,10 +78,11 @@
 </form>
 
 
-<form method="get" name="star">
+<form action="Reviewadd.do" method="post">
 <div id="star">
-  <select>
-    <option value="none">== 평점선택 ==</option>
+<input type="hidden" name="bo_id" value="${svo.id}">
+  <select id="grade" name="bo_grade" size="1">
+    <option value="none" selected>== 평점선택 ==</option>
     <option value="1">★☆☆☆☆</option>
     <option value="2">★★☆☆☆</option>
     <option value="3">★★★☆☆</option>
@@ -89,23 +90,19 @@
     <option value="5">★★★★★</option>
   </select>
 <br>
-<textarea name="oneline" cols="80" rows="2" placeholder="이책의 한줄평"  style="resize: none;"></textarea>
+<textarea name="comment_" cols="80" rows="2" placeholder="이책의 한줄평"  style="resize: none;"></textarea>
 <input type="submit" value="작성" id="inputtype"> 
 </div>
 </form>
 
 
-
- <!--  
-     <c:forEach var="vo2" items="${reviewlist1 }">
-       <tr>
-          <td>${vo2.comment }</td>
-       	  <td>${vo2.comment }</td>
-          <td>${vo2.comment }</td>   
-       </tr>
-     </c:forEach>
-     -->
 <%
+String k =request.getParameter("id");
+if (request.getParameter("id")==null){
+	
+	k = "1";
+}
+	
 int id= Integer.parseInt(request.getParameter("id"));
 String sql = "select * from grade_table where bo_id="+id;
 		try {

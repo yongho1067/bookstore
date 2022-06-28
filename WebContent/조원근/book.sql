@@ -15,7 +15,6 @@ bo_ex VARCHAR2(1000), -- 책설명
 bo_img VARCHAR2(50) -- 책이미지(img 경로 사용해서, 사진명은 book(숫자) , 사진 확장자는 png로 ) 
 );
 
-
 DROP TABLE mem_table;
 CREATE TABLE mem_table( -- 회원 테이블
 mem_id_num NUMBER(5) PRIMARY KEY, -- 회원의 고유값
@@ -28,9 +27,29 @@ mem_pw VARCHAR2(20) NOT NULL -- 회원 비밀번호
 );
 
 
+INSERT INTO mem_table
+VALUES(
+2,
+'아이디',
+'북적',
+'19961111',
+'bookstore',
+'01022223333',
+'password'
+);
 
+<<<<<<< Updated upstream
 
 SELECT * FROM book_table; 
+=======
+SELECT * FROM mem_table; 
+SELECT * FROM book_table; 
+
+SELECT rownum, a.*  FROM (select * from book_table order by bo_grade desc ) a where rownum<=3 ; 
+
+SELECT * FROM book_table  order by bo_grade desc ; 
+
+>>>>>>> Stashed changes
 
 DELETE FROM book_table;
 
@@ -46,6 +65,21 @@ foreign key (mem_id_num) REFERENCES mem_table(mem_id_num)
 
 );
 
+<<<<<<< Updated upstream
+=======
+INSERT INTO grade_table
+VALUES(
+1,
+1,
+3,
+'보통'
+);
+
+SELECT * FROM grade_table; 
+
+commit;
+
+>>>>>>> Stashed changes
 DROP TABLE basket_table;
 CREATE TABLE basket_table( -- 장바구니 테이블
 bas_order VARCHAR2(100) , -- 주문번호

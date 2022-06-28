@@ -23,6 +23,7 @@ public class BookGetReviewInfo implements BookImpl {
 	ArrayList<ReviewVO> reviewlist1= null;
 	reviewlist1 = tidao1.BookgetReviewInfo();
 	request.setAttribute("reviewlist1", reviewlist1);
+
 	
 	 
 	 
