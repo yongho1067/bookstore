@@ -17,14 +17,33 @@
         	mem_email = (String)session.getAttribute("mem_email");
         	mem_bd = (String)session.getAttribute("mem_bd");
         	mem_pn = (String)session.getAttribute("mem_pn");
-        }
         %>
+        	<div>IF 아이디 <%=mem_id %></div>
+            <div>이메일 <%=mem_email %></div>
+            <div>이름 <%=mem_name %></div>
+            <div>생일 <%=mem_bd %></div>
+            <div>전화번호 <%=mem_pn %></div>
+            
+        <%
+        }else{
+        	session.setAttribute("mem_id", mem_id);
+			session.setAttribute("mem_name", mem_name);
+			session.setAttribute("mem_email", mem_email);
+			session.setAttribute("mem_bd", mem_bd);
+			session.setAttribute("mem_pn", mem_pn);
+		%>
+			<div>ELSE 아이디 <%=mem_id %></div>
+            <div>이메일 <%=mem_email %></div>
+            <div>이름 <%=mem_name %></div>
+            <div>생일 <%=mem_bd %></div>
+            <div>전화번호 <%=mem_pn %></div>
+            
+        <%
+        }
 
-        <div>아이디 <%=mem_id %></div>
-        <div>이메일 <%=mem_email %></div>
-        <div>이름 <%=mem_name %></div>
-        <div>생일 <%=mem_bd %></div>
-        <div>전화번호 <%=mem_pn %></div>
+        %>   
+       	
+       	<input type="button" value="로그아웃" onclick="location.href='logout.jsp'">
 
 
     </body>

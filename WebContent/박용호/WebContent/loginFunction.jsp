@@ -15,15 +15,16 @@
 	
 	<%
 		memberDAO md = new memberDAO(); 
-	
-		memberDTO mdt = md.getMember(mem_id);
-		
-		String mem_name = mdt.getmem_name();
-		String mem_pn = mdt.getmem_pn();
-		String mem_bd = mdt.getmem_bd();
-		String mem_email = mdt.getmem_email();
-		
+
 		if(md.login(mem_id, mem_pw) == 1){
+			
+			memberDTO mdt = md.getMember(mem_id);
+			
+			String mem_name = mdt.getmem_name();
+			String mem_pn = mdt.getmem_pn();
+			String mem_bd = mdt.getmem_bd();
+			String mem_email = mdt.getmem_email();
+			
 			session.setAttribute("mem_id", mem_id);
 			session.setAttribute("mem_pw", mem_pw);
 			session.setAttribute("mem_name", mem_name);
@@ -36,7 +37,7 @@
 	<%response.sendRedirect("main.jsp"); %>
 			
 			<% 
-		}else if(md.login(mem_id, mem_pw) == 0){
+		}else if(md.login(mem_id, mem_pw) == 2){
 			%><script>alert("비밀번호가 틀렸습니다!!"); history.back(); </script><%
 		}else{
 			%><script>alert("아이디가 틀렸습니다!!"); history.back(); </script><%
