@@ -32,16 +32,17 @@ public class ReserveDAO {
 	
 	
 	//장바구니 DB 입력
-	public boolean insert_reserve(String sell_price, String amount, String sum, String address, String address_detail) {
-		String sql = "insert into basket_table(bas_count,bas_total,bas_address_1,bas_address_2) values(?,?,?,?)";
+	public boolean insert_reserve(String cartId, String sell_price, String amount, String sum, String address, String address_detail) {
+		String sql = "insert into basket_table(bas_order,bas_count,bas_total,bas_address_1,bas_address_2) values(?,?,?,?,?)";
 		
 		
 		try {
 			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, amount);
-			pstmt.setString(2, sum);
-			pstmt.setString(3, address);
-			pstmt.setString(4, address_detail);
+			pstmt.setString(1, cartId);
+			pstmt.setString(2, amount);
+			pstmt.setString(3, sum);
+			pstmt.setString(4, address);
+			pstmt.setString(5, address_detail);
 			
 			
 			pstmt.executeUpdate();
@@ -60,40 +61,44 @@ public class ReserveDAO {
 	
 	// 주문내역 확인
 	
-	public ArrayList<CartDTO> orderList(int bas_order) throws SQLException {
+	public ArrayList<CartDTO> orderlist(String cartId_check) throws SQLException {
 		// TODO Auto-generated method stub
-		ArrayList<CartDTO> odlist = null;
-		String sql = "SELECT * FROM basket_table WHERE bas_order = ?";
+		String sql = "SELECT * FROM basket_table where bas_order = ?";
 		
 		pstmt = con.prepareStatement(sql);
-		pstmt.setInt(1, bas_order);		
+		pstmt.setString(1, cartId_check);
 		
 		rs = pstmt.executeQuery();
 		
+		ArrayList<CartDTO> odlist = new ArrayList<CartDTO>();
 		
-		int cnt = 0;
-		while(rs.next()) {
-			cnt ++;
+		while(rs.next()) {			
+	
+			CartDTO dto = new CartDTO();
 			
-			if(cnt == 1) {
-				odlist = new ArrayList<CartDTO>();
-			}  
-				
-			CartDTO cdto = new CartDTO();
+			dto.setBas_order(rs.getString("bas_order"));
+			dto.setAmount(rs.getString("bas_count"));
+			dto.setSum(rs.getString("bas_total"));
+			dto.setBas_address_1(rs.getString("bas_address_1"));
+			dto.setBas_address_2(rs.getString("bas_address_2"));
+
+	
+			odlist.add(dto);
 			
-			cdto.setAmount(rs.getString("bas_count"));
-			cdto.setBas_total(rs.getString("bas_total"));
-			cdto.setSum(rs.getString("bas_total"));
-			cdto.setBas_count(rs.getString("bas_count"));
-			cdto.setBas_order(rs.getInt("bas_order"));
+			System.out.println(odlist);
 			
-			odlist.add(cdto);
-			
+		
 		}
 		return odlist;
 		
 		
+		
 	}
+	public void orderList1(String cartId_check) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 	/*
 	//주소입력

@@ -11,6 +11,9 @@
 String sell_price = request.getParameter("sell_price");
 String amount = request.getParameter("amount");
 String sum = request.getParameter("sum");
+
+String cartId = session.getId();
+
 %>
 
 <link rel="stylesheet"
