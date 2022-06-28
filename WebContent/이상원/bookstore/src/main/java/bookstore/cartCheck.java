@@ -57,6 +57,7 @@ public class cartCheck extends HttpServlet {
 		
 		case "/ordering.do":
 			
+			String cartId = session.getId();
 			String sell_price = request.getParameter("sell_price");
 			String amount = request.getParameter("amount");
 			String sum = request.getParameter("sum");
@@ -68,12 +69,13 @@ public class cartCheck extends HttpServlet {
 			ReserveDAO rsdao2 = null;
 			try {
 				rsdao = new ReserveDAO();
-				rsdao.insert_reserve(sell_price, amount, sum, address, address_detail);
+				rsdao.insert_reserve(cartId,sell_price, amount, sum, address, address_detail);
 			} catch (ClassNotFoundException | SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			
+			request.setAttribute("cardId", cartId);
 			request.setAttribute("sell_price", sell_price);
 			request.setAttribute("amount", amount);
 			request.setAttribute("sum", sum);
@@ -110,6 +112,10 @@ public class cartCheck extends HttpServlet {
 			*/
 		
 		case "/orderlist.do":
+			
+			
+			String cartId_check = request.getParameter("cartId_check");
+
 			try {
 				rsdao = new ReserveDAO();
 			} catch (ClassNotFoundException | SQLException e) {
@@ -120,7 +126,7 @@ public class cartCheck extends HttpServlet {
 			ArrayList<CartDTO> odlist = null;
 			
 			try {
-				odlist = rsdao.orderList(int bas_order);
+				odlist = rsdao.orderlist(cartId_check);
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
