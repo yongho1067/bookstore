@@ -40,6 +40,10 @@
 		<%
 			response.sendRedirect("../main.jsp"); 
 		}
+		
+	
+	
+	
 		%>	
 		<% 
 		}else if(md.login(mem_id, mem_pw) == 2){

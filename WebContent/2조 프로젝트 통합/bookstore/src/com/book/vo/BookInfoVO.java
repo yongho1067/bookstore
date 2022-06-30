@@ -14,6 +14,7 @@ public class BookInfoVO {
 	private double grade;
 	private int count;
 	private String example;
+	private String image;
 	
 	public BookInfoVO() {
 		
@@ -108,7 +109,7 @@ public class BookInfoVO {
 	}
 
 	public BookInfoVO(int id, String name, String cc, String janre, Date date, String author, String pb, int price,
-			double grade, int count, String example) {
+			double grade, int count, String example,String image) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -121,6 +122,15 @@ public class BookInfoVO {
 		this.grade = grade;
 		this.count = count;
 		this.example = example;
+		this.image = image;
+	}
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
 	}
 	
 }

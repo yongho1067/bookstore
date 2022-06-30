@@ -46,7 +46,7 @@
 
 <!-- 책이미지 -->
 <div class='imagebox'>
-<img src="./image/book/test.jpg" class="bookimage">
+<img src="./image/book/${svo.image}" class="bookimage">
 
 </div>
 
