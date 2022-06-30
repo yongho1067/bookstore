@@ -43,21 +43,24 @@
 
 
 
-
+<!--  제목 -->
 <div class='title'>
 <b>책정보</b>
 </div>
 
-
+<!-- 책이미지 -->
 <div class='imagebox'>
 <img src="./image/book/test.jpg" class="bookimage">
 
 </div>
 
+<!-- 책정보 -->
 <div class='bookinfo'>
 책 제목 : <b>${svo.name }</b>
 
 <br>
+<!-- 책정보 -->
+
 <pre>${svo.example }</pre>
 </div>
 

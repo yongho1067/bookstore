@@ -43,21 +43,24 @@
 
 
 
-
+<!--  제목 -->
 <div class='title'>
 <b>책정보</b>
 </div>
 
-
+<!-- 책이미지 -->
 <div class='imagebox'>
 <img src="./image/book/test.jpg" class="bookimage">
 
 </div>
 
+<!-- 책정보 -->
 <div class='bookinfo'>
 책 제목 : <b>${svo.name }</b>
 
 <br>
+<!-- 책정보 -->
+
 <pre>${svo.example }</pre>
 </div>
 
@@ -126,7 +129,25 @@ String sql = "select * from grade_table where bo_id="+id;
 		%>
 		<tr>
 			<td><%=rs.getString("mem_id_num")%></td>
-			<td><%=rs.getString("bo_grade")%></td>
+			<td><% String star=rs.getString("bo_grade");
+			switch(star){
+			case "1":
+				out.println("★☆☆☆☆");
+				break;
+			case "2":
+				out.println("★★☆☆☆");
+				break;
+			case "3":
+				out.println("★★★☆☆");
+				break;
+			case "4":
+				out.println("★★★★☆");
+				break;
+			case "5":
+				out.println("★★★★★");
+				break;
+			}
+			%></td>
 			<td><%=rs.getString("comment_")%></td>
 		</tr>
 		
