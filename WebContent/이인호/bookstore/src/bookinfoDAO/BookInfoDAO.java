@@ -132,7 +132,7 @@ public class BookInfoDAO {
 		String sql = "SELECT * FROM book_table";
 		
 		if(keyword != null && !keyword.isEmpty()) {
-			sql += " WHERE BO_NAME LIKE '%'||?||'%'";
+			sql += " WHERE UPPER(BO_NAME) LIKE UPPER('%'||?||'%')";
 		}
 
 		
