@@ -2,6 +2,7 @@ package com.frontcontroller.my;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.book.my.BookAdd;
 import com.book.my.BookGetAllInfo;
@@ -17,6 +19,7 @@ import com.book.my.BookGetListInfo;
 import com.book.my.BookGetReviewInfo;
 import com.book.my.BookGetSearchInfo;
 import com.book.my.ReviewAdd;
+import com.book.vo.CartDTO;
 
 import bookinfoDAO.AdminDAO;
 import bookinfoDAO.ReserveDAO;
@@ -55,7 +58,8 @@ public class Bookfrontcontroller extends HttpServlet {
 	       String str = null;
 	       ReserveDAO rsdao = null;
 	       AdminDAO rsdao1 = null;
-
+	       HttpSession session = request.getSession();
+	       
 	       BookImpl h1 = null; 
 	       BookImpl h2 = null;
 	       switch(c) {
@@ -94,12 +98,7 @@ public class Bookfrontcontroller extends HttpServlet {
                str = "booklist.jsp";  
             break;
             
-	       case "/ordering.do":
-				
-				
-			
-			str = "ordercomplete.jsp";
-				break;
+	       
 	       
 	       case "/bookadd.do":
 	    	   h1 = new BookAdd();
@@ -134,6 +133,65 @@ public class Bookfrontcontroller extends HttpServlet {
                
 				str = "/BookReviewAdd.jsp"; 
 				break;
+				
+	       case "/orderlist.do":
+				
+				
+				String cartId_check = request.getParameter("cartId_check");
+
+				try {
+					rsdao = new ReserveDAO();
+				} catch (ClassNotFoundException | SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				ArrayList<CartDTO> odlist = null;
+				
+				try {
+					odlist = rsdao.orderlist(cartId_check);
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				request.setAttribute("odlist", odlist);
+				
+				str = "orderlist.jsp";
+				break;
+				
+	       case "/ordering.do":
+				
+				String cartId = session.getId();
+				String sell_price = request.getParameter("sell_price");
+				String amount = request.getParameter("amount");
+				String sum = request.getParameter("sum");
+				String address = request.getParameter("address");
+				String address_detail = request.getParameter("address_detail");
+				
+				
+				
+				ReserveDAO rsdao2 = null;
+				try {
+					rsdao = new ReserveDAO();
+					rsdao.insert_reserve(cartId,sell_price, amount, sum, address, address_detail);
+				} catch (ClassNotFoundException | SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				request.setAttribute("cardId", cartId);
+				request.setAttribute("sell_price", sell_price);
+				request.setAttribute("amount", amount);
+				request.setAttribute("sum", sum);
+				request.setAttribute("address", address);
+				request.setAttribute("address_detail", address_detail);
+				
+				
+			
+			str = "ordercomplete.jsp";
+				break;
+				
 	       }
 	      
 	       RequestDispatcher rd1 = request.getRequestDispatcher(str);

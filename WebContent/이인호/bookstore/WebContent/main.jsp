@@ -46,10 +46,14 @@
 
 <div class='title'>	<!-- 제목 -->
 <h1>북쳐핸섭</h1>
-<button type="button" onclick = "location.href = 'BookInfo.jsp' " ></button>
-
 </div>
 
+
+<input class='link' type="button" class='login' value="주문확인" onclick = "location.href = 'orderlistcheck.jsp' ">
+<br>
+<br>
+
+<input class='link' type="button" class='login' value="관리자모드" onclick = "location.href = 'BookAdd.jsp' ">
 
 <form action="booksearch.do" method="post">
 <div class="wrap">	<!-- 검색창 -->

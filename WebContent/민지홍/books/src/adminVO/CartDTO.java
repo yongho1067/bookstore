@@ -1,4 +1,5 @@
-package com.book.vo;
+package adminVO;
+
 public class CartDTO {
 	
 	String amount;
