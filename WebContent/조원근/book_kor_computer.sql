@@ -18,7 +18,7 @@ NUM_SEQ.nextval,
 8.9,
 11,
 '구글은 어떻게 개발하고 코드를 관리하는가!',
-'"image/book2.png"'
+'book2.png'
 );-- 국내컴퓨터 1
 INSERT INTO book_table
 VALUES(
@@ -33,7 +33,7 @@ NUM_SEQ.nextval,
 9.7,
 19,
 '혼자 해도 충분하다! 1:1 과외하듯 배우는 인공지능 자습서',
-'"image/book11.png"'
+'book11.png'
 );-- 국내컴퓨터 2
 INSERT INTO book_table
 VALUES(
@@ -49,7 +49,7 @@ NUM_SEQ.nextval,
 17,
 '커튼 뒤에 감춰진 컴퓨터 구조와 프로그래밍에 대한 
 거의 모든 것을 다루는 컴퓨터공학 개론서',
-'"image/book4.png"'
+'book4.png'
 );-- 국내컴퓨터 3
 INSERT INTO book_table
 VALUES(
@@ -64,7 +64,7 @@ NUM_SEQ.nextval,
 9.6,
 11,
 '직접 구현하고 움직여보며 익히는 가장 쉬운 딥러닝 입문서!',
-'"image/book1.png"'
+'book1.png'
 );-- 국내컴퓨터 4
 INSERT INTO book_table
 VALUES(
@@ -80,7 +80,7 @@ NUM_SEQ.nextval,
 16,
 '자연어 처리와 머신러닝/딥러닝을 통합하고 
 해당 과정들을 자세하게 설명하는 책.',
-'"image/book5.png"'
+'book5.png'
 );-- 국내컴퓨터 5
 INSERT INTO book_table
 VALUES(
@@ -95,7 +95,7 @@ NUM_SEQ.nextval,
 10.0,
 15,
 '기본기에 충실한 딥러닝 파이토치 입문서!',
-'"image/book14.png"'
+'book14.png'
 );-- 국내컴퓨터 6
 INSERT INTO book_table
 VALUES(
@@ -111,7 +111,7 @@ NUM_SEQ.nextval,
 13,
 '사람 말을 알아듣는 AI’를 만들어 보자!
 트랜스포머 핵심 원리부터 문서 분류, 기계 독해, 문장 생성 실습까지!.',
-'"image/book3.png"'
+'book3.png'
 );-- 국내컴퓨터 7
 INSERT INTO book_table
 VALUES(
@@ -126,7 +126,7 @@ NUM_SEQ.nextval,
 0.0,
 14,
 '문제해결 방식에 정답은 없어도 패턴은 있습니다.',
-'"image/book7.png"'
+'book7.png'
 );-- 국내컴퓨터 8
 INSERT INTO book_table
 VALUES(
@@ -141,7 +141,7 @@ NUM_SEQ.nextval,
 10.0,
 18,
 '육각형 아키텍처 스타일의 애플리케이션을 만드는 데 필요한 모든 지식',
-'"image/book6.png"'
+'book6.png'
 );-- 국내컴퓨터 9
 INSERT INTO book_table
 VALUES(
@@ -156,7 +156,7 @@ NUM_SEQ.nextval,
 9.7,
  20,
 '컬러판으로 돌아온 아마존 인공지능 분야 부동의 1위 도서',
-'"image/book16.png"'
+'book16.png'
 );-- 국내컴퓨터 10
 INSERT INTO book_table
 VALUES(
@@ -171,7 +171,7 @@ NUM_SEQ.nextval,
 10.0,
 14,
 '막막했던 아키텍처가 쉬워지는 실무 지침서',
-'"image/book10.png"'
+'book10.png'
 );-- 국내컴퓨터 11
 INSERT INTO book_table
 VALUES(
@@ -187,7 +187,7 @@ NUM_SEQ.nextval,
 8,
 'MLOps의 개념부터 도입과 활용까지,
 성공적인 머신러닝 운영화를 위한 실용 가이드!',
-'"image/book13.png"'
+'book13.png'
 );-- 국내컴퓨터 12
 INSERT INTO book_table
 VALUES(
@@ -202,7 +202,7 @@ NUM_SEQ.nextval,
 10.0,
 7,
 '파이토치로 시작하는 딥러닝 구축과 활용',
-'"image/book9.png"'
+'book9.png'
 );-- 국내컴퓨터 13
 INSERT INTO book_table
 VALUES(
@@ -217,7 +217,7 @@ NUM_SEQ.nextval,
 9.5,
 6,
 '데이터 과학자가 되기 위한 첫걸음!',
-'"image/book18.png"'
+'book18.png'
 );-- 국내컴퓨터 14
 INSERT INTO book_table
 VALUES(
@@ -233,7 +233,7 @@ NUM_SEQ.nextval,
 5,
 '테스팅을 어려워하는 이들도 실무에 대한 내용을 파악할 수 있도록 
 소프트웨어 테스팅에 대한 상세한 정보를 제공',
-'"image/book15.png"'
+'book15.png'
 );-- 국내컴퓨터 15
 INSERT INTO book_table
 VALUES(
@@ -248,7 +248,7 @@ NUM_SEQ.nextval,
 9.3,
 4,
 '컴퓨터 관련 학과 학생을 대상으로 운영체제의 구조와 원리를 설명한 책',
-'"image/book19.png"'
+'book19.png'
 );-- 국내컴퓨터 16
 INSERT INTO book_table
 VALUES(
@@ -264,7 +264,7 @@ NUM_SEQ.nextval,
 3,
 '텐서플로 2와 BERT, GPT를 활용해 구현한 한국어 자연어 처리 모델의 성능을 한층 끌어올리는 
 퓨샷 러닝과 피-튜닝 기법을 추가했습니다!',
-'"image/book17.png"'
+'book17.png'
 );-- 국내컴퓨터 17
 INSERT INTO book_table
 VALUES(
@@ -280,7 +280,7 @@ NUM_SEQ.nextval,
 2,
 '현실과 메타버스를 넘나드는 NFT 크리에이터의 모든 것
 취미 생활에서 수익 창출까지, 누구나 도전하는 NFT 아트',
-'"image/book20.png"'
+'book20.png'
 );-- 국내컴퓨터 18
 INSERT INTO book_table
 VALUES(
@@ -295,7 +295,7 @@ NUM_SEQ.nextval,
 9.6,
 1,
 '살아있는 전설이 들려주는 실용적인 소프트웨어 아키텍처 원칙',
-'"image/book8.png"'
+'book8.png'
 );-- 국내컴퓨터 19
 INSERT INTO book_table
 VALUES(
@@ -310,10 +310,10 @@ NUM_SEQ.nextval,
 0.0,
 0,
 '복잡한 수식과 코드 없이 머신러닝과 딥러닝을 배우는 데 꼭 필요한 이론을 배울 수 있도록 구성',
-'"image/book12.png"'
+'book12.png'
 );-- 국내컴퓨터 20
 
-SELECT * FROM book_table; 
+SELECT * FROM book_table ORDER BY bo_id;
 
 DELETE FROM book_table;
 

@@ -15,6 +15,7 @@ bo_ex VARCHAR2(1000), -- 책설명
 bo_img VARCHAR2(50) -- 책이미지(img 경로 사용해서, 사진명은 book(숫자) , 사진 확장자는 png로 ) 
 );
 
+
 DROP TABLE mem_table;
 CREATE TABLE mem_table( -- 회원 테이블
 mem_id_num NUMBER(5) PRIMARY KEY, -- 회원의 고유값
@@ -27,52 +28,23 @@ mem_pw VARCHAR2(20) NOT NULL -- 회원 비밀번호
 );
 
 
-INSERT INTO mem_table
-VALUES(
-2,
-'아이디',
-'북적',
-'19961111',
-'bookstore',
-'01022223333',
-'password'
-);
-
 
 
 SELECT * FROM book_table; 
-
-SELECT * FROM mem_table; 
-SELECT * FROM book_table; 
-
-SELECT rownum, a.*  FROM (select * from book_table order by bo_grade desc ) a where rownum<=3 ; 
-
-SELECT * FROM book_table  order by bo_grade desc ; 
 
 DELETE FROM book_table;
 
 
 drop table grade_table;
 CREATE TABLE grade_table( -- 평점 댓글 테이블
-mem_id VARCHAR2(20) PRIMARY KEY , -- 회원이름
+mem_id VARCHAR2(20) PRIMARY KEY , -- 회원
 bo_id number(5), -- 책번호
 bo_grade NUMBER(5), -- 평점
 comment_ VARCHAR2(10), -- 댓글
 foreign key (bo_id) REFERENCES book_table(bo_id)
+
+
 );
-
-INSERT INTO grade_table
-VALUES(
-1,
-1,
-3,
-'보통'
-);
-
-SELECT * FROM grade_table; 
-
-commit;
-
 
 DROP TABLE basket_table;
 CREATE TABLE basket_table( -- 장바구니 테이블
@@ -109,32 +81,21 @@ SELECT
     
 delete  from mem_table;
     
-commit;
+    
 INSERT INTO mem_table
 VALUES(
 MEM_SEQ.nextval,
-'a123',
-'김씨',
+'s123',
+'이씨',
 '19960523',
 'a123@naver.com',
 '010-1234-1234',
-'a1234'
+'s123'
 );
     
     
 
-DROP TABLE basket_table;
-CREATE TABLE basket_table(
-bas_order varchar2(100),
-primary key(bas_order),
-bas_count NUMBER(5),
-bas_total NUMBER(5),
-bas_address_1 varchar2(200),
-bas_address_2 varchar2(200),
-
-bo_id NUMBER(5) REFERENCES book_table(bo_id),
-mem_id_num NUMBER(5) REFERENCES mem_table(mem_id_num)
-);
+    
     
     
     

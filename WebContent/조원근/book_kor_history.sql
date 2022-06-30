@@ -18,7 +18,7 @@ NUM_SEQ.nextval,
 9.1,
 11,
 '인류문명의 불균형은 총, 균, 쇠 때문이다!',
-'"image/book3.png"'
+'book3.png'
 );-- 국내역사 1
 INSERT INTO book_table
 VALUES(
@@ -33,7 +33,7 @@ NUM_SEQ.nextval,
 9.2,
 10,
 '인간 창조성이 가장 뜨겁게 폭발했던 경이로운 시대, 축의 시대!',
-'"image/book9.png"'
+'book9.png'
 );-- 국내역사 2
 INSERT INTO book_table
 VALUES(
@@ -49,7 +49,7 @@ NUM_SEQ.nextval,
 12,
 '인간의 가장 위대한 발명품, 도시의 역사로 보는 인류문명사
 ,문명의 창조, 발전, 교류에 관한 황홀하고 위대한 서사!',
-'"image/book14.png"'
+'book14.png'
 );-- 국내역사 3
 INSERT INTO book_table
 VALUES(
@@ -64,7 +64,7 @@ NUM_SEQ.nextval,
 9.2,
 11,
 '사라진 문명의 흔적을 찾아서!',
-'"image/book11.png"'
+'book11.png'
 );-- 국내역사 4
 INSERT INTO book_table
 VALUES(
@@ -80,7 +80,7 @@ NUM_SEQ.nextval,
 14,
 '세상 모든 만물의 시작, 수메르
 모래바람에 뒤덮여 있던 최초의 역사가 되살아난다.',
-'"image/book17.png"'
+'book17.png'
 );-- 국내역사 5
 INSERT INTO book_table
 VALUES(
@@ -96,7 +96,7 @@ NUM_SEQ.nextval,
 15,
 ' 나는 역사 속 위인들을 진찰하는 의사입니다
 의학과 추리의 눈으로 바라본 뜻밖의 인물사',
-'"image/book18.png"'
+'book18.png'
 );-- 국내역사 6
 INSERT INTO book_table
 VALUES(
@@ -113,7 +113,7 @@ NUM_SEQ.nextval,
 '우리는 현존하는 모든 종교와 신들의 정체는 물론, 
 그 계보와 각국 신화들로의 번안 과정, 그리고 신과 인간의 관계를 
 둘러싼 모든 의문에 대한 상세하고도 지적인 해답을 얻을 수 있다.',
-'"image/book8.png"'
+'book8.png'
 );-- 국내역사 7
 INSERT INTO book_table
 VALUES(
@@ -128,7 +128,7 @@ NUM_SEQ.nextval,
 9.5,
 16,
 '세계의 학계와 매스컴에 격렬한 논쟁을 불러일으킨 화제의 책.',
-'"image/book20.png"'
+'book20.png'
 );-- 국내역사 8
 INSERT INTO book_table
 VALUES(
@@ -143,7 +143,7 @@ NUM_SEQ.nextval,
 0.0,
 18,
 '서울대학교 비교문화연구소 한국인류학총서',
-'"image/book15.png"'
+'book15.png'
 );-- 국내역사 9
 INSERT INTO book_table
 VALUES(
@@ -159,7 +159,7 @@ NUM_SEQ.nextval,
 20,
 '인류학에 관심은 있지만 무슨 책부터 읽어야 할지 모르는 
 사람들에게는 이보다 좋은 길잡이!',
-'"image/book13.png"'
+'book13.png'
 );-- 국내역사 10
 INSERT INTO book_table
 VALUES(
@@ -175,7 +175,7 @@ NUM_SEQ.nextval,
 9,
 '식인풍습이 만연했던 지역의 지형, 기후, 동식물의 생태계, 농업활동 여부, 경제규모 등을 바탕으로 인간고기를
 ‘먹을 수밖에 없었던’ 또는 ‘먹게 된’ 이유를 규명',
-'"image/book19.png"'
+'book19.png'
 );-- 국내역사 11
 INSERT INTO book_table
 VALUES(
@@ -190,7 +190,7 @@ NUM_SEQ.nextval,
 9.6,
 8,
 '인구는 언제나 중요했다.',
-'"image/book1.png"'
+'book1.png'
 );-- 국내역사 12
 INSERT INTO book_table
 VALUES(
@@ -205,7 +205,7 @@ NUM_SEQ.nextval,
 9.7,
 7,
 '유사 이래 경쟁해온 동서양 문명을 비교·분석하다!',
-'"image/book6.png"'
+'book6.png'
 );-- 국내역사 13
 INSERT INTO book_table
 VALUES(
@@ -221,7 +221,7 @@ NUM_SEQ.nextval,
 6,
 '오늘날 세계질서의 기본 단위로 자리잡은 민족과 
 민족국가의 기원과 형성과정을 추적하고 있는 책',
-'"image/book2.png"'
+'book2.png'
 );-- 국내역사 14
 INSERT INTO book_table
 VALUES(
@@ -238,7 +238,7 @@ NUM_SEQ.nextval,
 '1540년 말 피레네 산맥 근처 프랑스의 한 마을에 한 농민이 부인과 아들을 남겨두고 집을 떠난다. 
 오랜 시간 후 그는 돌아와 다시 가족과 함께 살고 딸까지 낳는다. 
 그런데 어느날 부인은 그 남자가 자신의 남편이 아니라고 고소를 한다. 과연 ?',
-'"image/book10.png"'
+'book10.png'
 );-- 국내역사 15
 INSERT INTO book_table
 VALUES(
@@ -254,7 +254,7 @@ NUM_SEQ.nextval,
 4,
 '자유민주주의 국가들이 직면한 이런 위기들을 극복하기 위해 역사를 다시 읽으며, 
 국내외적인 문제에 어떻게 대처하고 무엇을 배울 것인가를 생각해야 한다',
-'"image/book7.png"'
+'book7.png'
 );-- 국내역사 16
 INSERT INTO book_table
 VALUES(
@@ -271,7 +271,7 @@ NUM_SEQ.nextval,
 '역사의식을 바탕으로, 지난 수십 년 동안 역사학에 
 제기된 질문과 논쟁에 따라 과거라는 개념이 
 얼마나 역동적으로 변화해 왔는지를 보여준다',
-'"image/book16.png"'
+'book16.png'
 );-- 국내역사 17
 INSERT INTO book_table
 VALUES(
@@ -288,7 +288,7 @@ NUM_SEQ.nextval,
 '역사 속 사상과 언어를
 가장 풍부하게 다루는 사유의 방법,
 ‘지성사 연구’를 만나다',
-'"image/book4.png"'
+'book4.png'
 );-- 국내역사 18
 INSERT INTO book_table
 VALUES(
@@ -304,7 +304,7 @@ NUM_SEQ.nextval,
 1,
 '우연히 발견한 물질이 인류의 문명을 이끌었다
 편리하고 쓸모 있게 진화하는 물질의 흥미로운 연대기',
-'"image/book5.png"'
+'book5.png'
 );-- 국내역사 19
 INSERT INTO book_table
 VALUES(
@@ -319,10 +319,10 @@ NUM_SEQ.nextval,
 10.0,
 0,
 '인류의 운명을 결정하는 힘, 기후!',
-'"image/book12.png"'
+'book12.png'
 );-- 국내역사 20
 
-SELECT * FROM book_table; 
+SELECT * FROM book_table ORDER BY bo_id; 
 
 DELETE FROM book_table;
 

@@ -18,7 +18,7 @@ NUM_SEQ.nextval,
 9.5,
 11,
 '과학계의 고전으로 꼽히는 리처드의 도킨스의 대표작!',
-'"image/book10.png"'
+'book10.png'
 );-- 외국과학 1
 INSERT INTO book_table
 VALUES(
@@ -33,7 +33,7 @@ NUM_SEQ.nextval,
 9.6,
 19,
 'Vaclav Smil is my favorite author.Bill Gates',
-'"image/book14.png"'
+'book14.png'
 );-- 외국과학 2
 INSERT INTO book_table
 VALUES(
@@ -49,7 +49,7 @@ NUM_SEQ.nextval,
 17,
 '상상만 했던 일들이 과학적으로 가능하다면?
 기상천외한 질문들에 과학적으로 답변하다!',
-'"image/book7.png"'
+'book7.png'
 );-- 외국과학 3
 INSERT INTO book_table
 VALUES(
@@ -65,7 +65,7 @@ NUM_SEQ.nextval,
 11,
 '윤리적 변동이 전 세계 곳곳에서 일어나는 지금,
 가장 논쟁적인 주제, 그래서 더욱 지적인 대화들',
-'"image/book13.png"'
+'book13.png'
 );-- 외국과학 4
 INSERT INTO book_table
 VALUES(
@@ -80,7 +80,7 @@ NUM_SEQ.nextval,
 10.0,
 16,
 '3판까지 출판되는 전 세계적으로 인기 있는 양자역학 교재',
-'"image/book20.png"'
+'book20.png'
 );-- 외국과학 5
 INSERT INTO book_table
 VALUES(
@@ -96,7 +96,7 @@ NUM_SEQ.nextval,
 15,
 'The fundamental mathematical tools needed to understand machine learning include linear algebra, analytic geometry, matrix decompositions, 
 vector calculus, optimization, probability and statistics',
-'"image/book9.png"'
+'book9.png'
 );-- 외국과학 6
 INSERT INTO book_table
 VALUES(
@@ -112,7 +112,7 @@ NUM_SEQ.nextval,
 13,
 'An Introduction to Quantum Field Theory is a textbook intended for the graduate physics course covering relativistic quantum mechanics, 
 quantum electrodynamics, and Feynman diagrams',
-'"image/book6.png"'
+'book6.png'
 );-- 외국과학 7
 INSERT INTO book_table
 VALUES(
@@ -128,7 +128,7 @@ NUM_SEQ.nextval,
 14,
 'Winner of the 2015 FT and McKinsey Business Book of the Year Award
 A New York Times Bestseller',
-'"image/book19.png"'
+'book19.png'
 );-- 외국과학 8
 INSERT INTO book_table
 VALUES(
@@ -144,7 +144,7 @@ NUM_SEQ.nextval,
 14,
 'An in-depth look at virtual reality and how it can be harnessed to 
 improve our everyday lives',
-'"image/book1.png"'
+'book1.png'
 );-- 외국과학 9
 INSERT INTO book_table
 VALUES(
@@ -160,7 +160,7 @@ NUM_SEQ.nextval,
  20,
 'For a senior undergraduate or first year graduate-level course in 
 Introduction to Topology',
-'"image/book16.png"'
+'book16.png'
 );-- 외국과학 10
 INSERT INTO book_table
 VALUES(
@@ -175,7 +175,7 @@ NUM_SEQ.nextval,
 0.0,
 14,
 '미생물학의 기초적이고 전반적인 내용을 확인할 수 있도록 구성',
-'"image/book18.png"'
+'book18.png'
 );-- 외국과학 11
 INSERT INTO book_table
 VALUES(
@@ -190,7 +190,7 @@ NUM_SEQ.nextval,
 0.0,
 8,
 '유기 합성의 기초적이고 전반적인 내용을 확인할 수 있도록 구성',
-'"image/book17.png"'
+'book17.png'
 );-- 외국과학 12
 INSERT INTO book_table
 VALUES(
@@ -206,7 +206,7 @@ NUM_SEQ.nextval,
 7,
 '전세계적으로 유명한 Halliday, Resnick, Walker의 Principles of Physics, 
 11th edition의 한국어판',
-'"image/book12.png"'
+'book12.png'
 );-- 외국과학 13
 INSERT INTO book_table
 VALUES(
@@ -221,7 +221,7 @@ NUM_SEQ.nextval,
 10.0,
 6,
 '과학에 대한 거의 모든 이야기',
-'"image/book8.png"'
+'book8.png'
 );-- 외국과학 14
 INSERT INTO book_table
 VALUES(
@@ -237,7 +237,7 @@ NUM_SEQ.nextval,
 5,
 'The only textbook designed specifically for the 
 one-semester short course in organic chemistry',
-'"image/book5.png"'
+'book5.png'
 );-- 외국과학 15
 INSERT INTO book_table
 VALUES(
@@ -253,7 +253,7 @@ NUM_SEQ.nextval,
 4,
 'his book is written in an informal and 
 personal style and teaches real mathematics',
-'"image/book3.png"'
+'book3.png'
 );-- 외국과학 16
 INSERT INTO book_table
 VALUES(
@@ -269,7 +269,7 @@ NUM_SEQ.nextval,
 3,
 ' Dr. Skoog is the 1999 recipient of the 
 American Chemical Society award in analytical chemistry',
-'"image/book4.png"'
+'book4.png'
 );-- 외국과학 17
 INSERT INTO book_table
 VALUES(
@@ -284,7 +284,7 @@ NUM_SEQ.nextval,
 10.0,
 2,
 '스티븐 호킹이 들려주는 블랙홀과 천체물리학의 핵심',
-'"image/book15.png"'
+'book15.png'
 );-- 외국과학 18
 INSERT INTO book_table
 VALUES(
@@ -299,7 +299,7 @@ NUM_SEQ.nextval,
 10.0,
 1,
 '대학생을 위한 Biochemistry: The Molecular Basis of Life. 생화학에 대한 교재',
-'"image/book2.png"'
+'book2.png'
 );-- 외국과학 19
 INSERT INTO book_table
 VALUES(
@@ -314,9 +314,9 @@ NUM_SEQ.nextval,
 10.0,
 5,
 ' SI 재료역학에 대해 다룬 도서',
-'"image/book11.png"'
+'book11.png'
 );-- 외국과학 20
 
-SELECT * FROM book_table; 
+SELECT * FROM book_table ORDER BY bo_id;
 
 DELETE FROM book_table;

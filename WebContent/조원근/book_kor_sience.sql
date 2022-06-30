@@ -19,7 +19,7 @@ NUM_SEQ.nextval,
 11,
 '피버디상 수상자 룰루 밀러의
 사랑과 혼돈, 과학적 집착에 관한 경이롭고도 충격적인 데뷔작!',
-'"image/book1.png"'
+'book1.png'
 );-- 국내과학 1
 INSERT INTO book_table
 VALUES(
@@ -34,7 +34,7 @@ NUM_SEQ.nextval,
 9.3,
 19,
 '독특한 발상과 놀라운 주장으로 40여 년간 수많은 찬사와 논쟁의 중심에 선 과학 교양서의 바이블!',
-'"image/book2.png"'
+'book2.png'
 );-- 국내과학 2
 INSERT INTO book_table
 VALUES(
@@ -49,7 +49,7 @@ NUM_SEQ.nextval,
 10.0,
 17,
 '당신의 뇌를 깨우고 싶다면, 지금 일어나 걸어라!',
-'"image/book3.png"'
+'book3.png'
 );-- 국내과학 3
 INSERT INTO book_table
 VALUES(
@@ -65,7 +65,7 @@ NUM_SEQ.nextval,
 11,
 '상부의 지시에 따라 2개월간 외계인과의 인터뷰 임무를 수행하게 되며 
 남긴 필기본 사본을 공개!',
-'"image/book4.png"'
+'book4.png'
 );-- 국내과학 4
 INSERT INTO book_table
 VALUES(
@@ -81,7 +81,7 @@ NUM_SEQ.nextval,
 16,
 '적자생존은 틀렸다.
 진화의 승자는 최적자가 아니라 다정한 자였다.',
-'"image/book5.png"'
+'book5.png'
 );-- 국내과학 5
 INSERT INTO book_table
 VALUES(
@@ -96,7 +96,7 @@ NUM_SEQ.nextval,
 9.3,
 15,
 '현대 물리학의 3대 기둥 양자역학, 상대성이론, 열역학을 수식 없이 알려준다!',
-'"image/book6.png"'
+'book6.png'
 );-- 국내과학 6
 INSERT INTO book_table
 VALUES(
@@ -112,7 +112,7 @@ NUM_SEQ.nextval,
 13,
 '수학이 필요한 이유를 알려준 시리즈,
 미적분에 대한 두려움을 떨치게 해준 책.',
-'"image/book7.png"'
+'book7.png'
 );-- 국내과학 7
 INSERT INTO book_table
 VALUES(
@@ -127,7 +127,7 @@ NUM_SEQ.nextval,
 9.5,
 14,
 '미래는 인공지능을 이해하는 사람의 것이다.',
-'"image/book8.png"'
+'book8.png'
 );-- 국내과학 8
 INSERT INTO book_table
 VALUES(
@@ -143,7 +143,7 @@ NUM_SEQ.nextval,
 18,
 '타주의와 성 선택의 수수께끼를 둘러싼, 
 진화론의 역사에서 가장 치열한 토론의 과정과 그 성과를 집대성한 역작',
-'"image/book9.png"'
+'book9.png'
 );-- 국내과학 9
 INSERT INTO book_table
 VALUES(
@@ -158,7 +158,7 @@ NUM_SEQ.nextval,
 9.5,
  20,
 '2020년 美 아마존 과학 분야 1위!',
-'"image/book10.png"'
+'book10.png'
 );-- 국내과학 10
 INSERT INTO book_table
 VALUES(
@@ -173,7 +173,7 @@ NUM_SEQ.nextval,
 10.0,
 14,
 '아마존 최장기 베스트셀러 《나는 내가 죽었다고 생각했습니다》 저자의 신작',
-'"image/book11.png"'
+'book11.png'
 );-- 국내과학 11
 INSERT INTO book_table
 VALUES(
@@ -188,7 +188,7 @@ NUM_SEQ.nextval,
 8.8,
 8,
 '우리의 뇌 속에서 민주주의가 작동한다고?',
-'"image/book12.png"'
+'book12.png'
 );-- 국내과학 12
 INSERT INTO book_table
 VALUES(
@@ -203,7 +203,7 @@ NUM_SEQ.nextval,
 10.0,
 7,
 '생각의 그릇을 키우는 42가지 과학 이야기',
-'"image/book13.png"'
+'book13.png'
 );-- 국내과학 13
 INSERT INTO book_table
 VALUES(
@@ -218,7 +218,7 @@ NUM_SEQ.nextval,
 9.4,
 6,
 '사피엔스의 동반자가 알려주는 다정함의 과학',
-'"image/book14.png"'
+'book14.png'
 );-- 국내과학 14
 INSERT INTO book_table
 VALUES(
@@ -234,7 +234,7 @@ NUM_SEQ.nextval,
 5,
 '대칭부터 전기와 자기까지, 약한 상호작용부터 끈이론까지
 왼쪽과 오른쪽을 구별하다 보면, 현대 물리학이 보인다!',
-'"image/book15.png"'
+'book15.png'
 );-- 국내과학 15
 INSERT INTO book_table
 VALUES(
@@ -249,7 +249,7 @@ NUM_SEQ.nextval,
 9.1,
 4,
 '뇌를 안다는 것은, 나와 인간을 안다는 것',
-'"image/book16.png"'
+'book16.png'
 );-- 국내과학 16
 INSERT INTO book_table
 VALUES(
@@ -264,7 +264,7 @@ NUM_SEQ.nextval,
 9.6,
 3,
 '현대의학이 가르쳐주지 않는 건강한 삶을 위한 다정함의 놀라운 과학',
-'"image/book17.png"'
+'book17.png'
 );-- 국내과학 17
 INSERT INTO book_table
 VALUES(
@@ -279,7 +279,7 @@ NUM_SEQ.nextval,
 9.8,
 2,
 '세상에서 가장 이해하기 쉬운 21세기 기후 교양',
-'"image/book18.png"'
+'book18.png'
 );-- 국내과학 18
 INSERT INTO book_table
 VALUES(
@@ -294,7 +294,7 @@ NUM_SEQ.nextval,
 9.0,
 1,
 '마음 훈련이 가져오는 기적 같은 뇌의 변화',
-'"image/book19.png"'
+'book19.png'
 );-- 국내과학 19
 INSERT INTO book_table
 VALUES(
@@ -309,9 +309,9 @@ NUM_SEQ.nextval,
 9.3,
 0,
 '식물세밀화가의 시선에서 말하는 도시식물 이야기!',
-'"image/book20.png"'
+'book20.png'
 );-- 국내과학 20
 
-SELECT * FROM book_table; 
+SELECT * FROM book_table ORDER BY bo_id; 
 
 DELETE FROM book_table;

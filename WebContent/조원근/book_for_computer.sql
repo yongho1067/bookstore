@@ -18,7 +18,7 @@ NUM_SEQ.nextval,
 9.5,
 11,
 '심층 학습의 다양한 주제를 소개하는 심층 학습',
-'"image/book9.png"'
+'book9.png'
 );-- 외국컴퓨터 1
 INSERT INTO book_table
 VALUES(
@@ -34,7 +34,7 @@ NUM_SEQ.nextval,
 19,
 'Wonderful ... Illuminating ... 
 Fun to read Daniel Kahneman, author of Thinking, Fast and Slow',
-'"image/book1.png"'
+'book1.png'
 );-- 외국컴퓨터 2
 INSERT INTO book_table
 VALUES(
@@ -49,7 +49,7 @@ NUM_SEQ.nextval,
 9.2,
 17,
 '3D 컴퓨터 그래픽 전공교재',
-'"image/book3.png"'
+'book3.png'
 );-- 외국컴퓨터 3
 INSERT INTO book_table
 VALUES(
@@ -65,7 +65,7 @@ NUM_SEQ.nextval,
 11,
 'The significantly expanded and updated new edition of a widely used text on reinforcement learning, 
 one of the most active research areas in artificial intelligence.',
-'"image/book15.png"'
+'book15.png'
 );-- 외국컴퓨터 4
 INSERT INTO book_table
 VALUES(
@@ -82,7 +82,7 @@ NUM_SEQ.nextval,
 '면접에서 실제로 출시되었던 문제만 실었다. 
 최고의 회사들이 면접에서 하는 질문을 반영하여 
 실제 면접과 비슷하게 준비할 수 있을 것',
-'"image/book4.png"'
+'book4.png'
 );-- 외국컴퓨터 5
 INSERT INTO book_table
 VALUES(
@@ -98,7 +98,7 @@ NUM_SEQ.nextval,
 15,
 'This practical guide by experimentation leaders at Google, LinkedIn, and Microsoft will teach you how to accelerate 
 innovation using trustworthy online controlled experiments, or A/B tests',
-'"image/book13.png"'
+'book13.png'
 );-- 외국컴퓨터 6
 INSERT INTO book_table
 VALUES(
@@ -113,7 +113,7 @@ NUM_SEQ.nextval,
 8.8,
 13,
 'DW/BI 설계 경험을 바탕으로 한 실제 사례 연구들로 설명',
-'"image/book7.png"'
+'book7.png'
 );-- 외국컴퓨터 7
 INSERT INTO book_table
 VALUES(
@@ -128,7 +128,7 @@ NUM_SEQ.nextval,
 10.0,
 14,
 '이제 단순 반복 작업은 파이썬으로 해치운다',
-'"image/book2.png"'
+'book2.png'
 );-- 외국컴퓨터 8
 INSERT INTO book_table
 VALUES(
@@ -143,7 +143,7 @@ NUM_SEQ.nextval,
 8.9,
 14,
 '정돈된 데이터를 만드는 방법을 새롭게 설명하고 최신 버전의 예제를 제공',
-'"image/book18.png"'
+'book18.png'
 );-- 외국컴퓨터 9
 INSERT INTO book_table
 VALUES(
@@ -160,7 +160,7 @@ NUM_SEQ.nextval,
 'The dramatic, larger-than-life true story behind the founding of 
 Oculus and its quest for virtual reality, 
 by the bestselling author of Console Wars',
-'"image/book20.png"'
+'book20.png'
 );-- 외국컴퓨터 10
 INSERT INTO book_table
 VALUES(
@@ -176,7 +176,7 @@ NUM_SEQ.nextval,
 14,
 'Ten years ago, college student 
 Linus Torvalds retreated to his own computer to write code',
-'"image/book10.png"'
+'book10.png'
 );-- 외국컴퓨터 11
 INSERT INTO book_table
 VALUES(
@@ -191,7 +191,7 @@ NUM_SEQ.nextval,
 0.0,
 8,
 'For courses in Wireless Communication',
-'"image/book11.png"'
+'book11.png'
 );-- 외국컴퓨터 12
 INSERT INTO book_table
 VALUES(
@@ -206,7 +206,7 @@ NUM_SEQ.nextval,
 10.0,
 7,
 '실해석학 교재',
-'"image/book16.png"'
+'book16.png'
 );-- 외국컴퓨터 13
 INSERT INTO book_table
 VALUES(
@@ -221,7 +221,7 @@ NUM_SEQ.nextval,
 10.0,
 6,
 '아키텍쳐 소프트웨어 연습 교재',
-'"image/book5.png"'
+'book5.png'
 );-- 외국컴퓨터 14
 INSERT INTO book_table
 VALUES(
@@ -236,7 +236,7 @@ NUM_SEQ.nextval,
 10.0,
 5,
 '최적화 문제를 푸는 데 유용한 알고리즘을 광범위하게 소개',
-'"image/book8.png"'
+'book8.png'
 );-- 외국컴퓨터 15
 INSERT INTO book_table
 VALUES(
@@ -253,7 +253,7 @@ NUM_SEQ.nextval,
 'A detailed and up-to-date introduction to machine learning, 
 presented through the unifying lens of probabilistic modeling 
 and Bayesian decision theory',
-'"image/book17.png"'
+'book17.png'
 );-- 외국컴퓨터 16
 INSERT INTO book_table
 VALUES(
@@ -269,7 +269,7 @@ NUM_SEQ.nextval,
 3,
 'An introduction to computational thinking that 
 traces a genealogy beginning centuries before the digital computer',
-'"image/book14.png"'
+'book14.png'
 );-- 외국컴퓨터 17
 INSERT INTO book_table
 VALUES(
@@ -284,7 +284,7 @@ NUM_SEQ.nextval,
 10.0,
 2,
 '유닉스 프로그래밍의 기초적이고 전반적인 내용을 학습할 수 있도록 구성',
-'"image/book19.png"'
+'book19.png'
 );-- 외국컴퓨터 18
 INSERT INTO book_table
 VALUES(
@@ -300,7 +300,7 @@ NUM_SEQ.nextval,
 1,
 'The first edition of C Programming: A Modern Approach was popular with students and faculty alike 
 because of its clarity and comprehensiveness as well as its trademark QnA sections.',
-'"image/book6.png"'
+'book6.png'
 );-- 외국컴퓨터 19
 INSERT INTO book_table
 VALUES(
@@ -315,9 +315,9 @@ NUM_SEQ.nextval,
 10.0,
 5,
 'Wonderfully erudite, humorous, and easy to read',
-'"image/book2.png"'
+'book2.png'
 );-- 외국컴퓨터 20
 
-SELECT * FROM book_table; 
+SELECT * FROM book_table order by bo_id; 
 
 DELETE FROM book_table;
