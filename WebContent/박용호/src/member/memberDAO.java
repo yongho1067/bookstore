@@ -191,4 +191,72 @@ public class memberDAO {
 		
 		return -1; //데이터베이스 오류
 	}
+	
+	public int passwordCheck(String mem_id, String mem_pw) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String SQL = "select * from mem_table where mem_id = ?";
+		try {
+			conn = dataSource.getConnection(); //커넥션풀접근
+			pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, mem_id);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				if(rs.getString("mem_pw").equals(mem_pw)) {
+					return 1; //로그인 성공
+				}
+				return 2; //비밀번호가 틀림
+			} else {
+				return 0; //해당 사용자 없음
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				if(rs != null) rs.close();
+				if(pstmt != null) pstmt.close();
+				if(conn != null) conn.close();
+			}catch(Exception e) {
+				e.printStackTrace();
+				
+			}// finally-try-catch -end
+			
+		}// try-catch-finally -end
+		
+		return -1; //데이터베이스 오류
+	}
+	public int memberUpdate(String mem_id, String mem_pw, String mem_name, String mem_pn, String mem_email, String mem_bd) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String SQL = "update mem_table set mem_pw = ?, mem_name = ?, mem_pn = ?, mem_email = ?, mem_bd = ? where mem_id = ?";
+
+		try {
+			conn = dataSource.getConnection(); //커넥션풀접근
+			pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, mem_pw);
+			pstmt.setString(2, mem_name);
+			pstmt.setString(3, mem_pn);
+			pstmt.setString(4, mem_email);
+			pstmt.setString(5, mem_bd);
+			pstmt.setString(6, mem_id);
+			rs = pstmt.executeQuery();
+			return 1;
+		} catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				if(rs != null) rs.close();
+				if(pstmt != null) pstmt.close();
+				if(conn != null) conn.close();
+			}catch(Exception e) {
+				e.printStackTrace();
+				
+			}// finally-try-catch -end
+			
+		}// try-catch-finally -end
+		
+		return -1; //데이터베이스 오류
+	}
 }

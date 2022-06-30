@@ -1,50 +1,148 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
-
-    <body>
-        로그인 완료!
-        <%
-        request.setCharacterEncoding("UTF-8");
-        
-        String mem_id = request.getParameter("mem_id");
-        String mem_name = request.getParameter("mem_email");
-        String mem_email = request.getParameter("mem_name");
-        String mem_bd = request.getParameter("mem_bd");
-        String mem_pn = request.getParameter("mem_pn");
-        
-        if(session.getAttribute("mem_id") != null){
-        	mem_id = (String)session.getAttribute("mem_id");
-        	mem_name = (String)session.getAttribute("mem_name");
-        	mem_email = (String)session.getAttribute("mem_email");
-        	mem_bd = (String)session.getAttribute("mem_bd");
-        	mem_pn = (String)session.getAttribute("mem_pn");
-        %>
-        	<div>IF 아이디 <%=mem_id %></div>
-            <div>이메일 <%=mem_email %></div>
-            <div>이름 <%=mem_name %></div>
-            <div>생일 <%=mem_bd %></div>
-            <div>전화번호 <%=mem_pn %></div>
-            
-        <%
-        }else{
-        	session.setAttribute("mem_id", mem_id);
-			session.setAttribute("mem_name", mem_name);
-			session.setAttribute("mem_email", mem_email);
-			session.setAttribute("mem_bd", mem_bd);
-			session.setAttribute("mem_pn", mem_pn);
-		%>
-			<div>ELSE 아이디 <%=mem_id %></div>
-            <div>이메일 <%=mem_email %></div>
-            <div>이름 <%=mem_name %></div>
-            <div>생일 <%=mem_bd %></div>
-            <div>전화번호 <%=mem_pn %></div>
-            
-        <%
-        }
-
-        %>   
-       	
-       	<input type="button" value="로그아웃" onclick="location.href='logout.jsp'">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link rel="stylesheet" href="/bookstore/css/main.css">
 
 
-    </body>
+<style>
+
+
+</style>
+<meta charset="UTF-8">
+<title>메인화면</title>
+</head>
+<body>
+
+
+	
+<%@include file="/headerLogin.jsp" %>
+
+
+<div class='title'>
+<h1>북쳐핸섭</h1>
+</div>
+
+
+
+<div class="wrap">
+   <div class="search">
+      <input type="text" class="searchTerm" placeholder="원하는 도서 검색">
+      <button type="submit" class="searchButton" onclick = "location.href = '#' " >
+        <i class="fa fa-search"></i>
+     </button>
+   </div>
+</div>
+
+<br>
+
+<input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+    <header>도서</header>
+    <ul>
+     <li><a href="#"><i class="fas fa-stream"></i>Dashboard</a></li>
+     <li><a href="#"><i class="fas fa-stream"></i>Shortcuts</a></li>
+     <li><a href="#"><i class="fas fa-stream"></i>Overview</a></li>
+     <li><a href="#"><i class="fas fa-stream"></i>Events</a></li>
+     <li><a href="#"><i class="fas fa-stream"></i>About</a></li>
+     <li><a href="#"><i class="fas fa-stream"></i>Services</a></li>
+     <li><a href="#"><i class="fas fa-stream"></i>Contact</a></li>
+    </ul>
+   </div>
+   <div class="favoritebook">
+    
+    <table class="styled-table">
+    <thead>
+        <tr>
+            <th>인기 순위</th>
+            <th>이름</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td><a href="#">책이름</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><a href="#">책이름</a></td>
+        </tr>
+         <tr>
+            <td>3</td>
+            <td><a href="#">책이름</a></td>
+        </tr>
+        <!-- and so on... -->
+    </tbody>
+</table>
+</div>
+    
+    
+    <div class="goodbook">
+    
+    <table class="styled-table">
+    <thead>
+        <tr>
+            <th>평점 순위</th>
+            <th>이름	</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td><a href="#">책이름</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><a href="#">책이름</a></td>
+        </tr>
+         <tr>
+            <td>3</td>
+            <td><a href="#">책이름</a></td>
+        </tr>
+        <!-- and so on... -->
+    </tbody>
+</table>
+</div>
+    
+    
+    <div class="book1">
+    <table class="bookstyle">
+    <thead>
+        <tr>
+            <th colspan="3">추천 도서</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>
+            <td><a href="#"><img src="./image/book/test.jpg" class="bookimage"></a>	</td>
+            <td><a href="#"><img src="./image/book/test.jpg" class="bookimage"></a>	</td>
+            <td><a href="#"><img src="./image/book/test.jpg" class="bookimage"></a>	</td>
+   </tr>
+    <tr>
+            <td>책이름	</td>
+            <td>책이름	</td>
+ 			<td>책이름	</td>   
+   </tr>
+   <tr>
+            <td><a href="#"><img src="./image/book/test.jpg" class="bookimage"></a>	</td>
+            <td><a href="#"><img src="./image/book/test.jpg" class="bookimage"></a>	</td>
+            <td><a href="#"><img src="./image/book/test.jpg" class="bookimage"></a>	</td>
+   </tr>
+    <tr>
+            <td>책이름	</td>
+            <td>책이름	</td>
+ 			<td>책이름	</td>   
+   </tr>
+    </tbody>
+	</table>
+    </div>
+</body>
 </html>

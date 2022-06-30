@@ -9,6 +9,8 @@ public class memberDTO {
 	String mem_email;
 	String mem_bd;
 	
+	String mem_pw_update;
+	
 	
 	
 	public int getmem_id_num() {
@@ -56,6 +58,13 @@ public class memberDTO {
 	
 	public void setmem_bd(String mem_bd) {
 		this.mem_bd = mem_bd;
+	}
+	public String getmem_pw_update() {
+		return mem_pw_update;
+	}
+	
+	public void setmem_pw_update(String mem_pw_update) {
+		this.mem_pw_update = mem_pw_update;
 	}
 
 

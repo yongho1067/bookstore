@@ -24,7 +24,7 @@
 
 	alert('로그아웃');
 
-	location.href = 'login.jsp';
+	location.href = 'main.jsp';
 
 </script>
 
