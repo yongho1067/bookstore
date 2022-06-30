@@ -64,9 +64,10 @@ public class BookInfoDAO {
 			double grade = rs.getDouble(9);
 			int count = rs.getInt(10);
 			String example = rs.getString(11);
+			String image = rs.getString(12);
 			
 		 tv = new BookInfoVO(id, name, cc, janre, date, author, pb, price,
-				 grade, count,  example);
+				 grade, count,  example, image);
 			}else {
 				tv = null;
 			}
@@ -94,6 +95,7 @@ public class BookInfoDAO {
 			double grade = rs.getDouble("bo_grade");
 			int count = rs.getInt("bo_count");
 			String example = rs.getString("bo_ex");
+	
 			
 			AllInfoVO tiv = new AllInfoVO(id, name, cc, janre, date, author, pb, price,
 					grade, count,  example);
@@ -130,7 +132,7 @@ public class BookInfoDAO {
 		String sql = "SELECT * FROM book_table";
 		
 		if(keyword != null && !keyword.isEmpty()) {
-			sql += " WHERE BO_NAME LIKE '%'||?||'%'";
+			sql += " WHERE UPPER(BO_NAME) LIKE UPPER('%'||?||'%')";
 		}
 
 		
