@@ -107,12 +107,12 @@ public class BookInfoDAO {
 	
 	public ArrayList<ReviewVO> BookgetReviewInfo() throws SQLException{
 		ArrayList<ReviewVO> tiarray = new ArrayList<ReviewVO>();
-		String sql = "select * from grade_table order by mem_id_num";
+		String sql = "select * from grade_table";
 		
 		pstmt = con.prepareStatement(sql);
 		rs = pstmt.executeQuery();
 		while(rs.next()) {
-			int id = rs.getInt("mem_id_num");
+			String id = rs.getString("mem_id");
 			int grade = rs.getInt("BO_GRADE");
 			String comment = rs.getString("COMMENT_");
 			
@@ -194,17 +194,17 @@ public class BookInfoDAO {
 					return tiarray;
 				}
 			
-		public boolean 	ReviewAddInsert (int mem_id_num, int bo_id, int bo_grade, String comment_) throws SQLException  {
-			String sql = "insert into grade_table values(2,1,?,?)";
+		public boolean 	ReviewAddInsert (String mem_id, int bo_id, int bo_grade, String comment_) throws SQLException  {
+			String sql = "insert into grade_table values(?,?,?,?)";
 		
 				System.out.println(bo_grade);
 				System.out.println(comment_);
 
 				pstmt = con.prepareStatement(sql);
-				//pstmt.setInt(1, mem_id_num);
-				//pstmt.setInt(2, bo_id);
-				pstmt.setInt(1, bo_grade);
-				pstmt.setString(2, comment_);
+				pstmt.setString(1, mem_id);
+				pstmt.setInt(2, bo_id);
+				pstmt.setInt(3, bo_grade);
+				pstmt.setString(4, comment_);
 		
 				pstmt.executeUpdate();
 			

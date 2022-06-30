@@ -34,11 +34,7 @@
 
 
 
-<div class='login1'>
-<input type="button" class='login' value="로그인" onclick="location.href='http://google.com';">
-<input type="button" class='login' value="회원가입" onclick = "location.href = '#' ">
-<input type="button" class='login' value="장바구니" onclick = "location.href = '#' ">
-</div>
+<%@include file="/header.jsp" %> <!-- 헤더 로그인 -->
 
 
 
@@ -83,6 +79,9 @@
 
 <form action="Reviewadd.do" method="post">
 <div id="star">
+<input type="hidden" name="mem_id" value="<%String mid = (String)session.getAttribute("mem_id");
+out.println(mid);
+%>">
 <input type="hidden" name="bo_id" value="${svo.id}">
   <select id="grade" name="bo_grade" size="1">
     <option value="none" selected>== 평점선택 ==</option>
@@ -128,7 +127,7 @@ String sql = "select * from grade_table where bo_id="+id;
 			while (rs.next()) {
 		%>
 		<tr>
-			<td><%=rs.getString("mem_id_num")%></td>
+			<td><%=rs.getString("mem_id")%></td>
 			<td><% String star=rs.getString("bo_grade");
 			switch(star){
 			case "1":

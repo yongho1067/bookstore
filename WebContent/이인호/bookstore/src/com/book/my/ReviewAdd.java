@@ -18,22 +18,21 @@ public class ReviewAdd implements BookImpl {
 	response.setCharacterEncoding("utf-8");
 	
 	//int mem_id_num = Integer.parseInt(request.getParameter("mem_id_num"));
-	int mem_id_num = 1;
+	String mem_id = request.getParameter("mem_id");
+	System.out.println(mem_id);
 
 	int bo_id = Integer.parseInt(request.getParameter("bo_id"));
 	
 	String k=request.getParameter("bo_grade");
 	
 	int bo_grade = Integer.parseInt(k);
-	System.out.println(bo_grade);
 	String comment_ = request.getParameter("comment_");
-	System.out.println(comment_);
 	
 	BookInfoDAO bidao = null;
 	
 	 bidao = new BookInfoDAO();
 	
-	bidao.ReviewAddInsert(mem_id_num, bo_id, bo_grade, comment_);
+	bidao.ReviewAddInsert(mem_id, bo_id, bo_grade, comment_);
 		 
 	}
 }

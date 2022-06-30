@@ -54,13 +54,11 @@ DELETE FROM book_table;
 
 drop table grade_table;
 CREATE TABLE grade_table( -- 평점 댓글 테이블
-mem_id_num NUMBER(5) , -- 회원번호
+mem_id VARCHAR2(20) PRIMARY KEY , -- 회원이름
 bo_id number(5), -- 책번호
 bo_grade NUMBER(5), -- 평점
 comment_ VARCHAR2(10), -- 댓글
-foreign key (bo_id) REFERENCES book_table(bo_id),
-foreign key (mem_id_num) REFERENCES mem_table(mem_id_num)
-
+foreign key (bo_id) REFERENCES book_table(bo_id)
 );
 
 INSERT INTO grade_table
@@ -111,7 +109,7 @@ SELECT
     
 delete  from mem_table;
     
-    
+commit;
 INSERT INTO mem_table
 VALUES(
 MEM_SEQ.nextval,
@@ -125,7 +123,18 @@ MEM_SEQ.nextval,
     
     
 
-    
+DROP TABLE basket_table;
+CREATE TABLE basket_table(
+bas_order varchar2(100),
+primary key(bas_order),
+bas_count NUMBER(5),
+bas_total NUMBER(5),
+bas_address_1 varchar2(200),
+bas_address_2 varchar2(200),
+
+bo_id NUMBER(5) REFERENCES book_table(bo_id),
+mem_id_num NUMBER(5) REFERENCES mem_table(mem_id_num)
+);
     
     
     
