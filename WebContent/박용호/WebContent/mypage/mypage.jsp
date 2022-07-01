@@ -16,7 +16,7 @@
  <script type="text/javascript">
   function showPopup() { 
 	  
-	  window.open("passwordUpdate.jsp?mem_id=<%=mem_id%>", "passwordUpdate", "width=400, height=300, left=100, top=50"); 
+	  window.open("passwordUpdate.jsp?mem_id=<%=mem_id%>", "passwordUpdate", "width=500, height=300, left=100, top=50"); 
 	  
   }
   </script>
@@ -46,6 +46,7 @@
         }
         %>
 <br>
+<form action="memberUpdate.jsp">
 	<div class="container">
 		<table class="table table-bordered table-hover" style="text-align: center; border: 1px solid #dddddd">
 			<thead>
@@ -75,14 +76,15 @@
 				</tr>
 				<tr>
 					<td style="text-align: left;" colspan="3"><h5 style="color: red;" id="passwordCheckMessage"></h5>
-					<input class="btn btn-primary pull-left" type="submit" value="비밀번호 변경 " onclick="showPopup();">　
-					<input class="btn btn-primary pull-right" type="submit" value="회원 탈퇴 " onclick="location.href='memberDelete.jsp'">　
-					<input class="btn btn-primary pull-right" type="submit" value="이전  " onclick="location.href='../main.jsp'">　　
-					<input class="btn btn-primary pull-right" type="submit" value="수정" onclick="location.href='memberUpdate.jsp'">　　
+					<input class="btn btn-primary pull-left" type="button" value="비밀번호 변경 " onclick="showPopup();">　
+					<input class="btn btn-primary pull-right" type="button" value="회원 탈퇴 " onclick="location.href='memberDelete.jsp?mem_id=<%=mem_id%>'">　
+					<input class="btn btn-primary pull-right" type="button" value="이전" onclick="location.href='../main.jsp'">　　
+					<input class="btn btn-primary pull-right" type="submit" value="수정">　　
 					</td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
+</form>
 </body>
 </html>

@@ -37,35 +37,43 @@
 </head>
 <body>
 
-<% String mem_id = request.getParameter("mem_id"); %>
-<div class="container">
-			<table class="table table-bordered table-hover" style="text-align: center; border: 1px solid #dddddd">
-				<thead>
-					<tr>
-						<th colspan="3"><h4>비밀번호 변경</h4></th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td style="width: 110px;"><h5>기존 비밀번호</h5></td>
-						<td colspan="2"><input class="form-control" id="mem_pw" type="password" name="mem_pw" maxlength="20" placeholder="기존 비밀번호를 입력하세요."></td>
-					</tr>
-					<tr>
-						<td style="width: 110px;"><h5>변경 비밀번호</h5></td>
-						<td colspan="2"><input onkeyup="passwordCheckFunction();" class="form-control" id="mem_pw_update" type="password" name="mem_pw_update" maxlength="20" placeholder="변경 비밀번호를 입력하세요."></td>
-					</tr>
-					<tr>
-						<td style="width: 110px;"><h5>변경 비밀번호 확인</h5></td>
-						<td colspan="2"><input onkeyup="passwordCheckFunction();" class="form-control" id="mem_pw_update_ck" type="password" name="mem_pw_update_ck" maxlength="20" placeholder="변경 비밀번호 확인을 입력하세요."></td>
-					</tr>
-					<tr>
-						<td style="text-align: left;" colspan="3"><h5 style="color: red;" id="passwordCheckMessage"></h5>
-						<input class="btn btn-primary pull-right" type="submit" value="닫기" onclick="closeClick();">
-						<input class="btn btn-primary pull-right" type="submit" value="확인" onclick="location.href='passwordUpdateFunction.jsp?mem_id=<%=mem_id%>'"></td>
-					</tr>
-				</tbody>
-			</table>
+<% 
+
+String mem_id = request.getParameter("mem_id"); 
+
+
+%>
+<form action="passwordUpdateFunction.jsp">
+	<div class="container">
+		<table class="table table-bordered table-hover" style="text-align: center; border: 1px solid #dddddd">
+			<thead>
+				<tr>
+					<th colspan="3"><h4>비밀번호 변경</h4></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="width: 110px;"><h5>기존 비밀번호</h5></td>
+					<td colspan="2"><input class="form-control" id="mem_pw" type="password" name="mem_pw" maxlength="20" placeholder="기존 비밀번호를 입력하세요."></td>
+				</tr>
+				<tr>
+					<td style="width: 110px;"><h5>변경 비밀번호</h5></td>
+					<td colspan="2"><input onkeyup="passwordCheckFunction();" class="form-control" id="mem_pw_update" type="password" name="mem_pw_update" maxlength="20" placeholder="변경 비밀번호를 입력하세요."></td>
+				</tr>
+				<tr>
+					<td style="width: 110px;"><h5>변경 비밀번호 확인</h5></td>
+					<td colspan="2"><input onkeyup="passwordCheckFunction();" class="form-control" id="mem_pw_update_ck" type="password" name="mem_pw_update_ck" maxlength="20" placeholder="변경 비밀번호 확인을 입력하세요."></td>
+				</tr>
+				<tr>
+					<td style="text-align: left;" colspan="3"><h5 style="color: red;" id="passwordCheckMessage"></h5>
+					<input type="hidden" id=<%=mem_id %> name="mem_id" value=<%=mem_id %>>
+					<input class="btn btn-primary pull-right" type="button" value="닫기" onclick="closeClick();">
+					<input class="btn btn-primary pull-right" type="submit" value="확인"></td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
+</form>
 
 </body>
 </html>
