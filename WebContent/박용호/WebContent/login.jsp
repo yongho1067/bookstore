@@ -4,17 +4,23 @@
 <%@ page import="java.security.SecureRandom" %>
 <%@ page import="java.math.BigInteger" %>
 
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" language="java"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 
 <html lang="ko">
 
 <head>
 	<title>로그인</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
     <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
   	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
     
+	<link rel="stylesheet" href="css/bootstrap.css?ver=1">
+	<link rel="stylesheet" href="css/custom.css">
+	<script src="js/bootstrap.js"></script>
     
 	<script>
 		Kakao.init('3c99651ce15ee284a9c851bacbc9ef00'); //발급받은 키 중 javascript키를 사용해준다.
@@ -86,21 +92,32 @@
 	<!-- 사이트 로그인 시작 -->
 	
 <br>
-<div class="align" align="center">
+<div align="center">
 <form action="loginFunction.jsp" method="post">
-	아이디 : <input type="text" id="mem_id" name = "mem_id" placeholder="아이디">
-		<div class="text-id"> 
-		</div> 
-	<label></label>
-	비밀번호 : <input type="password" id="mem_pw" name = "mem_pw" placeholder="암호">
-		<div class="text-id">
-	                        
-		</div> 
-		<br>
-	<input type="submit" id="btnLogin" value="로그인" onclick="location.href='loginFunction.jsp'" >
-	<input type="button" value="회원가입" onclick="location.href='join.jsp'"/></form>
-	<br><br>
-</div>
+	<div class ="container">
+		<table class ="table table-bordered table-hover" style="text-align: center; border: 1px solid #dddddd">
+			<thead>
+				<tr>
+					<th colspan="3"><h4>로그인</h4></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="width: 110px; font: bold;"><h5>아이디</h5></td>
+					<td><input class="form-control" type="text" id="mem_id" name="mem_id" maxlength="20" placeholder="아이디를 입력하세요." ></td>
+				</tr> 
+				<tr>
+					<td style="width: 110px;"><h5>비밀번호</h5></td>
+					<td><input class="form-control" type="password" id="mem_pw" name="mem_pw" maxlength="20" placeholder="비밀번호를 입력하세요."></td>
+				</tr> 
+			</tbody>
+		</table>
+	</div>
+		<input type="submit" class="btn btn-primary" id="btnLogin" value="로그인" onclick="location.href='loginFunction.jsp'" >
+		<input type="button" class="btn btn-primary" value="회원가입" onclick="location.href='join.jsp'"/></form>
+		<br><br>
+</form>
+	</div>
 	<!-- 사이트 로그인 종료 -->
 	
 	
@@ -120,7 +137,7 @@
     <!-- 네이버 로그인 종료 -->
     
     <!-- 카카오 로그인 시작 -->
-    <div class="btn" align ="center">
+    <div align ="center">
 	<a href="javascript:void(0)"  onclick="kakaoLogin();">
     	<img src="image/kakaologin.png" width="360" height ="82px" />
     </a>

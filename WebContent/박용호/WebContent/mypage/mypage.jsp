@@ -59,6 +59,7 @@
 					<td style="width: 110px;"><h5>아이디</h5></td>
 					<td><input class="form-control" type="text" id="mem_id" name="mem_id" maxlength="20" value="<%=mem_id%>" readonly></td>
 				</tr>
+				<tr>
 					<td style="width: 110px;"><h5>이메일</h5></td>
 					<td colspan="2"><input class="form-control" id="mem_email" type="text" name="mem_email" maxlength="100" value="<%=mem_email%>"></td>
 				</tr>
