@@ -56,16 +56,47 @@ public class cartCheck extends HttpServlet {
 		switch(c) {
 		
 		case "/ordering.do":
+			
+			String cartId = session.getId();
 			String sell_price = request.getParameter("sell_price");
 			String amount = request.getParameter("amount");
 			String sum = request.getParameter("sum");
+			String address = request.getParameter("address");
+			String address_detail = request.getParameter("address_detail");
 			
 			
 			
 			ReserveDAO rsdao2 = null;
 			try {
 				rsdao = new ReserveDAO();
-				rsdao.insert_reserve(sell_price, amount, sum);
+				rsdao.insert_reserve(cartId,sell_price, amount, sum, address, address_detail);
+			} catch (ClassNotFoundException | SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			request.setAttribute("cardId", cartId);
+			request.setAttribute("sell_price", sell_price);
+			request.setAttribute("amount", amount);
+			request.setAttribute("sum", sum);
+			request.setAttribute("address", address);
+			request.setAttribute("address_detail", address_detail);
+			
+			
+		
+		str = "ordercomplete.jsp";
+			break;
+			
+			/*
+			주소 입력
+		case "/address.do":
+			String address = request.getParameter("address");
+			String address_detail = request.getParameter("address_detail");
+			
+
+			try {
+				rsdao = new ReserveDAO();
+				rsdao.insert_address(address, address_detail);
 			} catch (ClassNotFoundException | SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -73,15 +104,18 @@ public class cartCheck extends HttpServlet {
 			
 			
 			
-			request.setAttribute("sell_price", sell_price);
-			request.setAttribute("amount", amount);
-			request.setAttribute("sum", sum);
+			request.setAttribute("address", address);
+			request.setAttribute("address_detail", address_detail);
 		
-		str = "ordercomplete.jsp";
+		str = "realordercomplete.jsp";
 			break;
-
+			*/
 		
 		case "/orderlist.do":
+			
+			
+			String cartId_check = request.getParameter("cartId_check");
+
 			try {
 				rsdao = new ReserveDAO();
 			} catch (ClassNotFoundException | SQLException e) {
@@ -92,13 +126,13 @@ public class cartCheck extends HttpServlet {
 			ArrayList<CartDTO> odlist = null;
 			
 			try {
-				odlist = rsdao.orderList();
+				odlist = rsdao.orderlist(cartId_check);
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			
-			request.setAttribute("orlist", odlist);
+			request.setAttribute("odlist", odlist);
 			
 			str = "orderlist.jsp";
 			break;

@@ -34,30 +34,29 @@
 
 
 
-<div class='login1'>
-<input type="button" class='login' value="로그인" onclick="location.href='http://google.com';">
-<input type="button" class='login' value="회원가입" onclick = "location.href = '#' ">
-<input type="button" class='login' value="장바구니" onclick = "location.href = '#' ">
-</div>
+<%@include file="/header.jsp" %> <!-- 헤더 로그인 -->
 
 
 
 
-
+<!--  제목 -->
 <div class='title'>
-책정보
+<b>책정보</b>
 </div>
 
-
+<!-- 책이미지 -->
 <div class='imagebox'>
-<img src="./image/book/test.jpg" class="bookimage">
+<img src="./image/${svo.image}" class="bookimage">
 
 </div>
 
+<!-- 책정보 -->
 <div class='bookinfo'>
 책 제목 : <b>${svo.name }</b>
 
 <br>
+<!-- 책정보 -->
+
 <pre>${svo.example }</pre>
 </div>
 
@@ -72,16 +71,20 @@
 
 금액 : <input type="text" name="sum" size="11" readonly>원
 
-<input type="button" class='login' value="장바구니" onclick = "location.href = '#' ">
-<input type="button" class='login' value="바로구매" onclick = "location.href = '#' ">
+<input type="button" class='login' value="장바구니" onclick = "location.href = '' ">
+<input type="button" class='login' value="바로구매" onclick = "location.href = 'jang.jsp' ">
 
 </form>
 
 
-<form method="get" name="star">
+<form action="Reviewadd.do" method="post">
 <div id="star">
-  <select>
-    <option value="none">== 평점선택 ==</option>
+<input type="hidden" name="mem_id" value="<%String mid = (String)session.getAttribute("mem_id");
+out.println(mid);
+%>">
+<input type="hidden" name="bo_id" value="${svo.id}">
+  <select id="grade" name="bo_grade" size="1">
+    <option value="none" selected>== 평점선택 ==</option>
     <option value="1">★☆☆☆☆</option>
     <option value="2">★★☆☆☆</option>
     <option value="3">★★★☆☆</option>
@@ -89,23 +92,19 @@
     <option value="5">★★★★★</option>
   </select>
 <br>
-<textarea name="oneline" cols="80" rows="2" placeholder="이책의 한줄평"  style="resize: none;"></textarea>
+<textarea name="comment_" cols="80" rows="2" placeholder="이책의 한줄평"  style="resize: none;"></textarea>
 <input type="submit" value="작성" id="inputtype"> 
 </div>
 </form>
 
 
-
- <!--  
-     <c:forEach var="vo2" items="${reviewlist1 }">
-       <tr>
-          <td>${vo2.comment }</td>
-       	  <td>${vo2.comment }</td>
-          <td>${vo2.comment }</td>   
-       </tr>
-     </c:forEach>
-     -->
 <%
+String k =request.getParameter("id");
+if (request.getParameter("id")==null){
+	
+	k = "1";
+}
+	
 int id= Integer.parseInt(request.getParameter("id"));
 String sql = "select * from grade_table where bo_id="+id;
 		try {
@@ -128,8 +127,26 @@ String sql = "select * from grade_table where bo_id="+id;
 			while (rs.next()) {
 		%>
 		<tr>
-			<td><%=rs.getString("mem_id_num")%></td>
-			<td><%=rs.getString("bo_grade")%></td>
+			<td><%=rs.getString("mem_id")%></td>
+			<td><% String star=rs.getString("bo_grade");
+			switch(star){
+			case "1":
+				out.println("★☆☆☆☆");
+				break;
+			case "2":
+				out.println("★★☆☆☆");
+				break;
+			case "3":
+				out.println("★★★☆☆");
+				break;
+			case "4":
+				out.println("★★★★☆");
+				break;
+			case "5":
+				out.println("★★★★★");
+				break;
+			}
+			%></td>
 			<td><%=rs.getString("comment_")%></td>
 		</tr>
 		

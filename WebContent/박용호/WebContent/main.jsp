@@ -1,31 +1,148 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link rel="stylesheet" href="/bookstore/css/main.css">
 
-    <body>
-        로그인 완료!
-        <%
-            request.setCharacterEncoding("UTF-8");
-            String email = request.getParameter("email");
-            String name = request.getParameter("name");
-            String profileImage = request.getParameter("profileImage");
-            String birthday = request.getParameter("birthday");
-            String uniqId = request.getParameter("uniqId");
-            String age = request.getParameter("age");
-            String mobile = request.getParameter("mobile");
-            String birthYear = request.getParameter("birthYear");
-            String nickName = request.getParameter("nickName");
-            String gender = request.getParameter("gender");
-        %>
 
-        <div>이메일 <%=email %></div>
-        <div>이름 <%=name %></div>
-        <div>프로필 <%=profileImage %></div>
-        <div>생일 <%=birthday %></div>
-        <div>출생년도 <%=birthYear %></div>
-        <div>uniqId <%=uniqId %></div>
-        <div>연령대 <%=age %></div>
-        <div>전화번호 <%=mobile %></div>
-        <div>닉넴 <%=nickName %></div>
-        <div>성별 <%=gender %></div>
+<style>
 
-    </body>
+
+</style>
+<meta charset="UTF-8">
+<title>메인화면</title>
+</head>
+<body>
+
+
+	
+<%@include file="/headerLogin.jsp" %>
+
+
+<div class='title'>
+<h1>북쳐핸섭</h1>
+</div>
+
+
+
+<div class="wrap">
+   <div class="search">
+      <input type="text" class="searchTerm" placeholder="원하는 도서 검색">
+      <button type="submit" class="searchButton" onclick = "location.href = '#' " >
+        <i class="fa fa-search"></i>
+     </button>
+   </div>
+</div>
+
+<br>
+
+<input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+    <header>도서</header>
+    <ul>
+     <li><a href="#"><i class="fas fa-stream"></i>Dashboard</a></li>
+     <li><a href="#"><i class="fas fa-stream"></i>Shortcuts</a></li>
+     <li><a href="#"><i class="fas fa-stream"></i>Overview</a></li>
+     <li><a href="#"><i class="fas fa-stream"></i>Events</a></li>
+     <li><a href="#"><i class="fas fa-stream"></i>About</a></li>
+     <li><a href="#"><i class="fas fa-stream"></i>Services</a></li>
+     <li><a href="#"><i class="fas fa-stream"></i>Contact</a></li>
+    </ul>
+   </div>
+   <div class="favoritebook">
+    
+    <table class="styled-table">
+    <thead>
+        <tr>
+            <th>인기 순위</th>
+            <th>이름</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td><a href="#">책이름</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><a href="#">책이름</a></td>
+        </tr>
+         <tr>
+            <td>3</td>
+            <td><a href="#">책이름</a></td>
+        </tr>
+        <!-- and so on... -->
+    </tbody>
+</table>
+</div>
+    
+    
+    <div class="goodbook">
+    
+    <table class="styled-table">
+    <thead>
+        <tr>
+            <th>평점 순위</th>
+            <th>이름	</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td><a href="#">책이름</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><a href="#">책이름</a></td>
+        </tr>
+         <tr>
+            <td>3</td>
+            <td><a href="#">책이름</a></td>
+        </tr>
+        <!-- and so on... -->
+    </tbody>
+</table>
+</div>
+    
+    
+    <div class="book1">
+    <table class="bookstyle">
+    <thead>
+        <tr>
+            <th colspan="3">추천 도서</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>
+            <td><a href="#"><img src="./image/book/test.jpg" class="bookimage"></a>	</td>
+            <td><a href="#"><img src="./image/book/test.jpg" class="bookimage"></a>	</td>
+            <td><a href="#"><img src="./image/book/test.jpg" class="bookimage"></a>	</td>
+   </tr>
+    <tr>
+            <td>책이름	</td>
+            <td>책이름	</td>
+ 			<td>책이름	</td>   
+   </tr>
+   <tr>
+            <td><a href="#"><img src="./image/book/test.jpg" class="bookimage"></a>	</td>
+            <td><a href="#"><img src="./image/book/test.jpg" class="bookimage"></a>	</td>
+            <td><a href="#"><img src="./image/book/test.jpg" class="bookimage"></a>	</td>
+   </tr>
+    <tr>
+            <td>책이름	</td>
+            <td>책이름	</td>
+ 			<td>책이름	</td>   
+   </tr>
+    </tbody>
+	</table>
+    </div>
+</body>
 </html>

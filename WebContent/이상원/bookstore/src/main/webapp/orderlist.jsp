@@ -12,21 +12,32 @@
 </head>
 
 <%
+String cartId_check = request.getParameter("cartId_check");
 request.setCharacterEncoding("UTF-8");
 ReserveDAO rdao = new ReserveDAO();
-ArrayList<CartDTO> odlist = rdao.orderList();
+ArrayList<CartDTO> odlist = rdao.orderlist(cartId_check);
+
 %>
 
 <body>
-	<% for(CartDTO tmp:odlist){ %>
+
+
 	
+	<% for(CartDTO tmp:odlist) {%>
+	
+
 	<%=tmp.getBas_order() %><br>
-	<%=tmp.getBas_count() %><br>
-	<%=tmp.getBas_total() %><br>
-	<%=tmp.getBo_id() %><br>
-	<%=tmp.getMem_id_num() %><br>
-	
+	<%=tmp.getAmount() %><br>
+	<%=tmp.getSum() %><br>
+	<%=tmp.getBas_address_1() %><br>
+	<%=tmp.getBas_address_2() %><br>
+
 	
 	<%} %>
+	
+	<br><br>
+	<a href="jang.jsp">되돌아가기</a>
+	
+	
 </body>
 </html>

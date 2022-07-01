@@ -12,6 +12,7 @@ public class ReserveDAO {
 	
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
+
 	
 	public ReserveDAO() throws ClassNotFoundException, SQLException {
 		con = new DBConn().getConnection();
@@ -29,14 +30,89 @@ public class ReserveDAO {
 			con.close();
 	}
 	
-	public boolean insert_reserve(String sell_price, String amount, String sum) {
-		String sql = "insert into basket_table(bas_count,bas_total) values(?,?)";
+	
+	//장바구니 DB 입력
+	public boolean insert_reserve(String cartId, String sell_price, String amount, String sum, String address, String address_detail) {
+		String sql = "insert into basket_table(bas_order,bas_count,bas_total,bas_address_1,bas_address_2) values(?,?,?,?,?)";
 		
 		
 		try {
 			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, amount);
-			pstmt.setString(2, sum);
+			pstmt.setString(1, cartId);
+			pstmt.setString(2, amount);
+			pstmt.setString(3, sum);
+			pstmt.setString(4, address);
+			pstmt.setString(5, address_detail);
+			
+			
+			pstmt.executeUpdate();
+			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println("insert Exception");
+			return false;
+		}
+		return true;
+	}
+	
+	
+	
+	// 주문내역 확인
+	
+	public ArrayList<CartDTO> orderlist(String cartId_check) throws SQLException {
+		// TODO Auto-generated method stub
+		String sql = "SELECT * FROM basket_table where bas_order = ?";
+		
+		pstmt = con.prepareStatement(sql);
+		pstmt.setString(1, cartId_check);
+		
+		rs = pstmt.executeQuery();
+		
+		ArrayList<CartDTO> odlist = new ArrayList<CartDTO>();
+		
+		while(rs.next()) {			
+	
+			CartDTO dto = new CartDTO();
+			
+			dto.setBas_order(rs.getString("bas_order"));
+			dto.setAmount(rs.getString("bas_count"));
+			dto.setSum(rs.getString("bas_total"));
+			dto.setBas_address_1(rs.getString("bas_address_1"));
+			dto.setBas_address_2(rs.getString("bas_address_2"));
+
+	
+			odlist.add(dto);
+			
+			System.out.println(odlist);
+			
+		
+		}
+		return odlist;
+		
+		
+		
+	}
+	public void orderList1(String cartId_check) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+	/*
+	//주소입력
+	
+	public boolean insert_address(String address, String address_detail) {
+		// TODO Auto-generated method stub
+		
+		String sql = "insert into basket_table(bas_address_1,bas_address_2) values(?,?)";
+		
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, address);
+			pstmt.setString(2, address_detail);
 			
 			
 			pstmt.executeUpdate();
@@ -49,31 +125,8 @@ public class ReserveDAO {
 		return true;
 	}
 	
-	
-	public ArrayList<CartDTO> orderList() throws SQLException {
-		// TODO Auto-generated method stub
-		ArrayList<CartDTO> odlist = new ArrayList<CartDTO>();
-		String sql = "SELECT * FROM basket_table order by bas_order";
-		
-		pstmt = con.prepareStatement(sql);
-		rs = pstmt.executeQuery();
-		
-		while(rs.next()) {
-			int bas_order = rs.getInt("bas_order");
-			String bas_count = rs.getString("bas_count");
-			String bas_total = rs.getString("bas_total");
-			int bo_id = rs.getInt("bo_id");
-			int mem_id_num = rs.getInt("mem_id_num");
-			
-			CartDTO cdto = new CartDTO(bas_order,bas_count,bas_total,bo_id,mem_id_num);
-			
-			odlist.add(cdto);
-			
-		}
-		return odlist;
-		
-		
-	}
+	*/
+
 
 	
 	
