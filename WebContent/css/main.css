@@ -1,0 +1,140 @@
+@charset "EUC-KR";
+
+
+.title{
+    text-align : center;
+	font-size: 30px;
+}
+
+
+
+
+.login{
+  position: relative;
+  left : 75%;
+  color: #fff;
+  height: 35px;
+  width: 80px;
+  border: 1px solid  #009879; ;
+  background: #009879;;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+}
+
+/*°Ë»öÃ¢*/
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 80%;
+  border: 3px solid #00B4CC;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+.favoritebook{
+  position: relative;
+  top: 50px;
+}
+
+
+.styled-table{
+	position: relative;
+	left:30%;
+	top:100px;	
+}
+
+
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+.styled-table tbody td {
+	text-align: center;
+}
+    
+
+.book1{
+  position: relative;
+  left : 60%;
+  top : -270px;
+  text-align: center;
+  width:700px;
+}
+
+.bookstyle thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.bookstyle th,
+.bookstyle td {
+	border-bottom: 1px solid #dddddd;	
+    padding: 8px 15px;
+    text-align: center;
+}
+.bookstyle tbody tr:nth-of-type(even) {
+	    background-color: #f3f3f3;
+}
+
+.bookimage{
+	width: 100px;
+	height: 130px;
+}
+
+
