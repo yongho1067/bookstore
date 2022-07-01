@@ -1,12 +1,14 @@
 package adminVO;
 
+import java.sql.Date;
+
 public class AdminVO {
 	
 	private int bo_id; // 책 아이디
 	private String bo_name; // 책이름
 	private String bo_cc; // 책분류
 	private String bo_janre; // 책의 장르
-	private int bo_date; // 출간일
+	private Date bo_date; // 출간일
 	private String bo_author; // 작가
 	private String bo_pb; // 책출판사
 	private int bo_price; // 책의가격
@@ -14,7 +16,7 @@ public class AdminVO {
 	private int bo_count; // 책의 재고
 	private String bo_ex; // 책설명
 	
-	public AdminVO(int bo_id, String bo_name, String bo_cc, String bo_janre, int bo_date, String bo_author,
+	public AdminVO(int bo_id, String bo_name, String bo_cc, String bo_janre, Date bo_date, String bo_author,
 			String bo_pb, int bo_price, int bo_grade, int bo_count, String bo_ex) {
 		super();
 		this.bo_id = bo_id;
@@ -30,6 +32,10 @@ public class AdminVO {
 		this.bo_ex = bo_ex;
 		
 		
+	}
+
+	public AdminVO() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public int getBo_id() {
@@ -64,11 +70,11 @@ public class AdminVO {
 		this.bo_janre = bo_janre;
 	}
 
-	public int getBo_date() {
+	public Date getBo_date() {
 		return bo_date;
 	}
 
-	public void setBo_date(int bo_date) {
+	public void setBo_date(Date bo_date) {
 		this.bo_date = bo_date;
 	}
 

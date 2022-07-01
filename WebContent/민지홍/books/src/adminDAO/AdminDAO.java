@@ -7,11 +7,15 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import adminDBConn.AdminDBConn;
 import adminVO.AdminVO;
 import adminDBConn.AdminDBConn;
 
 public class AdminDAO {
+	
 	private Connection con;
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
@@ -33,9 +37,9 @@ public class AdminDAO {
 			String Bo_name = rs.getString("bo_name");
 			String Bo_janre = rs.getString("bo_janre");
 			String Bo_cc = rs.getString("bo_cc");
+			
 
-			AdminVO cdto = new AdminVO(Bo_id, Bo_name, Bo_janre, Bo_cc, Bo_id, Bo_cc, Bo_cc, Bo_id, Bo_id, Bo_id,
-					Bo_cc);
+			AdminVO cdto = new AdminVO(Bo_id, Bo_name, Bo_janre, Bo_cc, null, Bo_cc, Bo_cc, Bo_id, Bo_id, Bo_id, Bo_cc);
 
 			odlist.add(cdto);
 
@@ -44,17 +48,24 @@ public class AdminDAO {
 
 	}
 
-	public boolean BookAdd_insert(int Bo_id, String Bo_name, String Bo_pb, String Bo_cc, int Bo_price, int Bo_count) {
-		String sql = "insert into book_table value(num_seq.nextval,?,?,?,?,?)";
+	public boolean BookAdd(int Bo_id,String Bo_name, String Bo_janre, String Bo_pb, String Bo_author,String bo_date, String Bo_cc, int Bo_price, int Bo_count, String Bo_ex) {
+		String sql = "insert into book_table(bo_id,bo_name,bo_janre,bo_pb,bo_author,bo_date,bo_cc,bo_price,bo_count,bo_ex) values(num_seq.nextval,?,?,?,?,?,?,?,?,?)";
 		PreparedStatement pstmt = null;
 
 		try {
 			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, Bo_name);
-			pstmt.setString(2, Bo_pb);
-			pstmt.setString(3, Bo_cc);
-			pstmt.setInt(4, Bo_price);
-			pstmt.setInt(5, Bo_count);
+			pstmt.setInt(1, Bo_id);
+			pstmt.setString(2, Bo_name);
+			pstmt.setString(3, Bo_janre);;
+			pstmt.setString(4, Bo_pb);
+			pstmt.setString(5, Bo_author);
+		    pstmt.setString(6,bo_date); 
+			pstmt.setString(7, Bo_cc);
+			pstmt.setInt(8, Bo_price);
+			pstmt.setInt(9, Bo_count);
+			pstmt.setString(10, Bo_ex);
+			
+			 
 
 			pstmt.executeUpdate();
 		} catch (SQLException e) {
@@ -64,28 +75,22 @@ public class AdminDAO {
 		return true;
 	}
 
-	public boolean BookDelete(String name) throws SQLException {
-		String sql = "DELETE book_table WHERE name = ?";
-
+	public boolean BookDelete(int bo_id) throws SQLException {
+		String sql = "DELETE book_table WHERE bo_id = ?";
+		
 		pstmt = con.prepareStatement(sql);
-		pstmt.setString(1, name);
+		pstmt.setInt(1, bo_id);
 		pstmt.executeUpdate();
 		return true;
 	}
 
-	public boolean update_all(int Bo_id, String Bo_name, String Bo_pb, String Bo_cc, int Bo_price, int Bo_count) throws SQLException {
-		String sql = "update book_table set Bo_id=?, Bo_name=?, Bo_pb=?, Bo_cc, Bo_price, Bo_count where Bo_name=?";
-
-		pstmt = con.prepareStatement(sql);
-		pstmt.setString(1, Bo_name);
-		pstmt.setString(2, Bo_pb);
-		pstmt.setString(3, Bo_cc);
-		pstmt.setInt(4, Bo_price);
-		pstmt.setInt(5, Bo_count);
-
-		pstmt.executeUpdate();
-
-		return true;
+	
 	}
 
-}
+	
+		
+	
+
+	
+	
+

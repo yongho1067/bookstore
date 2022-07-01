@@ -115,9 +115,7 @@ body {background-color: HoneyDew;}
 
 
 
-.btn-add{
-	background-color: Aliceblue;
-}
+
 
 textarea {
     width: 50%;
@@ -144,16 +142,37 @@ textarea {
 		<div style="margin-left:30%; padding:1px 16px; height:800px;">
 		<h4>도서관리 > 추가</h4>
 		
-	
+			
+			 <div class="form">
+		    	<label class="id">번호</label><br>
+		    	<input type="text" id="bo_id" name="bo_id" placeholder="아이디를 입력해주세요." maxlength=50 required>
+		  	</div>    
+			
 			<div class="form">
 		    	<label class="title">도서명</label><br>
 		    	<input type="text" id="bo_name" name="bo_name" placeholder="도서명을 입력해주세요." maxlength=50 required>
+		  	</div>
+		  	
+		  	<div class="form">
+		    	<label class="janre">장르</label><br>
+		    	<input type="text" id="bo_janre" name="bo_janre" placeholder="장르를 입력해주세요." maxlength=50 required>
 		  	</div>
 		  	
 			<div class="form">
 		    	<label class="publisher">출판사</label><br>
 		    	<input type="text" id="bo_pb" name="bo_pb" placeholder="출판사를 입력해주세요." maxlength=20 required>
 		  	</div>
+		  	
+		  	
+		  	<div class="form">
+		    	<label class="author">작가</label><br>
+		    	<input type="text" id="bo_author" name="bo_author" placeholder="작가를 입력해주세요." maxlength=20 required>
+		  	</div>
+		  	
+		  	 <div class="form">
+		    	<label class="date">출간일</label><br>
+		    	<input type="text" id="bo_date" name="bo_date" placeholder="출간일을 입력해주세요." maxlength=20 required>
+		  	</div> 
 		  		  
 		  	<div class="form">
 		    	<label class="category">카테고리</label><br>
@@ -189,8 +208,8 @@ textarea {
 		  	</div>
 		  	
 		  <div class="actionbtn">
-		  	<input type="button" class="btn-add" id="btnadd" value="추가">
-		  	<input type="button" class="btn-cancel" id="btncancel" value="취소">
+		  	<input type="submit" class="btn-add" id="btnadd" value="추가">
+		  	<input type="reset" class="btn-cancel" id="btncancel" value="취소">
 		  </div>
 		  	</div>
 	

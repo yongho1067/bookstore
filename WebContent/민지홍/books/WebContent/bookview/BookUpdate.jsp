@@ -114,9 +114,7 @@ body {background-color: HoneyDew;}
 
 
 
-.btn-add{
-	background-color: Aliceblue;
-}
+
 
 textarea {
     width: 50%;

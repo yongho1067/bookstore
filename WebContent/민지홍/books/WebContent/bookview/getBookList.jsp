@@ -165,44 +165,46 @@ ArrayList<AdminVO> odlist = rdao.getBookList();
 			onclick="location.href='BookInfo.jsp'">회원관리</button>
 	</div>
 
-	<div style="margin-left: 50%; padding: 1px 16px; height: 800px;">
+	<div style="margin-left: 40%; padding: 1px 16px; height: 1000px;">
 		<h4>전체 도서 목록</h4>
 
-		<table class="booklist">
-			<thead>
+		<table class="table table-hover table-list">
+			
 				<tr>
+					<th>번호</th>
 					<th>도서명</th>
 					<th>카테고리</th>
 					<th>장르</th>
+					
 					<th></th>
 				</tr>
-			</thead>
-			<tbody>
-				<%
+			
+				
+			<%
 				for (AdminVO tmp : odlist) {
-				%>
-
-				<%=tmp.getBo_id()%>
-				<%=tmp.getBo_name()%>
-				<%=tmp.getBo_janre()%>
-				<%=tmp.getBo_cc()%>
-
-
-
-				<%
+				%>	
+			
+		<tr>	
+				
+				<td><%=tmp.getBo_id()%></td>
+				<td><%=tmp.getBo_name()%></td>
+				<td><%=tmp.getBo_janre()%></td>
+				<td><%=tmp.getBo_cc()%></td>
+				
+				<td><input type="button" value="수정" onclick="location.href='BookUpdate.jsp'"></td>
+				<td><input type="button" value="삭제" onclick="location.href='BookDelete.jsp'"></td>
+		</tr>	
+				
+		
+		<%
 				}
-				%>
-			</tbody>
-
+		%>
+		
 		</table>
 
-
-
-
-
-
 	</div>
-
+	
+	
 
 </body>
 </html>

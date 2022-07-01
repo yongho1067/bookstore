@@ -138,7 +138,7 @@ textarea {
    
    
 </div>
-<form method="post" action="bookdeleteok.do">
+<form method="post" action="bookdelete.do">
 		<div style="margin-left:30%; padding:1px 16px; height:800px;">
 		<h4>도서관리 > 삭제</h4>
 
@@ -146,52 +146,15 @@ textarea {
 		
 	
 			<div class="form">
-		    	<label class="title">도서명</label><br>
-		    	<input type="text" id="title" name="title" placeholder="도서명을 입력해주세요." maxlength=50 required>
+		    	<label class="id">도서번호</label><br>
+		    	<input type="text" id="bo_id" name="bo_id" placeholder="도서번호를 입력하세요" maxlength=50 required>
 		  	</div>
 		  	
-			<div class="form">
-		    	<label class="publisher">출판사</label><br>
-		    	<input type="text" id="publisher" name="publisher" placeholder="출판사를 입력해주세요." maxlength=20 required>
-		  	</div>
-		  		  
-		  	<div class="form">
-		    	<label class="category">카테고리</label><br>
-		    	<select id="category" name="category" size="1" >
-		    		<option value="국내서적" selected>국내서적</option>
-		    		<option value="해외서적">해외서적</option>
-		    		
-		    	</select>
-		  	</div><br><br>
-		  	
-		  	<div class="form">
-		  		<label class="price">정가 (단위 : 원)</label><br>
-		  		<input type="text" id="price" name="price" value="0" maxlength=20 required>
-		  	</div>
-		  	
-		  	<div class="form">
-		  		<label class="amount">수량</label><br>
-		  		<input type="number" id="amount" name="amount" min="0" max="100" value="0" required>
-		  	</div><br>
-		  	
-		  	<div>
-		  		<label class="bookintro">도서정보</label><br>
-		  		<textarea id="bookintro" name="summary" placeholder="도서내용을 입력해주세요." rows="10" maxlength="1500" required></textarea>
-		  	</div><br>
-		  	
-		  <div class="form">
-		  		<label style="display: block;">이미지</label>
-		  		<label for="image" class="btn-info">이미지 선택</label>
-		  		<input type="file" id="image" name="image" style="display: none;">
-		  		<input type="text" class="form-control" id="imagename" placeholder="파일 선택" readonly>
-		  		<input type="button" class="btn-warning" value="미리보기" id="btnpreviewimage">
-				<p class="help-block">※하나의 이미지만 등록 가능합니다. (등록 가능한 이미지 확장자 : <mark>png</mark>, <mark>jpg</mark>, <mark>gif</mark>)</p>
-		  	</div>
-		  	
+			
 		  <div>
-		  	<input type="button" class="btn-delete" id="btndelete" value="삭제">
-		  	<input type="button" value="취소">
-		  	<input type="button" value="목록">
+		  	<input type="submit" class="btn-delete" id="btndelete" value="삭제" >
+		  	<input type="reset" value="취소">
+		  	<input type="button" value="목록" onclick="location.href='getBookList.jsp'">
 		  </div>
 		  	
 	</div>

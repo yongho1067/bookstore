@@ -118,7 +118,7 @@ textarea {
 					id="pw" name="pw" placeholder="비밀번호를 입력해주세요." maxlength=50 required>
 			</div>
 			
-			<input type="button" onclick="alert('정말 탈퇴하시겠습니까?')" value="확인">
+			<input type="submit" onclick="alert('정말 탈퇴하시겠습니까?')" value="확인">
 			<input type="reset" value="취소">
 		</div>
 
