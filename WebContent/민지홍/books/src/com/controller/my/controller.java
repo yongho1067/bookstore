@@ -114,7 +114,7 @@ public class controller extends HttpServlet {
 				e1.printStackTrace();
 			}
 
-			str = "/bookbiew/BookAdd.jsp"; // view
+			str = "/bookview/BookAdd.jsp"; // view
 			break;
 
 		case "/bookdelete.do":
@@ -135,7 +135,7 @@ public class controller extends HttpServlet {
 				e.printStackTrace();
 			}
 
-			str = "/bookbiew/BookDelete.jsp"; // view
+			str = "/bookview/BookDelete.jsp"; // view
 			break;
 
 		

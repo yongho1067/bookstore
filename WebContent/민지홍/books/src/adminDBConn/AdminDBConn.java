@@ -16,7 +16,7 @@ private Connection con;
 	public AdminDBConn() throws ClassNotFoundException, SQLException {
 		
 		Class.forName("oracle.jdbc.driver.OracleDriver");
-		con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "book", "1234");
+		con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:5151:xe", "book", "1234");
 		
 		
 	}
