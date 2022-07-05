@@ -20,15 +20,19 @@ ArrayList<CartDTO> odlist = rdao.orderlist(cartId_check);
 
 <body>
 
+<%@include file="/header.jsp" %>
 
+<%@include file="/sidebar.jsp" %>
 	
+	<div class="completetitle">
+	<b style="color : #C4B73B">주문 내역</b><br><hr><br>
 	<% for(CartDTO tmp:odlist) {%>
 	
 
-	<%=tmp.getBas_order() %><br>
-	<%=tmp.getAmount() %><br>
-	<%=tmp.getSum() %><br>
-	<%=tmp.getBas_address_1() %><br>
+	주문 번호 : <%=tmp.getBas_order() %><br>
+	갯수 : <%=tmp.getAmount() %><br>
+	총 가격 : <%=tmp.getSum() %><br>
+	주소 : <%=tmp.getBas_address_1() %> &nbsp;&nbsp;&nbsp; 
 	<%=tmp.getBas_address_2() %><br>
 
 	
@@ -37,6 +41,9 @@ ArrayList<CartDTO> odlist = rdao.orderlist(cartId_check);
 	<br><br>
 	<a href="main.jsp">되돌아가기</a>
 	
+	</div>
+	
+	<%@include file="/footer.jsp" %> <!-- 헤더 로그인 -->
 	
 </body>
 </html>

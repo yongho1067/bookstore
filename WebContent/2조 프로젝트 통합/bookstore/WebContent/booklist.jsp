@@ -10,9 +10,9 @@
 	Connection conn = null;
 	Statement stmt = null;
 	ResultSet rs = null;
-	String uid = "c##book";
+	String uid = "book";
 	String pwd = "1234";
-	String url = "jdbc:oracle:thin:@localhost:1521:XE";
+	String url = "jdbc:oracle:thin:@localhost:5151:XE";
 	%>
 <!DOCTYPE html>
 <html>

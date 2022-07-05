@@ -126,6 +126,9 @@ textarea {
 </style>
 </head>
 <body>
+
+	<%@include file="/header.jsp" %>
+
 	<div class="buttons">
 	<button class="btn-hover color-1" onclick="location.href='BookAdd.jsp'">도서추가</button>
     <button class="btn-hover color-2" onclick="location.href='BookUpdate.jsp'">도서수정</button>
@@ -142,6 +145,8 @@ textarea {
 		
 </div>
 </form>
+
+<%@include file="/footer.jsp" %> <!-- 헤더 로그인 -->
 
 </body>
 </html>

@@ -1,12 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>바로 구매 페이지</title>
 </head>
+<style>
 
+table, td, th {
+	margin-left : auto;
+	margin-right: auto;
+	padding: 20px;
+	border-spacing: auto;
+}
+
+
+
+
+</style>
 <%
 String sell_price = request.getParameter("sell_price");
 String amount = request.getParameter("amount");
@@ -22,7 +35,11 @@ String sum = request.getParameter("sum");
 
 <body onload="init();">
 
-	<div class='title'>바로 구매</div>
+<%@include file="/header.jsp" %>
+
+	<div class='maintitle'>구매 합니다.</div>
+	
+	<%@include file="/sidebar.jsp" %>
 
 	<table align="center" class='title' border="0">
 		<tr>
@@ -36,7 +53,7 @@ String sum = request.getParameter("sum");
 		<tr>
 			<td><img src="./image/book/test.jpg" class="bookimage"></td>
 
-			<td>우에엥</td>
+			<td></td>
 
 			<td>
 				<form action="ordering.do" name="form" method="get" id="counttype">
@@ -45,7 +62,7 @@ String sum = request.getParameter("sum");
 
 					주소 : <input type="text" id="address_kakao" name="address" readonly />
 					<input type="button" onclick="insert_address()"
-						value="우편번호 찾기"><br> 상세 주소 : <input type="text"
+						value="우편번호 찾기"><br><br>상세 주소 : <input type="text"
 						name="address_detail" />
 
 
@@ -79,8 +96,7 @@ String sum = request.getParameter("sum");
 
 			</td>
 
-			<td><input type="button" value="삭제" onclick="">
-				</form></td>
+				</form>
 		</tr>
 
 		<tr>
@@ -92,6 +108,7 @@ String sum = request.getParameter("sum");
 
 	</table>
 
+<%@include file="/footer.jsp" %>
 
 	<script>
 		var sell_price;

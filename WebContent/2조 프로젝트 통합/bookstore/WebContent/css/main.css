@@ -46,7 +46,7 @@
 	position: relative;
   padding: 20px 30px;
   left:20%;
-  margin-top: -15% ;
+  margin-top: -5% ;
 	
 }
 
@@ -82,7 +82,7 @@
 .book1{
   position: relative;
   left : 50%;
-  top : -270px;
+  top : -200px;
   text-align: center;
   width:700px;
 }

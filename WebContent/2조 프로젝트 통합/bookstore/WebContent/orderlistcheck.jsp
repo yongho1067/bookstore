@@ -8,14 +8,27 @@
 </head>
 <body>
 
-<form action="orderlist.do" method="post">
-	주문 번호 입력
+<%@include file="/header.jsp" %>
+
+<%@include file="/sidebar.jsp" %>
+
+<div class="completetitle">
+	주문 내역 확인
+
+	
+	<form action="orderlist.do" method="post">
+	
 	<br>
-	<input type="text" name="cartId_check">
+	
+	<input type="text" class="orderindex" placeholder="주문 번호를 입력해주세요." name="cartId_check">
 	<br>
 	<input type="submit" value="주문 내역 확인">
 	</form>
 	
+		</div>
+	
+	<%@include file="/footer.jsp" %> <!-- 헤더 로그인 -->
+
 
 </body>
 </html>

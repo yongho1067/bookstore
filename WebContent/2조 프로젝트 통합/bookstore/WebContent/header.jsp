@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="/bookstore/css/header.css">
 
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+<title>부쳐핸썸^_^</title>
 </head>
 <body>
 
@@ -36,10 +36,11 @@
 
 <br><br>
 
-<div class='title'>
+<div class='maintitle'>
 
 <a href="main.jsp">북쳐핸섭</a>
 
+</div>
 <br>
 
 <form action="booksearch.do" method="post">
@@ -57,7 +58,5 @@
 <hr>
 <br>
 
-
-</div>
 
 </body>

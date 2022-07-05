@@ -17,14 +17,14 @@ private Connection con;
 		
 		Class.forName("oracle.jdbc.driver.OracleDriver");
 
-		con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","c##book","1234");
+		con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:5151:xe","book","1234");
 	}
 	
 	public void close() {
 		try {
 			if( con != null) {
 				con.close();
-				System.out.println("DB ¿¬°á Á¾·á");
+				System.out.println("DB ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 			}	
 		}
 		catch (Exception e) {

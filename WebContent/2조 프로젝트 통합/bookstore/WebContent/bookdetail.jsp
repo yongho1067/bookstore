@@ -36,7 +36,7 @@
 
 <%@include file="/header.jsp" %> <!-- 헤더 로그인 -->
 
-
+<%@include file="/sidebar.jsp" %>
 
 
 <!--  제목 -->
@@ -71,10 +71,10 @@
 
 금액 : <input type="text" name="sum" size="11" readonly>원
 
-<input type="button" class='login' value="장바구니" onclick = "location.href = '' ">
 <input type="button" class='login' value="바로구매" onclick = "location.href = 'jang.jsp' ">
 
 </form>
+
 
 
 <form action="Reviewadd.do" method="post">
@@ -93,7 +93,11 @@ out.println(mid);
   </select>
 <br>
 <textarea name="comment_" cols="80" rows="2" placeholder="이책의 한줄평"  style="resize: none;"></textarea>
-<input type="submit" value="작성" id="inputtype"> 
+<br>
+
+
+
+<input class = 'login' type="submit" value="작성" id="inputtype"> 
 </div>
 </form>
 
@@ -173,7 +177,7 @@ String sql = "select * from grade_table where bo_id="+id;
 		</table>
 
 
-
+<%@include file="/footer.jsp" %>
 
 
 

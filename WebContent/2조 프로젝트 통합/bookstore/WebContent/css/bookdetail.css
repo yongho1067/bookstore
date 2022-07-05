@@ -2,13 +2,14 @@
 
 
 .title{
+	top:0px;
     text-align : center;
 	font-size: 30px;
 }
 
 .login{
   position: relative;
-  left : 75%;
+  left : 90%;
   color: #fff;
   height: 35px;
   width: 80px;
@@ -20,7 +21,7 @@
 
 .imagebox{
 	position: fixed;
-	left:10%;
+	left:20%;
 	
 }
 
@@ -46,15 +47,15 @@
 .review{
 	position:fixed;
 	left: 10%;
-	top: 70%;
+	top: 50%;
 	text-align:center;
 		
 }
 
 #star{
 	position:fixed;
-	left:10%;
-	top: 60%;
+	left:20%;
+	top: 70%;
 
 }
 

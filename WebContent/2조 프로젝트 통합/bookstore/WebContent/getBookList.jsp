@@ -206,6 +206,7 @@ ArrayList<AdminVO> odlist = rdao.getBookList();
 
 	</div>
 
+<%@include file="/footer.jsp" %> <!-- 헤더 로그인 -->
 
 </body>
 </html>

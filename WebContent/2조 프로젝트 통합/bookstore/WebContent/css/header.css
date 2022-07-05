@@ -41,9 +41,13 @@ a:visited			{color:#B7F0B1;text-decoration:none}
 a:hover				{color:#B7F0B1;text-decoration:none}
 a:active				{color:#B7F0B1;text-decoration:none}
 
+.completetitle {
+	font-family: 'ChosunCentennial';
+	text-align : center;
+	font-size:30px;
+}
 
-
-.title {
+.maintitle {
 
 
 	font-family: 'ChosunCentennial';
